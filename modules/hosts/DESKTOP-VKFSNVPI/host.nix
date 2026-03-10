@@ -33,12 +33,9 @@
     boot.kernelPackages = pkgs.linuxPackages_zen;
 
     programs = {
+      noisetorch.enable = true;
       steam.enable = true;
     };
-
-    environment.systemPackages = with pkgs; [
-      noisetorch
-    ];
 
     hardware = {
       amdgpu.opencl.enable = true;
