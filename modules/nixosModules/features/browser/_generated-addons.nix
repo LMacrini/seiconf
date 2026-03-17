@@ -544,10 +544,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.3.3";
+    version = "26.3.17";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4712327/refined_github-26.3.3.xpi";
-    sha256 = "c794b2c9d65ba363562774de35b552777211db7c6044dfd3d07bccf930772b75";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4728945/refined_github-26.3.17.xpi";
+    sha256 = "26cdf4d0432bca4107439d769cc9b093c3068fe50f1d563bf688e9084b721c23";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -693,10 +693,10 @@
   };
   "ublock-origin" = buildMozillaXpiAddon {
     pname = "ublock-origin";
-    version = "1.69.0";
+    version = "1.70.0";
     addonId = "uBlock0@raymondhill.net";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4675310/ublock_origin-1.69.0.xpi";
-    sha256 = "785bcde68a25faa8a0949964ec5ffe9bdcb85d3f0ae21c23f607c6c8f91472cf";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4721638/ublock_origin-1.70.0.xpi";
+    sha256 = "f2730d2877005763a45d765749892e936f49cae713d28f7aa6ea314454b89cf1";
     meta = with lib; {
       homepage = "https://github.com/gorhill/uBlock#ublock-origin";
       description = "Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory.";
@@ -731,10 +731,10 @@
   };
   "ultimadark" = buildMozillaXpiAddon {
     pname = "ultimadark";
-    version = "1.6.60";
+    version = "1.6.61";
     addonId = "{7c7f6dea-3957-4bb9-9eec-2ef2b9e5bcec}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4659230/ultimadark-1.6.60.xpi";
-    sha256 = "5789b6cfa1ab0b49c2327b2e8c05e572e44b6635cabe2bcf931a5446e42caa4e";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4729277/ultimadark-1.6.61.xpi";
+    sha256 = "b85181ba5e7525813049592bdda074975283260c7ec26358dc2b91cbcfd255a0";
     meta = with lib; {
       homepage = "https://github.com/ThomazPom/Moz-Ext-UltimaDark";
       description = "UltimaDark uses agressive and smart techniques to turn even the sunniest websites into realms of darkness.\nAlthough it works well, this is so experimental, it makes lab rats look like seasoned professionals. \nGo ahead, embrace the shadows! 🦇";
@@ -783,10 +783,10 @@
   };
   "violentmonkey" = buildMozillaXpiAddon {
     pname = "violentmonkey";
-    version = "2.34.0";
+    version = "2.35.0";
     addonId = "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4677263/violentmonkey-2.34.0.xpi";
-    sha256 = "ac58eb2796765da73db571a9491352acbb8287b76ccd9e2375612364a4cd5473";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4704557/violentmonkey-2.35.0.xpi";
+    sha256 = "00d6ed07f730e4f5e15395d9a204ea91dff4e06e70c51f0df11edf54dc645ec9";
     meta = with lib; {
       homepage = "https://violentmonkey.github.io/";
       description = "Userscript support for browsers, open source.";
