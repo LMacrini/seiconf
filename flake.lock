@@ -533,6 +533,26 @@
         "type": "github"
       }
     },
+    "re-lunatic-player": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773712745,
+        "narHash": "sha256-9iegBLUGESVhYPSCSeqn+X6SEgTQnpGgXA5C9KhhhAw=",
+        "owner": "prince527github",
+        "repo": "re-lunatic-player",
+        "rev": "08c34143e80312a3f03c62a1330ae4dccbe726e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "prince527github",
+        "repo": "re-lunatic-player",
+        "type": "github"
+      }
+    },
     "re2-src": {
       "flake": false,
       "locked": {
@@ -564,6 +584,7 @@
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
         "nur": "nur",
+        "re-lunatic-player": "re-lunatic-player",
         "wrappers": "wrappers",
         "zig": "zig"
       }

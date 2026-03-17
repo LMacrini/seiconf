@@ -21,6 +21,11 @@
       };
     };
 
+    re-lunatic-player = {
+      url = "github:prince527github/re-lunatic-player";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     catppuccin = {
       url = "github:catppuccin/nix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
