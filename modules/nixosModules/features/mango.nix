@@ -242,6 +242,7 @@
           switchbind = fold,spawn,systemctl suspend
 
           windowrule = isopensilent:1,isglobal:1,offsetx:100,offsety:100,appid:steam,title:^notificationtoasts_\d+_desktop$
+          windowrule = appid:re-lunatic-player,isfloating:1,isglobal:1
 
           xkb_rules_layout = us
           xkb_rules_options = compose:ralt
@@ -271,6 +272,11 @@
           bind = SUPER,M,setmfact,-0.05
           bind = SUPER,I,setmfact,+0.05
 
+          bind = SUPER,O,minimized
+          bind = SUPER+SHIFT,O,restore_minimized
+          bind = SUPER,H,toggle_scratchpad
+          bind = SUPER,K,toggle_named_scratchpad,kitty-scratch,none,kitty --class kitty-scratch
+
           bind = SUPER,U,incnmaster,+1
           bind = SUPER,D,incnmaster,-1
 
@@ -292,6 +298,7 @@
           bind = SUPER,F,togglefullscreen
           bind = SUPER+SHIFT,F,togglefloating
           bind = SUPER+SHIFT,M,togglemaximizescreen
+          bind = SUPER,G,toggleglobal
 
           bind = SUPER+SHIFT,T,setlayout,tile
           bind = SUPER,S,setlayout,scroller
