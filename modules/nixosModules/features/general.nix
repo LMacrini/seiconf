@@ -22,7 +22,7 @@
 
       environment.systemPackages = with pkgs; [
         prince.helium-nightly # TODO: 26.06 use nixpkgs helium
-        inputs'.re-lunatic-player.packages.default
+        prince.re-lunatic-player
       ];
 
       programs = {
