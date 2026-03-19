@@ -275,7 +275,8 @@
           bind = SUPER,O,minimized
           bind = SUPER+SHIFT,O,restore_minimized
           bind = SUPER,H,toggle_scratchpad
-          bind = SUPER,K,toggle_named_scratchpad,kitty-scratch,none,kitty --class kitty-scratch
+          bind = SUPER,K,toggle_named_scratchpad,kitty-scratch,none,kitty --app-id kitty-scratch
+          windowrule = isnamedscratchpad:1,appid:kitty-scratch
 
           bind = SUPER,U,incnmaster,+1
           bind = SUPER,D,incnmaster,-1
