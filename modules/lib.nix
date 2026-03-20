@@ -11,16 +11,16 @@
       aspects:
         getAll aspects |> lib.flatten |> lib.uniqueStrings |> map (aspect: self.aspects.${aspect}.module);
 
+    makePrime = a: system:
+      a
+      |> lib.filterAttrs (_: v: builtins.isAttrs v && builtins.hasAttr system v)
+      |> builtins.mapAttrs (_: attr: attr.${system});
+
     nixosSystem = {
       module,
       aspects ? [],
       system ? "x86_64-linux",
-    }: let
-      makePrime = a:
-        a
-        |> lib.filterAttrs (_: v: builtins.isAttrs v && builtins.hasAttr system v)
-        |> builtins.mapAttrs (_: attr: attr.${system});
-    in
+    }:
       inputs.nixpkgs.lib.nixosSystem {
         inherit system;
 
@@ -28,17 +28,7 @@
           [
             module
             self.nixosModules.base
-            {
-              config._module.args = {
-                inherit system;
-                inputs' =
-                  builtins.mapAttrs (
-                    _: flake: makePrime flake
-                  )
-                  inputs;
-                self' = makePrime self;
-              };
-            }
+            self.nixosModules.inputs
           ]
           ++ self.lib.aspects aspects;
       };

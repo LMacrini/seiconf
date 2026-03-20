@@ -1,4 +1,11 @@
-{lib, ...}: {
+{
+  lib,
+  inputs,
+  self,
+  ...
+}: {
+  imports = [inputs.wrappers.flakeModules.wrappers];
+
   options = with lib; {
     flake = {
       aspects = mkOption {
@@ -29,5 +36,17 @@
     systems = [
       "x86_64-linux"
     ];
+
+    flake.nixosModules.inputs = {pkgs, ...}: {
+      config._module.args = rec {
+        system = pkgs.stdenvNoCC.hostPlatform.system;
+
+        inputs' = builtins.mapAttrs (_: flake:
+          self.lib.makePrime flake system)
+        inputs;
+
+        self' = self.lib.makePrime self system;
+      };
+    };
   };
 }

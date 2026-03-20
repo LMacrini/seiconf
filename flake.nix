@@ -27,7 +27,7 @@
     };
 
     wrappers = {
-      url = "github:lassulus/wrappers";
+      url = "github:birdeehub/nix-wrapper-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

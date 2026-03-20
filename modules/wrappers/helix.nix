@@ -1,74 +1,72 @@
-{inputs, ...}: {
-  perSystem = {pkgs, ...}: {
-    packages.helix =
-      (inputs.wrappers.wrapperModules.helix.apply {
-        inherit pkgs;
-        settings = {
-          theme = "catppuccin_macchiato";
+{
+  flake.wrappers.helix = {wlib, ...}: {
+    imports = [wlib.wrapperModules.helix];
 
-          editor = {
-            color-modes = true;
-            line-number = "relative";
-            mouse = false;
-            trim-trailing-whitespace = true;
+    settings = {
+      theme = "catppuccin_macchiato";
 
-            cursor-shape = {
-              insert = "block";
-              normal = "block";
-              select = "underline";
-            };
+      editor = {
+        color-modes = true;
+        line-number = "relative";
+        mouse = false;
+        trim-trailing-whitespace = true;
 
-            soft-wrap.enable = true;
-          };
-
-          keys = {
-            insert =
-              builtins.listToAttrs
-              <| builtins.map (key: {
-                name = key;
-                value = "no_op";
-              })
-              <| [
-                "left"
-                "down"
-                "up"
-                "right"
-
-                "end"
-                "home"
-                "pagedown"
-                "pageup"
-              ];
-
-            normal = {
-              S-tab = "move_parent_node_start";
-              tab = "move_parent_node_end";
-              C-z = "no_op";
-            };
-
-            select = {
-              S-tab = "extend_parent_node_start";
-              tab = "extend_parent_node_end";
-            };
-          };
+        cursor-shape = {
+          insert = "block";
+          normal = "block";
+          select = "underline";
         };
 
-        languages = {
-          language = [
-            {
-              name = "nix";
-              auto-format = true;
-              formatter = {
-                command = "nix";
-                args = ["fmt"];
-              };
-            }
+        soft-wrap.enable = true;
+      };
+
+      keys = {
+        insert =
+          builtins.listToAttrs
+          <| builtins.map (key: {
+            name = key;
+            value = "no_op";
+          })
+          <| [
+            "left"
+            "down"
+            "up"
+            "right"
+
+            "end"
+            "home"
+            "pagedown"
+            "pageup"
           ];
 
-          language-server = {
-            zls.config.enable_snippets = false;
-          };
+        normal = {
+          S-tab = "move_parent_node_start";
+          tab = "move_parent_node_end";
+          C-z = "no_op";
         };
-      }).wrapper;
+
+        select = {
+          S-tab = "extend_parent_node_start";
+          tab = "extend_parent_node_end";
+        };
+      };
+    };
+
+    languages = {
+      language = [
+        {
+          name = "nix";
+          auto-format = true;
+          formatter = {
+            command = "nix";
+            args = ["fmt"];
+          };
+        }
+      ];
+
+      language-server = {
+        zls.config.enable_snippets = false;
+      };
+    };
   };
 }

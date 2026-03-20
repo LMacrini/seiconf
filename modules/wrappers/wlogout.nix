@@ -1,10 +1,11 @@
 {
-  inputs,
+  self,
   lib,
   ...
 }: {
-  perSystem = {
+  flake.wrappers.wlogout = {
     pkgs,
+    wlib,
     inputs',
     ...
   }: let
@@ -29,17 +30,18 @@
         ]}
     '';
   in {
-    packages.wlogout = inputs.wrappers.lib.wrapPackage {
-      inherit pkgs;
-      package = pkgs.wlogout;
+    imports = [
+      wlib.modules.default
+      self.nixosModules.inputs
+    ];
 
-      runtimeInputs = [
-        pkgs.systemd
-      ];
+    package = pkgs.wlogout;
+    extraPackages = [
+      pkgs.systemd
+    ];
 
-      flags = {
-        "--css" = "${style}";
-      };
+    flags = {
+      "--css" = style;
     };
   };
 }

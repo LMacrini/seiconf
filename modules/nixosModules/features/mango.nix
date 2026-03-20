@@ -9,8 +9,9 @@
     "ly"
     "swayidle"
     "swaync"
-    "wpaperd"
+    "waybar"
     "wayland-pipewire-idle-inhibit"
+    "wpaperd"
   ];
 
   flake.aspects.mango.module = {
@@ -97,46 +98,44 @@
 
       launcher = "rofi -show drun";
       sessionMenu = "wlogout";
+    in {
+      wrappers.waybar = {
+        enable = true;
+        settings = {
+          modules-left = [
+            "ext/workspaces"
+            "dwl/window"
+          ];
 
-      waybar =
-        (self.wrapperModules.waybar.apply {
-          inherit pkgs;
-
-          settings = {
-            modules-left = [
-              "ext/workspaces"
-              "dwl/window"
-            ];
-
-            "ext/workspaces" = {
-              on-click = "activate";
-            };
-
-            "dwl/window" = {
-              format = "  {title}";
-              rewrite = {
-                " (.*) - YouTube — LibreWolf" = "   $1";
-                "  NixOS Search - (.*) — LibreWolf" = "  󱄅 $1";
-                " (.*) — LibreWolf" = "   $1";
-              };
-            };
+          "ext/workspaces" = {
+            on-click = "activate";
           };
 
-          "style.css".content =
-            # css
-            ''
-              #workspaces button {
-                border-radius: 0;
-                box-shadow: inset 0px 2px 0px transparent;
-                transition: box-shadow 0.2s ease;
-              }
+          "dwl/window" = {
+            format = "  {title}";
+            rewrite = {
+              " (.*) - YouTube — LibreWolf" = "   $1";
+              "  NixOS Search - (.*) — LibreWolf" = "  󱄅 $1";
+              " (.*) — LibreWolf" = "   $1";
+            };
+          };
+        };
 
-              #workspaces button.active {
-                box-shadow: inset 0px 2px 0px white;
-              }
-            '';
-        }).wrapper;
-    in {
+        style.content =
+          # css
+          ''
+            #workspaces button {
+              border-radius: 0;
+              box-shadow: inset 0px 2px 0px transparent;
+              transition: box-shadow 0.2s ease;
+            }
+
+            #workspaces button.active {
+              box-shadow: inset 0px 2px 0px white;
+            }
+          '';
+      };
+
       packages = with pkgs; [
         brightnessctl
         grim
@@ -148,7 +147,6 @@
 
         self'.packages.kitty
         self'.packages.rofi
-        waybar
         self'.packages.wlogout
 
         # redundant but technically i do use it

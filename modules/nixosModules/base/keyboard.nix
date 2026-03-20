@@ -9,13 +9,18 @@
     ...
   }: {
     environment.systemPackages = let
-      kanata = inputs.wrappers.lib.wrapPackage {
-        inherit pkgs;
-        package = config.services.kanata.package;
-        flags = {
-          "-c" = "${config.services.kanata.keyboards.kanata.configFile}";
-        };
-      };
+      kanata = inputs.wrappers.lib.evalPackage [
+        (
+          {wlib, ...}: {
+            imports = [wlib.modules.default];
+            inherit pkgs;
+            package = config.services.kanata.package;
+            flags = {
+              "-c" = "${config.services.kanata.keyboards.kanata.configFile}";
+            };
+          }
+        )
+      ];
     in [kanata];
 
     services.kanata = {

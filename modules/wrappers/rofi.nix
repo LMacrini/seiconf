@@ -1,24 +1,24 @@
-{inputs, ...}: {
-  perSystem = {
+{self, ...}: {
+  flake.wrappers.rofi = {
+    wlib,
     inputs',
-    pkgs,
     ...
   }: let
     catppuccin = inputs'.catppuccin.packages.rofi;
   in {
-    packages.rofi =
-      (inputs.wrappers.wrapperModules.rofi.apply {
-        inherit pkgs;
+    imports = [
+      wlib.wrapperModules.rofi
+      self.nixosModules.inputs
+    ];
 
-        settings = {
-          display-drun = ":3 ";
-          show-icons = true;
-        };
+    settings = {
+      display-drun = ":3 ";
+      show-icons = true;
+    };
 
-        theme = {
-          "@theme" = "${catppuccin}/catppuccin-default.rasi";
-          "@import" = "${catppuccin}/themes/catppuccin-macchiato.rasi";
-        };
-      }).wrapper;
+    theme = {
+      "@theme" = "${catppuccin}/catppuccin-default.rasi";
+      "@import" = "${catppuccin}/themes/catppuccin-macchiato.rasi";
+    };
   };
 }

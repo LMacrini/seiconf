@@ -1,12 +1,14 @@
 {
-  inputs,
+  self,
   lib,
   ...
 }: {
-  perSystem = {
-    pkgs,
+  flake.wrappers.fish = {
     inputs',
+    wlib,
+    pkgs,
     system,
+    config,
     ...
   }: let
     match =
@@ -19,7 +21,7 @@
       |> builtins.map (s: "set -g ${s}")
       |> builtins.concatStringsSep "\n";
 
-    config = pkgs.writeText "config.fish" ''
+    conf = pkgs.writeText "config.fish" ''
       ${theme}
 
       status is-interactive; and begin
@@ -95,22 +97,23 @@
         end
       end
     '';
-
-    unwrapped = pkgs.fish;
   in {
-    packages.fish = inputs.wrappers.lib.wrapPackage {
-      inherit pkgs;
-      package = unwrapped;
-      runtimeInputs = with pkgs; [
-        lsd
-        nix-your-shell
-        sqlite
-        zoxide
-      ];
+    imports = [
+      wlib.modules.default
+      self.nixosModules.inputs
+    ];
+    package = pkgs.fish;
+    extraPackages = with pkgs; [
+      lsd
+      nix-your-shell
+      sqlite
+      zoxide
+    ];
 
-      flags = {
-        "-C" = "source ${config}";
-      };
+    passthru.shellPath = config.wrapperPaths.relPath;
+
+    flags = {
+      "-C" = "source ${conf}";
     };
   };
 }
