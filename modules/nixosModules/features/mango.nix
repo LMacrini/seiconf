@@ -1,8 +1,4 @@
-{
-  self,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   flake.aspects.mango.deps = [
     "desktop"
     "hjem"
