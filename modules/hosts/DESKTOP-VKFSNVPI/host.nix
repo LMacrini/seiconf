@@ -36,6 +36,20 @@
       noisetorch.enable = true;
       steam.enable = true;
     };
+    hjem.users.lioma = {
+      systemd.services.noisetorch = {
+        enable = true;
+        description = "Run noisetorch";
+        after = ["graphical-session.target"];
+        wantedBy = ["graphical-session.target"];
+
+        serviceConfig = {
+          ExecStart = "noisetorch -i alsa_output.usb-SteelSeries_Arctis_Nova_3-00.analog-stereo";
+          Restart = "on-failure";
+          Type = "oneshot";
+        };
+      };
+    };
 
     hardware = {
       amdgpu.opencl.enable = true;
