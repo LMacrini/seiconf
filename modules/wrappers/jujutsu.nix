@@ -1,5 +1,9 @@
 {
-  flake.wrappers.jujutsu = {wlib, ...}: {
+  flake.wrappers.jujutsu = {
+    wlib,
+    pkgs,
+    ...
+  }: {
     imports = [wlib.wrapperModules.jujutsu];
 
     settings = {
@@ -16,8 +20,13 @@
       ui = {
         default-command = ["log" "--reversed"];
         diff-editor = ":builtin";
+        diff-formatter = "difft";
         paginate = "never";
       };
     };
+
+    extraPackages = with pkgs; [
+      difftastic
+    ];
   };
 }
