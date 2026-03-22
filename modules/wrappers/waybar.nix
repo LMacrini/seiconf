@@ -7,12 +7,14 @@
   flake.aspects.waybar.deps = ["hjem"];
   flake.aspects.waybar.module = {
     hjem.extraModules = [
-      (inputs.wrappers.lib.mkInstallModule {
-        loc = ["packages"];
-        name = "waybar";
-        value = self.wrapperModules.waybar;
-      })
+      self.hjemModules.waybar
     ];
+  };
+
+  flake.hjemModules.waybar = inputs.wrappers.lib.mkInstallModule {
+    loc = ["packages"];
+    name = "waybar";
+    value = self.wrapperModules.waybar;
   };
 
   perSystem = {
