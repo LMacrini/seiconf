@@ -148,6 +148,21 @@
 
         rum.environment.hideWarning = true;
 
+        files.".editorconfig".text =
+          # ini
+          ''
+            root = true
+
+            [*]
+            end_of_line = lf
+            indent_size = 4
+            insert_final_newline = true
+            charset = utf-8
+
+            [*.{nix,hs}]
+            indent_size = 2
+          '';
+
         files.".profile" = {
           executable = true;
           source = config.hjem.users.lioma.environment.loadEnv;
