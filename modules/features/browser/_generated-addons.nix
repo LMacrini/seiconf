@@ -24,10 +24,10 @@
   };
   "bitwarden-password-manager" = buildMozillaXpiAddon {
     pname = "bitwarden-password-manager";
-    version = "2026.1.1";
+    version = "2026.2.0";
     addonId = "{446900e4-71c2-419f-a6a7-df9c091e268b}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4698131/bitwarden_password_manager-2026.1.1.xpi";
-    sha256 = "6143af5d61d95021fcdd6939ab8c18f9535f775c80d4b69f75d1d238f81ae347";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4715321/bitwarden_password_manager-2026.2.0.xpi";
+    sha256 = "e54999d45ae1cd001452a34294240633c89a95ae832f212721d746a89555958e";
     meta = with lib; {
       homepage = "https://bitwarden.com";
       description = "At home, at work, or on the go, Bitwarden easily secures all your passwords, passkeys, and sensitive information.";
@@ -462,10 +462,10 @@
   };
   "libredirect" = buildMozillaXpiAddon {
     pname = "libredirect";
-    version = "3.2.0";
+    version = "3.3.0";
     addonId = "7esoorv3@alefvanoon.anonaddy.me";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4522826/libredirect-3.2.0.xpi";
-    sha256 = "ba4cf8fe97275d7082fea085a09796481122845455df1af524a7210fff3ecf3c";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4734268/libredirect-3.3.0.xpi";
+    sha256 = "1c91739ae52c6eb8522f0efb38397c3d5e85d961b3999f3c5d60f89db447877d";
     meta = with lib; {
       homepage = "https://libredirect.github.io";
       description = "Redirects YouTube, Twitter, TikTok... requests to alternative privacy friendly frontends.";
@@ -483,10 +483,10 @@
   };
   "localcdn-fork-of-decentraleyes" = buildMozillaXpiAddon {
     pname = "localcdn-fork-of-decentraleyes";
-    version = "2.6.83";
+    version = "2.6.84";
     addonId = "{b86e4813-687a-43e6-ab65-0bde4ab75758}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4650561/localcdn_fork_of_decentraleyes-2.6.83.xpi";
-    sha256 = "b7806c9e517f910190e7baeb094235185451e2c267842bf34b15b3aea7653b08";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4709745/localcdn_fork_of_decentraleyes-2.6.84.xpi";
+    sha256 = "ec52022d8bf0e78e873d2cd554889cdab14fe45d22781a8181e4c461227d6665";
     meta = with lib; {
       homepage = "https://www.localcdn.org";
       description = "Emulates remote frameworks (e.g. jQuery, Bootstrap, AngularJS) and delivers them as local resource. Prevents unnecessary 3rd party requests to Google, StackPath, MaxCDN and more. Prepared rules for uBlock Origin/uMatrix.";
@@ -544,10 +544,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.3.17";
+    version = "26.3.21";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4728945/refined_github-26.3.17.xpi";
-    sha256 = "26cdf4d0432bca4107439d769cc9b093c3068fe50f1d563bf688e9084b721c23";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4735200/refined_github-26.3.21.xpi";
+    sha256 = "1a2087c885c552b5530fa85a7bb8b6d104ca0283b9a6345d4c13f70e7dd7369b";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -731,10 +731,10 @@
   };
   "ultimadark" = buildMozillaXpiAddon {
     pname = "ultimadark";
-    version = "1.6.61";
+    version = "1.6.66";
     addonId = "{7c7f6dea-3957-4bb9-9eec-2ef2b9e5bcec}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4729277/ultimadark-1.6.61.xpi";
-    sha256 = "b85181ba5e7525813049592bdda074975283260c7ec26358dc2b91cbcfd255a0";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4735965/ultimadark-1.6.66.xpi";
+    sha256 = "ff69639f43eed5f60c29441d34d51b26801b66b827b4bb4068eaf7380794df61";
     meta = with lib; {
       homepage = "https://github.com/ThomazPom/Moz-Ext-UltimaDark";
       description = "UltimaDark uses agressive and smart techniques to turn even the sunniest websites into realms of darkness.\nAlthough it works well, this is so experimental, it makes lab rats look like seasoned professionals. \nGo ahead, embrace the shadows! 🦇";
