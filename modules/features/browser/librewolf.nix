@@ -111,6 +111,7 @@
                 canvasblocker
                 catppuccin-macchiato-pink
                 dearrow
+                localcdn-fork-of-decentraleyes
                 refined-github-
                 simple-tab-groups
                 sponsorblock
