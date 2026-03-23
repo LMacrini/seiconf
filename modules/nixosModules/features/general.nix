@@ -31,6 +31,25 @@
       };
 
       hjem.users.lioma = {
+        packages = with pkgs; [
+          direnv
+          mpd
+          rmpc
+        ];
+
+        xdg.config.files."direnv/direnv.toml" = let
+          tomlFormat = pkgs.formats.toml {};
+        in {
+          source = tomlFormat.generate "direnv.toml" {
+            global = {
+              log_format = "-";
+              log_filter = "^$";
+              warn_timeout = "0s";
+            };
+          };
+        };
+        xdg.config.files."direnv/lib/nix-direnv.sh".source = "${pkgs.nix-direnv}/share/nix-direnv/direnvrc";
+
         environment.sessionVariables = {
           COMMA_CACHING = 0; # i want it to ask me every time
         };
@@ -53,19 +72,6 @@
           <Multi_key> <X> <i>			: "Ξ"	U039E # GREEK CAPITAL LETTER XI
           <Multi_key> <x> <i>			: "ξ"	U03BE # GREEK SMALL LETTER XI
         '';
-
-        rum.programs.direnv.enable = true;
-        xdg.config.files."direnv/direnv.toml" = let
-          tomlFormat = pkgs.formats.toml {};
-        in {
-          source = tomlFormat.generate "direnv.toml" {
-            global = {
-              log_format = "-";
-              log_filter = "^$";
-              warn_timeout = "0s";
-            };
-          };
-        };
 
         systemd = let
           mpd = rec {
@@ -113,11 +119,6 @@
             };
           };
         };
-
-        packages = with pkgs; [
-          mpd
-          rmpc
-        ];
       };
     };
   };
