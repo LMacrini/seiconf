@@ -1,4 +1,8 @@
-{self, ...}: {
+{
+  self,
+  lib,
+  ...
+}: {
   flake.nixosConfigurations.DESKTOP-VKFSNVPI = self.lib.nixosSystem {
     aspects = [
       "general"
@@ -7,7 +11,11 @@
     module = self.nixosModules.DESKTOP-VKFSNVPI;
   };
 
-  flake.nixosModules.DESKTOP-VKFSNVPI = {pkgs, ...}: {
+  flake.nixosModules.DESKTOP-VKFSNVPI = {
+    pkgs,
+    config,
+    ...
+  }: {
     preferences = {
       monitors = {
         DP-1 = {
@@ -36,16 +44,38 @@
       noisetorch.enable = true;
       steam.enable = true;
     };
+
+    services.udev.extraRules = ''
+      ACTION=="add", SUBSYSTEM=="sound", ENV{ID_VENDOR}=="SteelSeries", ENV{ID_MODEL}=="Arctis_Nova_3", TAG+="systemd", ENV{SYSTEMD_USER_WANTS}+="noisetorch-headset.service"
+    '';
     hjem.users.lioma = {
-      systemd.services.noisetorch = {
+      systemd.services.noisetorch-headset = let
+        mic = "alsa_output.usb-SteelSeries_Arctis_Nova_3-00.analog-stereo";
+      in {
         enable = true;
-        description = "Run noisetorch";
-        after = ["graphical-session.target"];
-        wantedBy = ["graphical-session.target"];
+        description = "Run noisetorch on headset (udev triggered)";
+        after = [
+          "graphical-session.target"
+          "sound.target"
+        ];
+        wants = [
+          "sound.target"
+        ];
+        wantedBy = [
+          "graphical-session.target"
+        ];
+
+        script = ''
+          for i in {1..10}; do
+            if ${lib.getExe' pkgs.pulseaudio "pactl"} list sources short | grep -q ${mic}; then
+              ${lib.getExe config.programs.noisetorch.package} -i ${mic}
+              break
+            fi
+            sleep 1
+          done
+        '';
 
         serviceConfig = {
-          ExecStart = "noisetorch -i alsa_output.usb-SteelSeries_Arctis_Nova_3-00.analog-stereo";
-          Restart = "on-failure";
           Type = "oneshot";
         };
       };
