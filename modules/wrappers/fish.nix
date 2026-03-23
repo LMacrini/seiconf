@@ -85,9 +85,8 @@
           direnv hook fish | source
         end
 
-        if type -q jj; and type -q git
+        if type -q jj; and not type -q git
           abbr --add git jj git
-          abbr --add _git git
         end
 
         if set -q KITTY_INSTALLATION_DIR

@@ -18,7 +18,6 @@
       pkgs.nh
       self'.formatter
 
-      pkgs.git
       pkgs.bat
       pkgs.ripgrep
       pkgs.tlrc
