@@ -27,7 +27,6 @@
 
     extraPackages = with pkgs; [
       difftastic
-      git
     ];
   };
 }
