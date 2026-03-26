@@ -3,7 +3,9 @@
     services.displayManager.ly = {
       enable = true;
       settings = {
-        animation = "colormix";
+        animation = "gameoflife";
+        bigclock = "en";
+        ly_log = null;
       };
     };
   };
