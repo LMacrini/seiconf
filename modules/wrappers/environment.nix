@@ -33,6 +33,7 @@
     ];
     env = {
       EDITOR = lib.getExe self'.packages.helix;
+      ZIG_BUILD_ERROR_STYLE = "minimal_clear";
     };
   };
 }
