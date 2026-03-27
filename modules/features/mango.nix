@@ -299,7 +299,7 @@
           bind = SUPER,S,setlayout,scroller
           bind = SUPER+CTRL,M,setlayout,monocle
 
-          scroller_proportion_preset = 0.3,0.5,0.7
+          scroller_proportion_preset = 1,0.7,0.5,0.3
           bind = SUPER,R,switch_proportion_preset
 
           bind = SUPER,Y,toggleoverview
