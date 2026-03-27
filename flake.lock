@@ -272,11 +272,11 @@
         "scenefx": "scenefx"
       },
       "locked": {
-        "lastModified": 1774440717,
-        "narHash": "sha256-8F6hUKf4XbeQqccimENIhyyJn5Q+XKAsOfOq73PtvUk=",
+        "lastModified": 1774567878,
+        "narHash": "sha256-3qDIaMzQRTkuDFIjZ6cHuVXFeo7TxlfhZIlDOieBWhA=",
         "owner": "mangowm",
         "repo": "mango",
-        "rev": "91e10b239f65d9e0d0d04c85829fb85ded15a231",
+        "rev": "f94ddc671e1d01ad85ffd6f1cf2f09811c2629c8",
         "type": "github"
       },
       "original": {
@@ -309,11 +309,11 @@
       },
       "locked": {
         "dir": "packages/nix",
-        "lastModified": 1774360398,
-        "narHash": "sha256-IvuZMTxTe5osTszZp4r27X/F0R7FVhLWkP7g6pYMgTs=",
+        "lastModified": 1774491538,
+        "narHash": "sha256-11rgTocaXAIFYVEcbb6ju/sDN6sZpxjneXj9FSbgwrA=",
         "owner": "steamclienthomebrew",
         "repo": "millennium",
-        "rev": "4378aac79283a11912dd1a7adf89f79ab3736a87",
+        "rev": "bf8b0cd016fcc4168c4e348cbcbfd237de4c01c8",
         "type": "github"
       },
       "original": {
@@ -453,11 +453,11 @@
     },
     "nixos-hardware": {
       "locked": {
-        "lastModified": 1774422943,
-        "narHash": "sha256-o1xgNumjljdBBfOrcQX95hhKGFOJQYNZqpF3EfaScMk=",
+        "lastModified": 1774567711,
+        "narHash": "sha256-uVlOHBvt6Vc/iYNJXLPa4c3cLXwMllOCVfAaLAcphIo=",
         "owner": "nixos",
         "repo": "nixos-hardware",
-        "rev": "632e4bfc21c01e5be900d0d8255a5368a5d6082f",
+        "rev": "3f6f874dfc34d386d10e434c48ad966c4832243e",
         "type": "github"
       },
       "original": {
@@ -484,11 +484,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1774244481,
-        "narHash": "sha256-mw80nQK4uJ8wJWiQnZ32j/BQlRx4QByvli8EP7/2hGE=",
-        "rev": "4590696c8693fea477850fe379a01544293ca4e2",
+        "lastModified": 1774388614,
+        "narHash": "sha256-cUgsPWt0NJz21K4i/5191mWaizw4XtT20WFqyxzSuQI=",
+        "rev": "1073dad219cb244572b74da2b20c7fe39cb3fa9e",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/25.11/nixos-25.11.8023.4590696c8693/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/25.11/nixos-25.11.8107.1073dad219cb/nixexprs.tar.xz"
       },
       "original": {
         "type": "tarball",
@@ -505,11 +505,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1774448284,
-        "narHash": "sha256-AE38FIdrYX+LGXbdN3TzPGTPwYzVXyKFCBgj3AxbI/0=",
+        "lastModified": 1774644935,
+        "narHash": "sha256-lOjPs2Bojf8859ku9h0jeN5U0QfaZJic1TlXhb4tk84=",
         "owner": "nix-community",
         "repo": "nur",
-        "rev": "c38a993dab71c0670d443f7c69d7e632c95fce8e",
+        "rev": "086a07af7ee681e4f901a83f3f3f62b615195bb5",
         "type": "github"
       },
       "original": {
@@ -678,11 +678,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1774400689,
-        "narHash": "sha256-hHABVYL0rxhVIzc7hZEpvE0eiCKPnevte73Tn6FRolo=",
+        "lastModified": 1774622331,
+        "narHash": "sha256-73C9XYuBrgo8unDbmqEFq4pNwQaSGXrTnBckqkOXmBk=",
         "owner": "birdeehub",
         "repo": "nix-wrapper-modules",
-        "rev": "54645978682ff99594a1d1666dde6fac6a8134f2",
+        "rev": "364e0007179fc2c910a6588e8826fd3fd7a45c14",
         "type": "github"
       },
       "original": {
@@ -698,11 +698,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1774430057,
-        "narHash": "sha256-5Ctal9X3U3cVYZipkal3CCHvHbL4rFUpYR2nh/n+aUI=",
+        "lastModified": 1774633482,
+        "narHash": "sha256-PC8EEfeEGXqfuyGam9RDn5QxkPganIPH0ypYoBpcW6o=",
         "owner": "silversquirl",
         "repo": "zig-flake",
-        "rev": "471f9794f240dad016ec81c1afe95e5a68ef1e11",
+        "rev": "fd74340be5f3fbb66eb39b521096de299671cbd8",
         "type": "github"
       },
       "original": {
