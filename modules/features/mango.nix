@@ -1,4 +1,12 @@
 {lib, ...}: {
+  flake.file.inputs.mango = {
+    url = "github:mangowm/mango";
+    inputs = {
+      nixpkgs.follows = "nixpkgs";
+      flake-parts.follows = "flake-parts";
+    };
+  };
+
   flake.aspects.mango.deps = [
     "desktop"
     "hjem"

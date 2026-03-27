@@ -3,7 +3,22 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.base = {self', ...}: {
+  flake.file.inputs = {
+    nur = {
+      url = "github:nix-community/nur";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-parts.follows = "flake-parts";
+      };
+    };
+
+    zig = {
+      url = "github:silversquirl/zig-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
+
+  flake.nixosModules.base = {
     nixpkgs.overlays = [
       inputs.nur.overlays.default
       (final: prev: {

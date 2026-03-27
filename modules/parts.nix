@@ -37,6 +37,11 @@
       "x86_64-linux"
     ];
 
+    flake.file.inputs.flake-parts = {
+      url = "github:hercules-ci/flake-parts";
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+    };
+
     flake.nixosModules.inputs = {pkgs, ...}: {
       config._module.args = rec {
         system = pkgs.stdenvNoCC.hostPlatform.system;

@@ -1,83 +1,63 @@
+# WARN: AUTO-GENERATED FILE
+# DO NOT MODIFY
 {
   inputs = {
-    nixpkgs.url = "https://channels.nixos.org/nixos-25.11/nixexprs.tar.xz";
-    flake-parts = {
-      url = "github:hercules-ci/flake-parts";
-      inputs.nixpkgs-lib.follows = "nixpkgs";
-    };
-
-    nixos-hardware.url = "github:nixos/nixos-hardware";
-
-    hjem = {
-      url = "github:feel-co/hjem";
+    catppuccin = {
       inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:catppuccin/nix/release-25.11";
+    };
+    disko = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/disko";
+    };
+    flake-parts = {
+      inputs.nixpkgs-lib.follows = "nixpkgs";
+      url = "github:hercules-ci/flake-parts";
+    };
+    hjem = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:feel-co/hjem";
     };
     hjem-rum = {
-      url = "github:snugnug/hjem-rum";
       inputs = {
-        nixpkgs.follows = "nixpkgs";
         hjem.follows = "hjem";
+        nixpkgs.follows = "nixpkgs";
       };
+      url = "github:snugnug/hjem-rum";
     };
-
-    catppuccin = {
-      url = "github:catppuccin/nix/release-25.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    wrappers = {
-      url = "github:birdeehub/nix-wrapper-modules";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nix-index-database = {
-      url = "github:nix-community/nix-index-database";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     mango = {
+      inputs = {
+        flake-parts.follows = "flake-parts";
+        nixpkgs.follows = "nixpkgs";
+      };
       url = "github:mangowm/mango";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-      };
     };
-
-    nur = {
-      url = "github:nix-community/nur";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-      };
-    };
-
-    zig = {
-      url = "github:silversquirl/zig-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     millennium = {
-      url = "github:steamclienthomebrew/millennium?dir=packages/nix";
       inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:steamclienthomebrew/millennium?dir=packages/nix";
+    };
+    nix-index-database = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nix-index-database";
+    };
+    nixos-hardware.url = "github:nixos/nixos-hardware";
+    nixpkgs.url = "https://channels.nixos.org/nixos-25.11/nixexprs.tar.xz";
+    nur = {
+      inputs = {
+        flake-parts.follows = "flake-parts";
+        nixpkgs.follows = "nixpkgs";
+      };
+      url = "github:nix-community/nur";
+    };
+    wrappers = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:birdeehub/nix-wrapper-modules";
+    };
+    zig = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:silversquirl/zig-flake";
     };
   };
 
-  outputs = inputs: let
-    inherit (inputs.nixpkgs) lib;
-  in
-    inputs.flake-parts.lib.mkFlake {inherit inputs;}
-    {
-      imports =
-        lib.filesystem.listFilesRecursive ./modules
-        |> builtins.filter (file: let
-          f = toString file;
-        in
-          !lib.hasPrefix "_" (builtins.baseNameOf f)
-          && lib.hasSuffix ".nix" f);
-    };
+  outputs = inputs: import ./outputs.nix inputs;
 }
