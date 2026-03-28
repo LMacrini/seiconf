@@ -11,7 +11,9 @@ addons:
 bootstrap: && flake
     cp ./bootstrap.nix ./flake.nix
 
-# TODO: nix-auto-follow maybe
+check-follow:
+    nix run github:fzakaria/nix-auto-follow -- -c
+
 flake:
     cp $(nix build .#flake --no-link --print-out-paths --no-write-lock-file) ./flake.nix
     chmod 644 ./flake.nix
