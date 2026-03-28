@@ -8,8 +8,14 @@ addons:
         modules/features/browser/_generated-addons.nix
     nix fmt modules/features/browser/_generated-addons.nix
 
+bootstrap: && flake
+    cp ./bootstrap.nix ./flake.nix
+
+# TODO: nix-auto-follow maybe
 flake:
-    nix run .#write-flake
+    cp $(nix build .#flake --no-link --print-out-paths --no-write-lock-file) ./flake.nix
+    chmod 644 ./flake.nix
+    nix fmt ./flake.nix
 
 iso:
     nom build .#iso
