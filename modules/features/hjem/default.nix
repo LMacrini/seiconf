@@ -9,13 +9,6 @@
       url = "github:feel-co/hjem";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hjem-rum = {
-      url = "github:snugnug/hjem-rum";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        hjem.follows = "hjem";
-      };
-    };
   };
 
   # probably not a necessary thing, will be doing it anyway :3
@@ -147,7 +140,7 @@
       };
     in {
       extraModules = [
-        inputs.hjem-rum.hjemModules.default
+        self.hjemModules.gtk
         self.hjemModules.userDirs
         mod
       ];
@@ -159,8 +152,6 @@
         directory = "/home/lioma";
         configDirectory = "${cfg.directory}/seiconf";
         user = "lioma";
-
-        rum.environment.hideWarning = true;
 
         files.".editorconfig".text =
           # ini

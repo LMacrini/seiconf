@@ -161,24 +161,19 @@
         TERMINAL = "kitty";
       };
 
-      rum.misc.gtk.css = let
-        css =
-          # css
-          ''
-            headerbar.default-decoration {
-              margin-bottom: 50px;
-              margin-top: -100px;
-            }
+      gtk.css.common =
+        # css
+        ''
+          headerbar.default-decoration {
+            margin-bottom: 50px;
+            margin-top: -100px;
+          }
 
-            window.csd,             /* gtk4? */
-            window.csd decoration { /* gtk3 */
-              box-shadow: none;
-            }
-          '';
-      in {
-        gtk3 = css;
-        gtk4 = css;
-      };
+          window.csd,             /* gtk4? */
+          window.csd decoration { /* gtk3 */
+            box-shadow: none;
+          }
+        '';
 
       services.swayidle = let
         swaylock = lib.getExe self'.packages.swaylock;

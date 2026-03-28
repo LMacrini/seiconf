@@ -96,6 +96,7 @@
           config.cursor.package
           config.iconTheme.package
           defaultIndexThemePackage
+          pkgs.adw-gtk3
         ];
 
         environment.sessionVariables = {
@@ -114,24 +115,15 @@
           "icons/${config.cursor.name}".source = "${config.cursor.package}/share/icons/${config.cursor.name}";
         };
 
-        rum.misc = {
-          gtk = {
-            enable = true;
+        gtk = {
+          enable = true;
 
-            # probably not necessary
-            packages = [
-              config.cursor.package
-              config.iconTheme.package
-              pkgs.adw-gtk3
-            ];
-
-            settings = {
-              application-prefer-dark-theme = true;
-              cursor-theme-name = config.cursor.name;
-              cursor-theme-size = config.cursor.size;
-              icon-theme-name = config.iconTheme.name;
-              theme-name = "adw-gtk3-dark";
-            };
+          settings = {
+            application-prefer-dark-theme = true;
+            cursor-theme-name = config.cursor.name;
+            cursor-theme-size = config.cursor.size;
+            icon-theme-name = config.iconTheme.name;
+            theme-name = "adw-gtk3-dark";
           };
         };
       };

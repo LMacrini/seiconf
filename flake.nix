@@ -18,13 +18,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:feel-co/hjem";
     };
-    hjem-rum = {
-      inputs = {
-        hjem.follows = "hjem";
-        nixpkgs.follows = "nixpkgs";
-      };
-      url = "github:snugnug/hjem-rum";
-    };
     mango = {
       inputs = {
         flake-parts.follows = "flake-parts";
