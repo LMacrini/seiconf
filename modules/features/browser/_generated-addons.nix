@@ -139,10 +139,10 @@
   };
   "dearrow" = buildMozillaXpiAddon {
     pname = "dearrow";
-    version = "2.2.3";
+    version = "2.3.2";
     addonId = "deArrow@ajay.app";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4656721/dearrow-2.2.3.xpi";
-    sha256 = "7d5986ce0d92019c10f0ad62ab23a3293ec83c0f090a3c8c57379efb9455820c";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4730911/dearrow-2.3.2.xpi";
+    sha256 = "d3185e2f773881b278f2bcd9be22256420dba8ec6d9628a565c01ce1fabf2f11";
     meta = with lib; {
       homepage = "https://dearrow.ajay.app";
       description = "Crowdsourcing titles and thumbnails to be descriptive and not sensational";
@@ -157,6 +157,7 @@
         "https://*.youtube.com/*"
         "https://www.youtube-nocookie.com/embed/*"
         "scripting"
+        "https://dearrow.ajay.app/*"
       ];
       platforms = platforms.all;
     };
@@ -204,10 +205,10 @@
   };
   "indie-wiki-buddy" = buildMozillaXpiAddon {
     pname = "indie-wiki-buddy";
-    version = "3.14.1";
+    version = "3.14.2";
     addonId = "{cb31ec5d-c49a-4e5a-b240-16c767444f62}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4688492/indie_wiki_buddy-3.14.1.xpi";
-    sha256 = "121dba0a23489be29bf5159a2dcd101c9958610c61eac494f64724d5be6c7f80";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4727783/indie_wiki_buddy-3.14.2.xpi";
+    sha256 = "450c8c7629f377880688bedb770ac733e82aa15aa963ed39e199d69622b38523";
     meta = with lib; {
       homepage = "https://getindie.wiki/";
       description = "Helping you discover quality, independent wikis!\n\nWhen visiting a Fandom wiki, Indie Wiki Buddy redirects or alerts you of independent alternatives. It also filters search engine results. BreezeWiki is also supported, to reduce clutter on Fandom.";
@@ -754,10 +755,10 @@
   };
   "vimium-ff" = buildMozillaXpiAddon {
     pname = "vimium-ff";
-    version = "2.4.0";
+    version = "2.4.2";
     addonId = "{d7742d87-e61d-4b78-b8a1-b469842139fa}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4698049/vimium_ff-2.4.0.xpi";
-    sha256 = "9ad35d0857031770e5c2f419789a5dfa8ea2fa3de7056c1dd32ca0bc81bb4d37";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4717567/vimium_ff-2.4.2.xpi";
+    sha256 = "131e2a67580e7ae9125ab19781159e61409fac47b441fc2782aab76396ead196";
     meta = with lib; {
       homepage = "https://github.com/philc/vimium";
       description = "The Hacker's Browser. Vimium provides keyboard shortcuts for navigation and control in the spirit of Vim.";
@@ -842,10 +843,10 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.2.12";
+    version = "2026.3.15";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4692189/youtube_tweaks-2026.2.12.xpi";
-    sha256 = "c35e116a0f0262b00246c052025398a64cef187e50c136787b8dd287d4bea90a";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4726792/youtube_tweaks-2026.3.15.xpi";
+    sha256 = "d9f5dd6be765105db52d07164fcd472e9d16f7ccc1fc91d718f5808246e86945";
     meta = with lib; {
       description = "A collection of tweaks for hiding Shorts, disabling auto-dubbing, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
       license = licenses.mit;
