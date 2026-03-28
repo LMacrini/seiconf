@@ -13,6 +13,7 @@
 
   flake.nixosModules.DESKTOP-VKFSNVPI = {
     pkgs,
+    inputs',
     config,
     ...
   }: {
@@ -80,6 +81,10 @@
         };
       };
     };
+
+    hjem.users.lioma.packages = [
+      inputs'.prince.packages.fluxer-bin
+    ];
 
     hardware = {
       amdgpu.opencl.enable = true;
