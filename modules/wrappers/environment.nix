@@ -20,6 +20,7 @@
 
       pkgs.git
       pkgs.bat
+      pkgs.just
       pkgs.ripgrep
       pkgs.tlrc
       pkgs.rip2
