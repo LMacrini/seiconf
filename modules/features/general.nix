@@ -27,12 +27,14 @@
       inputs',
       config,
       ...
-    }: {
+    }: let
+      prince = inputs'.prince.packages;
+    in {
       imports = [
         inputs.nix-index-database.nixosModules.default
       ];
 
-      environment.systemPackages = with pkgs; [
+      environment.systemPackages = [
         prince.helium-nightly # TODO: 26.06 use nixpkgs helium
         prince.re-lunatic-player
       ];

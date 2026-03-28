@@ -4,14 +4,6 @@
   ...
 }: {
   flake.file.inputs = {
-    nur = {
-      url = "github:nix-community/nur";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        flake-parts.follows = "flake-parts";
-      };
-    };
-
     zig = {
       url = "github:silversquirl/zig-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,13 +11,6 @@
   };
 
   flake.nixosModules.base = {
-    nixpkgs.overlays = [
-      inputs.nur.overlays.default
-      (final: prev: {
-        prince = prev.nur.repos.forkprince;
-      })
-    ];
-
     environment.etc."programs.sqlite".source = "${inputs.nixpkgs}/programs.sqlite";
 
     nix = {

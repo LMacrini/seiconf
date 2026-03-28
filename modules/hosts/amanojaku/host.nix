@@ -11,7 +11,11 @@
     module = self.nixosModules.amanojaku;
   };
 
-  flake.nixosModules.amanojaku = {pkgs, ...}: {
+  flake.nixosModules.amanojaku = {
+    pkgs,
+    inputs',
+    ...
+  }: {
     imports = [
       inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
     ];
@@ -34,9 +38,9 @@
       steam.enable = true;
     };
 
-    hjem.users.lioma.packages = with pkgs; [
-      libreoffice
-      prince.fluxer-bin
+    hjem.users.lioma.packages = [
+      pkgs.libreoffice
+      inputs'.prince.packages.fluxer-bin
     ];
 
     networking.hostName = "amanojaku";

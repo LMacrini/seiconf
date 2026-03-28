@@ -3,7 +3,11 @@
     "hjem"
   ];
 
-  flake.aspects.discord.module = {pkgs, ...}: let
+  flake.aspects.discord.module = {
+    pkgs,
+    inputs',
+    ...
+  }: let
     userplugins = {
       shyTyping = builtins.fetchGit {
         url = "https://git.nin0.dev/Sqaaakoi-VencordUserPlugins/shyTyping";
@@ -11,7 +15,7 @@
       };
     };
 
-    equicord = pkgs.prince.equicord.overrideAttrs (
+    equicord = inputs'.prince.packages.equicord.overrideAttrs (
       finalAttrs: _: {
         preBuild = ''
           mkdir ./src/userplugins

@@ -35,12 +35,9 @@
     };
     nixos-hardware.url = "github:nixos/nixos-hardware";
     nixpkgs.url = "https://channels.nixos.org/nixos-25.11/nixexprs.tar.xz";
-    nur = {
-      inputs = {
-        flake-parts.follows = "flake-parts";
-        nixpkgs.follows = "nixpkgs";
-      };
-      url = "github:nix-community/nur";
+    prince = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:forkprince/nur-packages";
     };
     wrappers = {
       inputs.nixpkgs.follows = "nixpkgs";

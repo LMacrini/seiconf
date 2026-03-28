@@ -8,13 +8,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    wrappers = {
-      url = "github:birdeehub/nix-wrapper-modules";
+    disko = {
+      url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    disko = {
-      url = "github:nix-community/disko";
+    prince = {
+      url = "github:forkprince/nur-packages";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    wrappers = {
+      url = "github:birdeehub/nix-wrapper-modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
