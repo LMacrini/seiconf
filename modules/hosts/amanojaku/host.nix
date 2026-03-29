@@ -20,6 +20,10 @@
       inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
     ];
 
+    users.users.lioma.extraGroups = [
+      "dialout"
+    ];
+
     preferences = {
       laptop.enable = true;
       monitors = {
