@@ -17,6 +17,12 @@
       } ''
         jc --ini < $conf > $out
       '';
+  in {
+    imports = [
+      wlib.wrapperModules.swaylock
+      self.nixosModules.inputs
+    ];
+    package = pkgs.swaylock-effects;
 
     settings =
       catppuccin
@@ -29,23 +35,5 @@
         indicator = true;
         ring-color = "717df1";
       };
-
-    swaylockConf =
-      settings
-      |> lib.mapAttrsToList (name: value:
-        if lib.isBool value
-        then lib.optional value name
-        else ["${name}=${toString value}"])
-      |> builtins.concatLists
-      |> builtins.concatStringsSep "\n";
-  in {
-    imports = [
-      wlib.modules.default
-      self.nixosModules.inputs
-    ];
-    package = pkgs.swaylock-effects;
-    flags = {
-      "--config" = pkgs.writeText "config" <| swaylockConf;
-    };
   };
 }
