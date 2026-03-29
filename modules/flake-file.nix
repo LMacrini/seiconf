@@ -35,6 +35,10 @@
               default = null;
               type = types.nullOr types.str;
             };
+            flake = mkOption {
+              default = null;
+              type = types.nullOr types.bool;
+            };
             follows = followsOption;
             inputs = inputsFollowsOption;
           };
