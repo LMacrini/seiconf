@@ -46,6 +46,10 @@
       steam.enable = true;
     };
 
+    services = {
+      cloudflare-warp.enable = true;
+    };
+
     services.udev.extraRules = ''
       ACTION=="add", SUBSYSTEM=="sound", ENV{ID_VENDOR}=="SteelSeries", ENV{ID_MODEL}=="Arctis_Nova_3", TAG+="systemd", ENV{SYSTEMD_USER_WANTS}+="noisetorch-headset.service"
     '';
