@@ -23,4 +23,4 @@ iso:
     nom build .#iso
 
 update *FLAKES: && addons
-    nix flake update {{FLAKES}}
+    nix flake update {{ FLAKES }}
