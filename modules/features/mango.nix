@@ -143,6 +143,7 @@
       packages = with pkgs; [
         brightnessctl
         grim
+        nautilus
         satty
         slurp
         wireplumber
