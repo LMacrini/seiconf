@@ -43,6 +43,7 @@
     };
 
     hjem.users.lioma.packages = [
+      pkgs.arduino
       pkgs.libreoffice
       inputs'.prince.packages.fluxer-bin
     ];
