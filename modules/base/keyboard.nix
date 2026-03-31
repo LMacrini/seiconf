@@ -49,8 +49,11 @@
             )
 
 
-            (defalias nav
-              (layer-while-held swap)
+            (defalias
+              nav (multi
+                rctrl
+                (layer-while-held swap)
+              )
             )
 
 
