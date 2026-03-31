@@ -71,6 +71,7 @@
     security = {
       pam.services.swaylock = {};
       polkit.enable = true; # should be on by default but doesn't hurt
+      soteria.enable = true;
     };
 
     services = {
