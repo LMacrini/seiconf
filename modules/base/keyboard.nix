@@ -27,7 +27,7 @@
       enable = lib.mkDefault true;
       keyboards.kanata = {
         extraDefCfg =
-          # kbd
+          # kdb
           ''
             linux-dev-names-exclude (
               "ZSA Technology Labs Ergodox EZ"
@@ -38,7 +38,7 @@
           '';
 
         config =
-          # kbd
+          # kdb
           ''
             (defsrc
               q w e r t y u i o p
