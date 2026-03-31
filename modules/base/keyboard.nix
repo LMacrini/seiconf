@@ -41,9 +41,11 @@
           # kdb
           ''
             (defsrc
-              q w e r t y u i o p
-              a s d f g h j k l ;
-              z x c v b n m caps ralt rctl
+                 1    2    3                                       -    =
+                  q    w    e    r    t    y    u    i    o    p    [    ]
+              caps a    s    d    f    g    h    j    k    l    ;    '
+              lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+              lctl lmet lalt                           ralt rctl
             )
 
 
@@ -53,24 +55,31 @@
 
 
             (deflayer cmkdh
-              q w f p b j l u y ;
-              a r s t g m n e i o
-              x c d v z k h bspc ralt @nav
+                 1    2    3                                       -    =
+                  q    w    f    p    b    j    l    u    y    ;    [    ]
+              bspc a    r    s    t    g    m    n    e    i    o    '
+              lsft  x    c    d    v    z    k    h    ,    .    /    rsft
+              lctl lmet lalt                           ralt @nav
             )
 
             (deflayer qwerty
-              q w e r t y u i o p
-              a s d f g h j k l ;
-              z x c v b n m bspc ralt @nav
+                 1    2    3                                       -    =
+                  q    w    e    r    t    y    u    i    o    p    [    ]
+              caps a    s    d    f    g    h    j    k    l    ;    '
+              lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+              lctl lmet lalt                           ralt @nav
+            )
+            (defalias
+              cmk (layer-switch cmkdh)
+              qwe (layer-switch qwerty)
             )
 
             (deflayer swap
-              XX XX XX XX XX XX XX XX XX XX
-              XX XX XX XX XX XX XX XX XX XX
-              XX XX XX XX XX XX XX XX (switch
-                ((base-layer cmkdh)) (layer-switch qwerty) break
-                ((base-layer qwerty)) (layer-switch cmkdh) break
-              ) XX
+                 @cmk @qwe @gra                                    _    _
+                  _    _    _    _    _    _    _    _    _    _    _    _
+              _    _    _    _    _    _    _    _    _    _    _    _
+              _     _    _    _    _    _    _    _    _    _    _    _
+              _    _    _                              _    XX
             )
           '';
       };
