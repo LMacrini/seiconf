@@ -101,7 +101,7 @@
         )
         |> builtins.concatStringsSep "\n";
 
-      launcher = "rofi -show drun";
+      launcher = "pkill rofi || rofi -show drun";
       sessionMenu = "wlogout";
     in {
       wrappers.waybar = {
@@ -260,8 +260,8 @@
           bind = SUPER,space,spawn,fcitx5-remote -t
 
           bind = SUPER,Q,spawn,kitty
-          bind = SUPER,T,spawn,${launcher}
-          bind = ALT,space,spawn,${launcher}
+          bind = SUPER,T,spawn_shell,${launcher}
+          bind = ALT,space,spawn_shell,${launcher}
           bind = SUPER,C,killclient
           bind = SUPER,Return,zoom
           bind = SUPER,L,spawn,${sessionMenu}
