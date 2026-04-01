@@ -41,7 +41,7 @@
           # kdb
           ''
             (defsrc
-                 1    2    3                                       -    =
+                 1    2                                            -    =
                   q    w    e    r    t    y    u    i    o    p    [    ]
               caps a    s    d    f    g    h    j    k    l    ;    '
               lsft  z    x    c    v    b    n    m    ,    .    /    rsft
@@ -56,9 +56,12 @@
               )
             )
 
+            (deftemplate hmod (key mod)
+              (tap-hold 200 200 $key $mod)
+            )
 
             (deflayer cmkdh
-                 1    2    3                                       -    =
+                 1    2                                            -    =
                   q    w    f    p    b    j    l    u    y    ;    [    ]
               bspc a    r    s    t    g    m    n    e    i    o    '
               lsft  x    c    d    v    z    k    h    ,    .    /    rsft
@@ -66,48 +69,20 @@
             )
 
             (deflayer qwerty
-                 1    2    3                                       -    =
+                 1    2                                            -    =
                   q    w    e    r    t    y    u    i    o    p    [    ]
               caps a    s    d    f    g    h    j    k    l    ;    '
               lsft  z    x    c    v    b    n    m    ,    .    /    rsft
               lctl lmet lalt                           ralt @nav
             )
 
-            (deftemplate hmod (key mod)
-              (tap-hold 200 200 $key $mod)
-            )
-
-            (defalias
-              g- (fork - ' (lsft rsft))
-              g/ (fork / , (lsft rsft))
-              g, (fork , / (lsft rsft))
-              g' (fork ' - (lsft rsft))
-              gn (t! hmod n lalt)
-              gr (t! hmod r lmet)
-              gt (t! hmod t lsft)
-              gs (t! hmod s lctl)
-              gh (t! hmod h rctl)
-              ga (t! hmod a rsft)
-              ge (t! hmod e rmet)
-              gi (t! hmod i lalt)
-            )
-
-            (deflayer graphite
-                 1    2    3                                       [    ]
-                  b    l    d    w    z    @g'  f    o    u    j    ;    =
-              bspc @gn  @gr  @gt  @gs  g    y    @gh  @ga  @ge  @gi  @g,
-              lsft  q    x    m    c    v    k    p    .    @g-  @g/  rsft
-              lctl lmet lalt                           ralt @nav
-            )
-
             (defalias
               cmk (layer-switch cmkdh)
               qwe (layer-switch qwerty)
-              gra (layer-switch graphite)
             )
 
             (deflayer swap
-                 @cmk @qwe @gra                                    _    _
+                 @cmk @qwe                                         _    _
                   _    _    _    _    _    _    _    _    _    _    _    _
               _    _    _    _    _    _    _    _    _    _    _    _
               _     _    _    _    _    _    _    _    _    _    _    _
