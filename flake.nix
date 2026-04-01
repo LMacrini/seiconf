@@ -14,6 +14,10 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
       url = "github:hercules-ci/flake-parts";
     };
+    freesm = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:freesmteam/freesmlauncher";
+    };
     hjem = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:feel-co/hjem";

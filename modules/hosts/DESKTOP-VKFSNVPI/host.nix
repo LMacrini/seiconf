@@ -3,6 +3,11 @@
   lib,
   ...
 }: {
+  flake.file.inputs.freesm = {
+    url = "github:freesmteam/freesmlauncher";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
   flake.nixosConfigurations.DESKTOP-VKFSNVPI = self.lib.nixosSystem {
     aspects = [
       "general"
@@ -118,6 +123,7 @@
 
     hjem.users.lioma.packages = [
       inputs'.prince.packages.fluxer-bin
+      inputs'.freesm.packages.default
     ];
 
     hardware = {

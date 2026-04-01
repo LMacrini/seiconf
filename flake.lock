@@ -92,6 +92,22 @@
         "type": "github"
       }
     },
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767039857,
+        "narHash": "sha256-vNpUSpF5Nuw8xvDLj2KCwwksIbjua2LZCqhV1LNRDns=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "5edf11c44bc78a0d334f6334cdaf7d60d732daab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
@@ -126,6 +142,29 @@
         "owner": "fmtlib",
         "ref": "12.0.0",
         "repo": "fmt",
+        "type": "github"
+      }
+    },
+    "freesm": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "libnbtplusplus": "libnbtplusplus",
+        "nix-filter": "nix-filter",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1774815961,
+        "narHash": "sha256-F8T9kMowfbIO8zMpVcpoAhNntZ+kt2SYFtegM3YEcbc=",
+        "owner": "freesmteam",
+        "repo": "freesmlauncher",
+        "rev": "ff52d69721449f9e3ee447f2642a65e9e08375ff",
+        "type": "github"
+      },
+      "original": {
+        "owner": "freesmteam",
+        "repo": "freesmlauncher",
         "type": "github"
       }
     },
@@ -199,6 +238,22 @@
         "owner": "libgit2",
         "ref": "v1.9.1",
         "repo": "libgit2",
+        "type": "github"
+      }
+    },
+    "libnbtplusplus": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1744811532,
+        "narHash": "sha256-qhmjaRkt+O7A+gu6HjUkl7QzOEb4r8y8vWZMG2R/C6o=",
+        "owner": "FreesmTeam",
+        "repo": "libnbtplusplus",
+        "rev": "531449ba1c930c98e0bcf5d332b237a8566f9d78",
+        "type": "github"
+      },
+      "original": {
+        "owner": "FreesmTeam",
+        "repo": "libnbtplusplus",
         "type": "github"
       }
     },
@@ -387,6 +442,21 @@
         "type": "github"
       }
     },
+    "nix-filter": {
+      "locked": {
+        "lastModified": 1757882181,
+        "narHash": "sha256-+cCxYIh2UNalTz364p+QYmWHs0P+6wDhiWR4jDIKQIU=",
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "rev": "59c44d1909c72441144b93cf0f054be7fe764de5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "nix-filter",
+        "type": "github"
+      }
+    },
     "nix-index-database": {
       "inputs": {
         "nixpkgs": [
@@ -477,6 +547,7 @@
         "catppuccin": "catppuccin",
         "disko": "disko",
         "flake-parts": "flake-parts",
+        "freesm": "freesm",
         "hjem": "hjem",
         "mango": "mango",
         "millennium": "millennium",
