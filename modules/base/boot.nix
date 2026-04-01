@@ -21,6 +21,8 @@
         "rd.systemd.show_status=auto"
       ];
 
+      kernelModules = lib.optional config.programs.steam.enable "ntsync";
+
       loader = {
         efi.canTouchEfiVariables = true;
         timeout = ifPlymouth <| lib.mkDefault 1; # if the bootloader is ever systemd this can be set to 0
