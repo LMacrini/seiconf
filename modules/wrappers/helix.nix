@@ -6,6 +6,7 @@
       theme = "catppuccin_macchiato";
 
       editor = {
+        auto-pairs = false;
         color-modes = true;
         line-number = "relative";
         mouse = false;
