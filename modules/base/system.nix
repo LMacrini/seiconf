@@ -1,4 +1,5 @@
-{lib, ...}: {
+{ lib, ... }:
+{
   flake.nixosModules.base = {
     system.nixos = {
       distroId = "seios";

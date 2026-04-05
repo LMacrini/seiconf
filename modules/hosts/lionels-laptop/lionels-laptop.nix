@@ -1,4 +1,5 @@
-{self, ...}: {
+{ self, ... }:
+{
   flake.nixosConfigurations.lionels-laptop = self.lib.nixosSystem {
     aspects = [
       "general"

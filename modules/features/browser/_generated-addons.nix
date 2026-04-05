@@ -3,7 +3,8 @@
   fetchurl,
   lib,
   stdenv,
-}: {
+}:
+{
   "annotations-restored" = buildMozillaXpiAddon {
     pname = "annotations-restored";
     version = "1.2";
@@ -62,7 +63,7 @@
       homepage = "https://bonjourr.fr";
       description = "Improve your web browsing experience with Bonjourr, a beautiful, customizable and lightweight homepage inspired by iOS.";
       license = licenses.gpl3;
-      mozPermissions = ["storage"];
+      mozPermissions = [ "storage" ];
       platforms = platforms.all;
     };
   };
@@ -98,7 +99,7 @@
     meta = with lib; {
       homepage = "https://github.com/catppuccin/firefox";
       description = "🦊 Soothing pastel theme for Firefox";
-      mozPermissions = [];
+      mozPermissions = [ ];
       platforms = platforms.all;
     };
   };
@@ -112,7 +113,12 @@
       homepage = "https://consentomatic.au.dk/";
       description = "Automatic handling of GDPR consent forms";
       license = licenses.mit;
-      mozPermissions = ["activeTab" "tabs" "storage" "<all_urls>"];
+      mozPermissions = [
+        "activeTab"
+        "tabs"
+        "storage"
+        "<all_urls>"
+      ];
       platforms = platforms.all;
     };
   };
@@ -643,7 +649,7 @@
       homepage = "https://stopmalwarecontent.lodine.xyz";
       description = "Alerts you when you attempt to visit suspicious or harmful websites.";
       license = licenses.gpl3;
-      mozPermissions = ["tabs"];
+      mozPermissions = [ "tabs" ];
       platforms = platforms.all;
     };
   };
@@ -850,7 +856,10 @@
     meta = with lib; {
       description = "A collection of tweaks for hiding Shorts, disabling auto-dubbing, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
       license = licenses.mit;
-      mozPermissions = ["storage" "https://www.youtube.com/*"];
+      mozPermissions = [
+        "storage"
+        "https://www.youtube.com/*"
+      ];
       platforms = platforms.all;
     };
   };

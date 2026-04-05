@@ -3,34 +3,37 @@
   self,
   inputs,
   ...
-}: {
+}:
+{
   flake.lib = {
-    aspects = let
-      getAll = aspects: aspects ++ map (aspect: self.aspects.${aspect}.deps |> getAll) aspects;
-    in
+    aspects =
+      let
+        getAll = aspects: aspects ++ map (aspect: self.aspects.${aspect}.deps |> getAll) aspects;
+      in
       aspects:
-        getAll aspects |> lib.flatten |> lib.uniqueStrings |> map (aspect: self.aspects.${aspect}.module);
+      getAll aspects |> lib.flatten |> lib.uniqueStrings |> map (aspect: self.aspects.${aspect}.module);
 
-    makePrime = a: system:
+    makePrime =
+      a: system:
       a
       |> lib.filterAttrs (_: v: builtins.isAttrs v && builtins.hasAttr system v)
       |> builtins.mapAttrs (_: attr: attr.${system});
 
-    nixosSystem = {
-      module,
-      aspects ? [],
-      system ? "x86_64-linux",
-    }:
+    nixosSystem =
+      {
+        module,
+        aspects ? [ ],
+        system ? "x86_64-linux",
+      }:
       inputs.nixpkgs.lib.nixosSystem {
         inherit system;
 
-        modules =
-          [
-            module
-            self.nixosModules.base
-            self.nixosModules.inputs
-          ]
-          ++ self.lib.aspects aspects;
+        modules = [
+          module
+          self.nixosModules.base
+          self.nixosModules.inputs
+        ]
+        ++ self.lib.aspects aspects;
       };
 
     types = with lib; {

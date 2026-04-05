@@ -1,6 +1,7 @@
-{inputs, ...}: {
+{ inputs, ... }:
+{
   flake.nixosModules.lionels-laptop = {
-    imports = [inputs.disko.nixosModules.disko];
+    imports = [ inputs.disko.nixosModules.disko ];
 
     networking.hostId = "a7afb3fc";
 
@@ -19,7 +20,7 @@
                   type = "filesystem";
                   format = "vfat";
                   mountpoint = "/boot";
-                  mountOptions = ["nofail"];
+                  mountOptions = [ "nofail" ];
                 };
               };
               zfs = {

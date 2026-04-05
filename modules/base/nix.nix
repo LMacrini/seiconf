@@ -2,7 +2,8 @@
   self,
   inputs,
   ...
-}: {
+}:
+{
   flake.file.inputs = {
     zig = {
       url = "github:silversquirl/zig-flake";

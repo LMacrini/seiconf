@@ -3,8 +3,9 @@
   inputs,
   self,
   ...
-}: {
-  imports = [inputs.wrappers.flakeModules.wrappers];
+}:
+{
+  imports = [ inputs.wrappers.flakeModules.wrappers ];
 
   options = with lib; {
     flake = {
@@ -14,7 +15,7 @@
           <| types.submodule {
             options = {
               deps = mkOption {
-                default = [];
+                default = [ ];
                 type = types.listOf types.str;
               };
 
@@ -27,7 +28,7 @@
 
       hjemModules = mkOption {
         type = types.lazyAttrsOf types.deferredModule;
-        default = {};
+        default = { };
       };
     };
   };
@@ -42,16 +43,16 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
     };
 
-    flake.nixosModules.inputs = {pkgs, ...}: {
-      config._module.args = rec {
-        system = pkgs.stdenvNoCC.hostPlatform.system;
+    flake.nixosModules.inputs =
+      { pkgs, ... }:
+      {
+        config._module.args = rec {
+          system = pkgs.stdenvNoCC.hostPlatform.system;
 
-        inputs' = builtins.mapAttrs (_: flake:
-          self.lib.makePrime flake system)
-        inputs;
+          inputs' = builtins.mapAttrs (_: flake: self.lib.makePrime flake system) inputs;
 
-        self' = self.lib.makePrime self system;
+          self' = self.lib.makePrime self system;
+        };
       };
-    };
   };
 }
