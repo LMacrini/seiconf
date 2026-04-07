@@ -511,10 +511,10 @@
   };
   "nekocap" = buildMozillaXpiAddon {
     pname = "nekocap";
-    version = "1.21.0";
+    version = "1.22.0";
     addonId = "nekocaption@gmail.com";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4670586/nekocap-1.21.0.xpi";
-    sha256 = "6f66f5520ee42ec53ffe3f6d4e0c67618b905911ef66fd75e2e57e7720da4004";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4719765/nekocap-1.22.0.xpi";
+    sha256 = "b30a89e1eed12f9e915ebfbba2208bebbd88b8bbc0df4ad06c9072323fa39ff9";
     meta = with lib; {
       homepage = "https://nekocap.com";
       description = "Create and upload community captions for YouTube videos (and more) with this easy to use extension that supports SSA/ASS rendering.";
