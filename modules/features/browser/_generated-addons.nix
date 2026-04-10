@@ -25,10 +25,10 @@
   };
   "bitwarden-password-manager" = buildMozillaXpiAddon {
     pname = "bitwarden-password-manager";
-    version = "2026.2.0";
+    version = "2026.3.0";
     addonId = "{446900e4-71c2-419f-a6a7-df9c091e268b}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4715321/bitwarden_password_manager-2026.2.0.xpi";
-    sha256 = "e54999d45ae1cd001452a34294240633c89a95ae832f212721d746a89555958e";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4749958/bitwarden_password_manager-2026.3.0.xpi";
+    sha256 = "2dc6d074d4dc0abd2a8966f5065a55e7252bbf5e54b23c31dbedabfac0d4dbc4";
     meta = with lib; {
       homepage = "https://bitwarden.com";
       description = "At home, at work, or on the go, Bitwarden easily secures all your passwords, passkeys, and sensitive information.";
@@ -124,10 +124,10 @@
   };
   "darkreader" = buildMozillaXpiAddon {
     pname = "darkreader";
-    version = "4.9.123";
+    version = "4.9.124";
     addonId = "addon@darkreader.org";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4710145/darkreader-4.9.123.xpi";
-    sha256 = "9a3e6cdac53f20257bd81264532c16afedad00eb2623bded89ed2b30b1e40243";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4748915/darkreader-4.9.124.xpi";
+    sha256 = "ce703c98545999cee0b5c416f4fd4a3080f1405440f005d5c5cf23ac0868bcbd";
     meta = with lib; {
       homepage = "https://darkreader.org/";
       description = "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing.";
@@ -145,10 +145,10 @@
   };
   "dearrow" = buildMozillaXpiAddon {
     pname = "dearrow";
-    version = "2.3.2";
+    version = "2.3.4";
     addonId = "deArrow@ajay.app";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4730911/dearrow-2.3.2.xpi";
-    sha256 = "d3185e2f773881b278f2bcd9be22256420dba8ec6d9628a565c01ce1fabf2f11";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4757748/dearrow-2.3.4.xpi";
+    sha256 = "319aa4708e4053b024091d99ae3ed14449a3c0187f262a6c072ded2a1dade9ae";
     meta = with lib; {
       homepage = "https://dearrow.ajay.app";
       description = "Crowdsourcing titles and thumbnails to be descriptive and not sensational";
@@ -620,10 +620,10 @@
   };
   "sponsorblock" = buildMozillaXpiAddon {
     pname = "sponsorblock";
-    version = "6.1.2";
+    version = "6.1.3";
     addonId = "sponsorBlocker@ajay.app";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4644570/sponsorblock-6.1.2.xpi";
-    sha256 = "598f66c9eb6bbab2bd5f87376b632a5860f442d3694e233610f5b37f8b6e3f10";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4744354/sponsorblock-6.1.3.xpi";
+    sha256 = "cc6ee2918298ce6a1754b462d0b54d9a96f545f65cd3ac69016332ebca1d100b";
     meta = with lib; {
       homepage = "https://sponsor.ajay.app";
       description = "Easily skip YouTube video sponsors. When you visit a YouTube video, the extension will check the database for reported sponsors and automatically skip known sponsors. You can also report sponsors in videos. Other browsers: https://sponsor.ajay.app";
@@ -849,10 +849,10 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.3.15";
+    version = "2026.4.7";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4726792/youtube_tweaks-2026.3.15.xpi";
-    sha256 = "d9f5dd6be765105db52d07164fcd472e9d16f7ccc1fc91d718f5808246e86945";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4756394/youtube_tweaks-2026.4.7.xpi";
+    sha256 = "83d2578362cb756cef0fe8d41e4193e5b94c9b84ab5d91ff40f6bd38287051ac";
     meta = with lib; {
       description = "A collection of tweaks for hiding Shorts, disabling auto-dubbing, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
       license = licenses.mit;
