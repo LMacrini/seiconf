@@ -249,6 +249,7 @@
 
               windowrule = isopensilent:1,isglobal:1,offsetx:100,offsety:100,appid:steam,title:^notificationtoasts_\d+_desktop$
               windowrule = appid:re-lunatic-player,isfloating:1,isglobal:1
+              windowrule = appid:spacewarp,isfloating:1
 
               xkb_rules_layout = us
               xkb_rules_options = compose:ralt
