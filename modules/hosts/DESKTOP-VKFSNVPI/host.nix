@@ -47,6 +47,12 @@
         };
       };
 
+      services.flatpak.enable = true;
+      programs.appimage = {
+        enable = true;
+        binfmt = true;
+      };
+
       boot.kernelPackages = pkgs.linuxPackages_zen;
 
       programs = {
@@ -129,6 +135,7 @@
       hjem.users.lioma.packages = [
         inputs'.prince.packages.fluxer-bin
         inputs'.freesm.packages.default
+        pkgs.gearlever
       ];
 
       hardware = {
