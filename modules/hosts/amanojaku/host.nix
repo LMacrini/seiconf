@@ -39,7 +39,10 @@
         };
       };
 
-      services.openssh.enable = true;
+      services = {
+        openssh.enable = true;
+        flatpak.enable = true;
+      };
 
       programs = {
         steam.enable = true;
