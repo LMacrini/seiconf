@@ -15,7 +15,7 @@
           trim-trailing-whitespace = true;
 
           cursor-shape = {
-            insert = "block";
+            insert = "bar";
             normal = "block";
             select = "underline";
           };
