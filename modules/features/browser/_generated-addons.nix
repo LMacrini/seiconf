@@ -145,10 +145,10 @@
   };
   "dearrow" = buildMozillaXpiAddon {
     pname = "dearrow";
-    version = "2.3.4";
+    version = "2.3.5";
     addonId = "deArrow@ajay.app";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4757748/dearrow-2.3.4.xpi";
-    sha256 = "319aa4708e4053b024091d99ae3ed14449a3c0187f262a6c072ded2a1dade9ae";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4760405/dearrow-2.3.5.xpi";
+    sha256 = "4d83666ae933ce9b9a7061742e7776dcc98bfbbbe47e60d0a5b99271fc9f6085";
     meta = with lib; {
       homepage = "https://dearrow.ajay.app";
       description = "Crowdsourcing titles and thumbnails to be descriptive and not sensational";
@@ -211,10 +211,10 @@
   };
   "indie-wiki-buddy" = buildMozillaXpiAddon {
     pname = "indie-wiki-buddy";
-    version = "3.14.2";
+    version = "3.14.4";
     addonId = "{cb31ec5d-c49a-4e5a-b240-16c767444f62}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4727783/indie_wiki_buddy-3.14.2.xpi";
-    sha256 = "450c8c7629f377880688bedb770ac733e82aa15aa963ed39e199d69622b38523";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4773275/indie_wiki_buddy-3.14.4.xpi";
+    sha256 = "4bab840aef056b3e4c5d14aaeb99507fb1e58601d8da8c845a6b89738f49836d";
     meta = with lib; {
       homepage = "https://getindie.wiki/";
       description = "Helping you discover quality, independent wikis!\n\nWhen visiting a Fandom wiki, Indie Wiki Buddy redirects or alerts you of independent alternatives. It also filters search engine results. BreezeWiki is also supported, to reduce clutter on Fandom.";
@@ -620,14 +620,14 @@
   };
   "sponsorblock" = buildMozillaXpiAddon {
     pname = "sponsorblock";
-    version = "6.1.3";
+    version = "6.1.5";
     addonId = "sponsorBlocker@ajay.app";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4744354/sponsorblock-6.1.3.xpi";
-    sha256 = "cc6ee2918298ce6a1754b462d0b54d9a96f545f65cd3ac69016332ebca1d100b";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4773757/sponsorblock-6.1.5.xpi";
+    sha256 = "d8ec229aecb0b78e307a86d436496891b755f874c24c0f7324551c7ffd1b2e14";
     meta = with lib; {
       homepage = "https://sponsor.ajay.app";
       description = "Easily skip YouTube video sponsors. When you visit a YouTube video, the extension will check the database for reported sponsors and automatically skip known sponsors. You can also report sponsors in videos. Other browsers: https://sponsor.ajay.app";
-      license = licenses.gpl3;
+      license = licenses.lgpl3;
       mozPermissions = [
         "storage"
         "scripting"
@@ -790,10 +790,10 @@
   };
   "violentmonkey" = buildMozillaXpiAddon {
     pname = "violentmonkey";
-    version = "2.35.0";
+    version = "2.37.0";
     addonId = "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4704557/violentmonkey-2.35.0.xpi";
-    sha256 = "00d6ed07f730e4f5e15395d9a204ea91dff4e06e70c51f0df11edf54dc645ec9";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4777100/violentmonkey-2.37.0.xpi";
+    sha256 = "5d04b402f391c3a3b826aed064bf771de41c94cbc8ccd8f7b3a3ce70cb01d735";
     meta = with lib; {
       homepage = "https://violentmonkey.github.io/";
       description = "Userscript support for browsers, open source.";
@@ -849,10 +849,10 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.4.7";
+    version = "2026.4.13";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4756394/youtube_tweaks-2026.4.7.xpi";
-    sha256 = "83d2578362cb756cef0fe8d41e4193e5b94c9b84ab5d91ff40f6bd38287051ac";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4763741/youtube_tweaks-2026.4.13.xpi";
+    sha256 = "881ae700188e787d2a4899f9d56fca6518f57c506fa847d0b4c5de3ae1e0ba5d";
     meta = with lib; {
       description = "A collection of tweaks for hiding Shorts, disabling auto-dubbing, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
       license = licenses.mit;
