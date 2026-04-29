@@ -65,10 +65,30 @@
               args = [ "fmt" ];
             };
           }
+          {
+            name = "uiua";
+            scope = "source.uiua";
+            file-types = [
+              "ua"
+            ];
+            comment-tokens = "#";
+            formatter = {
+              command = "uiua";
+              args = [
+                "fmt"
+                "--io"
+              ];
+            };
+            language-servers = [ "uiua-lsp" ];
+          }
         ];
 
         language-server = {
           zls.config.enable_snippets = false;
+          uiua-lsp = {
+            command = "uiua";
+            args = [ "lsp" ];
+          };
         };
       };
     };
