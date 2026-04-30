@@ -13,7 +13,7 @@
     let
       userplugins = {
         shyTyping = builtins.fetchGit {
-          url = "https://git.nin0.dev/Sqaaakoi-VencordUserPlugins/shyTyping";
+          url = "https://git.serversmp.xyz/Mirrors/shyTyping";
           rev = "a6f6a21cf5a64792cb049067b6e3536636fcfa37";
         };
       };
