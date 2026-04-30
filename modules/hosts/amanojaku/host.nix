@@ -23,8 +23,12 @@
         inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
       ];
 
+      virtualisation.libvirtd.enable = true;
+      programs.virt-manager.enable = true;
+
       users.users.lioma.extraGroups = [
         "dialout"
+        "libvirtd"
       ];
 
       preferences = {
