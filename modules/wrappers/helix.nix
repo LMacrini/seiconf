@@ -68,9 +68,10 @@
           {
             name = "uiua";
             scope = "source.uiua";
-            file-types = [
-              "ua"
-            ];
+            injection-regex = "uiua";
+            file-types = [ "ua" ];
+            roots = [ ];
+            auto-format = true;
             comment-tokens = "#";
             formatter = {
               command = "uiua";
@@ -80,6 +81,17 @@
               ];
             };
             language-servers = [ "uiua-lsp" ];
+            indent = {
+              tab-width = 2;
+              unit = "  ";
+            };
+            shebangs = [ "uiua" ];
+            auto-pairs = {
+              "(" = ")";
+              "{" = "}";
+              "[" = "]";
+              "\"" = "\"";
+            };
           }
         ];
 
