@@ -1,6 +1,5 @@
 {
   lib,
-  inputs,
   self,
   ...
 }:
@@ -8,14 +7,8 @@
   flake.aspects.waybar.deps = [ "hjem" ];
   flake.aspects.waybar.module = {
     hjem.extraModules = [
-      self.hjemModules.waybar
+      self.wrappers.waybar.install
     ];
-  };
-
-  flake.hjemModules.waybar = inputs.wrappers.lib.mkInstallModule {
-    loc = [ "packages" ];
-    name = "waybar";
-    value = self.wrapperModules.waybar;
   };
 
   perSystem = {
@@ -28,7 +21,7 @@
       pkgs,
       config,
       ...
-    }:
+    }@args:
     let
       format = pkgs.formats.json { };
     in
@@ -48,6 +41,19 @@
 
       config = {
         package = lib.mkDefault pkgs.waybar;
+
+        install.modules = {
+          hjem =
+            { config, ... }:
+            let
+              cfg = args.config.install.getWrapperConfig config;
+            in
+            {
+              packages = lib.mkIf cfg.enable [
+                cfg.wrapper
+              ];
+            };
+        };
 
         flags = {
           "--config" = format.generate "config" config.settings;

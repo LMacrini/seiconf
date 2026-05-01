@@ -338,11 +338,11 @@
       },
       "locked": {
         "dir": "packages/nix",
-        "lastModified": 1776469299,
-        "narHash": "sha256-6KV0OgBCKrbVP4EM9hqcospkoPImbt6VZ18Mbgi9bqY=",
+        "lastModified": 1777567645,
+        "narHash": "sha256-ccIaFXZnxFBwQh3xF63CerpzqU3QHm8IM3tyQ43WPJk=",
         "owner": "steamclienthomebrew",
         "repo": "millennium",
-        "rev": "19741152e4237810141a0f18868a6993939e556a",
+        "rev": "fcb0e5627deecf2fc03067ee3dfb63d37e8e82d4",
         "type": "github"
       },
       "original": {
@@ -463,11 +463,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1776829403,
-        "narHash": "sha256-oHVcvP2Ahhj1KUsEzp+2BQF55/r5VSa3QxdPdwE1p00=",
+        "lastModified": 1777181277,
+        "narHash": "sha256-yVJbd07ortDRAttDFmDV5p220aOLTHgVAx//0nW/xW8=",
         "owner": "nix-community",
         "repo": "nix-index-database",
-        "rev": "c43246d4e9e506178b69baed075d797ec2d873e2",
+        "rev": "b8eb7acee0f7604fe1bf6a5b3dcf5254369180fa",
         "type": "github"
       },
       "original": {
@@ -493,11 +493,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1776734388,
-        "narHash": "sha256-wjAIDqQxE+kWV2lbykQCcS+F0ArQwmN8iNw0kcj4iaA=",
-        "rev": "10e7ad5bbcb421fe07e3a4ad53a634b0cd57ffac",
+        "lastModified": 1777428379,
+        "narHash": "sha256-KswuI0LUh0/6wZsn8YvGo5DHUoe7xuSyY3iGCuQ7i6k=",
+        "rev": "755f5aa91337890c432639c60b6064bb7fe67769",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/25.11/nixos-25.11.9586.10e7ad5bbcb4/nixexprs.tar.xz"
+        "url": "https://releases.nixos.org/nixos/25.11/nixos-25.11.10031.755f5aa91337/nixexprs.tar.xz"
       },
       "original": {
         "type": "tarball",
@@ -511,11 +511,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777104891,
-        "narHash": "sha256-UZwvan9By7W2V2d8OYnZqF3UVRXbfYafXtP8Ol1PFlw=",
+        "lastModified": 1777541584,
+        "narHash": "sha256-pEnrHCYZ2Z+/nPMg8/x4eOaOzg5uTe9z38gHiJgdOcY=",
         "owner": "forkprince",
         "repo": "nur-packages",
-        "rev": "c5716c5778985dc6221a13b7d63f791be98fbf84",
+        "rev": "cd4b56101071579ca72d03de28608f6f452d509c",
         "type": "github"
       },
       "original": {
@@ -603,11 +603,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777021790,
-        "narHash": "sha256-LWFEnxRnI6ajb1i5NfycvTi9/EY2CM/IYIEAXEazqRI=",
+        "lastModified": 1777588201,
+        "narHash": "sha256-LfQx5BviXSkPOQfyCauFvq6J+NON4HyENCEgZ+MF0JM=",
         "owner": "birdeehub",
         "repo": "nix-wrapper-modules",
-        "rev": "787ec64506c39faea133ea185491715e5128d35d",
+        "rev": "badcc07fd80e0f2dd2432c649664e79e1848ee86",
         "type": "github"
       },
       "original": {
@@ -623,11 +623,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777092395,
-        "narHash": "sha256-cJitc7H7Zr6YLPuVLvop+T2nd+b66f25kUaDivpuD2k=",
+        "lastModified": 1777520567,
+        "narHash": "sha256-06DVCSn9xztoDiHcSCr/9lBGw/EvubDczG0qXeX3Rng=",
         "owner": "silversquirl",
         "repo": "zig-flake",
-        "rev": "22e43efd36acb474a255496ada6c927e2fd2ac20",
+        "rev": "6b84e95546292e6999c6d32b773a050bbaddfaa9",
         "type": "github"
       },
       "original": {

@@ -135,6 +135,7 @@
       hjem.users.lioma.packages = [
         inputs'.prince.packages.fluxer-bin
         inputs'.freesm.packages.default
+        pkgs.prismlauncher
         pkgs.gearlever
       ];
 
