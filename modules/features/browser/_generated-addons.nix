@@ -124,10 +124,10 @@
   };
   "darkreader" = buildMozillaXpiAddon {
     pname = "darkreader";
-    version = "4.9.124";
+    version = "4.9.125";
     addonId = "addon@darkreader.org";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4748915/darkreader-4.9.124.xpi";
-    sha256 = "ce703c98545999cee0b5c416f4fd4a3080f1405440f005d5c5cf23ac0868bcbd";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4783321/darkreader-4.9.125.xpi";
+    sha256 = "21a9a18bc873e09b9b10f841a559807ce9e90738674c7eddb9f639c0663eaf28";
     meta = with lib; {
       homepage = "https://darkreader.org/";
       description = "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing.";
@@ -551,10 +551,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.4.20";
+    version = "26.5.1";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4772939/refined_github-26.4.20.xpi";
-    sha256 = "d160e48b3d8dc4a6b46c774088d67fe557116dcd51dd6fa376c02eb0c51deb8a";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4787850/refined_github-26.5.1.xpi";
+    sha256 = "43714279847a724c1b88b5439487251dd712c8637c28bc3386ba7a4542bef538";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -849,10 +849,10 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.4.24";
+    version = "2026.5.2";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4778682/youtube_tweaks-2026.4.24.xpi";
-    sha256 = "915df22687a6cb5cb97de400fb98dcc2b5a189d3f286e8f39041e40bbe2edcf3";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4788084/youtube_tweaks-2026.5.2.xpi";
+    sha256 = "cfa884d75db737e1e9969b3f19cd6f5fbc0b3fb986a71a0dff38a2db66ec527d";
     meta = with lib; {
       description = "A collection of tweaks for hiding Shorts, disabling auto-dubbing, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
       license = licenses.mit;

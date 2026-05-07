@@ -16,7 +16,7 @@
     };
     freesm = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:freesmteam/freesmlauncher";
+      url = "github:forkprince/freesmlauncher?ref=patch-java";
     };
     hjem = {
       inputs.nixpkgs.follows = "nixpkgs";

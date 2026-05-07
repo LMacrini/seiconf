@@ -5,7 +5,7 @@
 }:
 {
   flake.file.inputs.freesm = {
-    url = "github:freesmteam/freesmlauncher";
+    url = "github:forkprince/freesmlauncher?ref=patch-java";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
