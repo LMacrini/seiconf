@@ -103,11 +103,13 @@
                 address = "127.0.0.1";
 
                 conf = pkgs.writeText "mpd.conf" ''
+                  music_directory "${config.hjem.users.lioma.directory}/Music"
                   playlist_directory "${playlistDir}"
                   db_file "${dataDir}/tag_cache"
                   state_file "${dataDir}/state"
                   sticker_file "${dataDir}/sticker.sql"
                   bind_to_address "${address}"
+                  auto_update "yes"
 
                   audio_output {
                     type "pipewire"
