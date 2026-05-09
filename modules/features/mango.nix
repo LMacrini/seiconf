@@ -156,6 +156,7 @@
             wireplumber
             wl-clipboard
             xwayland-satellite
+            zenity
 
             self'.packages.kitty
             self'.packages.rofi
