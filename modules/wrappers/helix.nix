@@ -66,6 +66,14 @@
             };
           }
           {
+            name = "python";
+            language-servers = [
+              "basedpyright"
+              "ty"
+              "ruff"
+            ];
+          }
+          {
             name = "uiua";
             scope = "source.uiua";
             injection-regex = "uiua";
