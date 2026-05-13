@@ -11,7 +11,7 @@
     };
 
     millennium = {
-      url = "github:steamclienthomebrew/millennium?dir=packages/nix";
+      url = "github:steamclienthomebrew/millennium?dir=packages/nix&rev=e2c66a276e579ee73c5151b01897bf63503aa12c";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
