@@ -44,8 +44,9 @@
       };
 
       services = {
-        openssh.enable = true;
+        cloudflare-warp.enable = true;
         flatpak.enable = true;
+        openssh.enable = true;
       };
 
       programs = {
