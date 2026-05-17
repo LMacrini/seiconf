@@ -40,7 +40,7 @@
 
         environment.systemPackages = [
           prince.helium-nightly # TODO: 26.05 use nixpkgs helium
-          # prince.re-lunatic-player
+          prince.re-lunatic-player
         ];
 
         programs = {

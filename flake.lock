@@ -495,11 +495,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1779030960,
-        "narHash": "sha256-lCR+3m3WQ1fLnsHzQ3nLquYNdGTd+tJfT3uT1G50ujs=",
+        "lastModified": 1779040461,
+        "narHash": "sha256-O3iObiTI/9SDEWulKVbWR2oiurTeMoNFug++O/bKHpI=",
         "owner": "forkprince",
         "repo": "nur-packages",
-        "rev": "bca70c8a4c893658d8f8b439701e48c0233e5657",
+        "rev": "d7e46aa911ff64f4c3f7673e6f64785b3600ab51",
         "type": "github"
       },
       "original": {
