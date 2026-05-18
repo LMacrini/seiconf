@@ -309,6 +309,7 @@
               bind = SUPER+SHIFT,M,togglemaximizescreen
               bind = SUPER,G,toggleglobal
 
+              bind = SUPER,W,setlayout,fair
               bind = SUPER+SHIFT,T,setlayout,tile
               bind = SUPER,S,setlayout,scroller
               bind = SUPER+CTRL,M,setlayout,monocle
@@ -339,6 +340,7 @@
                     bind=SUPER+SHIFT,${tag},tag,${tag}
                     bind=SUPER+CTRL,${tag},toggleview,${tag}
                     bind=SUPER+CTRL+SHIFT,${tag},toggletag,${tag}
+                    tagrule=id:${tag},layout_name:fair
                   ''
                 ) 9
               }
