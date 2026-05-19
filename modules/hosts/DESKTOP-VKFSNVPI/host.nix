@@ -64,7 +64,11 @@
         cloudflare-warp.enable = true;
       };
 
+      virtualisation.libvirtd.enable = true;
+      programs.virt-manager.enable = true;
+
       users.users.lioma.extraGroups = [
+        "libvirtd"
         "plugdev"
       ];
 
