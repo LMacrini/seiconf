@@ -30,7 +30,7 @@
         };
       };
 
-      extraPackages = with pkgs; [
+      runtimePkgs = with pkgs; [
         difftastic
       ];
     };

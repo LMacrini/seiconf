@@ -13,7 +13,7 @@
     {
       imports = [ self.wrapperModules.fish ];
 
-      extraPackages = [
+      runtimePkgs = [
         pkgs.nix
         pkgs.nix-inspect
         pkgs.nix-output-monitor

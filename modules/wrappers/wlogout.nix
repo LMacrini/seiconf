@@ -42,7 +42,7 @@
       ];
 
       package = pkgs.wlogout;
-      extraPackages = [
+      runtimePkgs = [
         pkgs.systemd
       ];
 

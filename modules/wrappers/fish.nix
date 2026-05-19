@@ -107,7 +107,7 @@
         self.nixosModules.inputs
       ];
       package = pkgs.fish;
-      extraPackages = with pkgs; [
+      runtimePkgs = with pkgs; [
         lsd
         nix-your-shell
         sqlite
