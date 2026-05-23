@@ -55,6 +55,10 @@
             };
         };
 
+        runtimePkgs = [
+          pkgs.pavucontrol
+        ];
+
         flags = {
           "--config" = format.generate "config" config.settings;
           "--style" = config.style.path;
