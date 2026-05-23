@@ -14,6 +14,7 @@
     "ly"
     "swayidle"
     "swaync"
+    "trash"
     "waybar"
     "wayland-pipewire-idle-inhibit"
     "wpaperd"
