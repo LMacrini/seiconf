@@ -11,7 +11,7 @@
     };
 
     millennium = {
-      url = "github:steamclienthomebrew/millennium?dir=packages/nix&rev=e2c66a276e579ee73c5151b01897bf63503aa12c";
+      url = "github:steamclienthomebrew/millennium?ref=next&dir=packages/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -44,8 +44,9 @@
         ];
 
         programs = {
+          command-not-found.enable = lib.mkForce false;
           nix-index-database.comma.enable = true;
-          steam.package = lib.mkDefault inputs'.millennium.packages.millennium-steam;
+          # steam.package = lib.mkDefault inputs'.millennium.packages.millennium-steam;
         };
 
         hjem.users.lioma = {

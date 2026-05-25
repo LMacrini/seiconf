@@ -4,7 +4,7 @@
   inputs = {
     catppuccin = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:catppuccin/nix/release-25.11";
+      url = "github:catppuccin/nix?ref=release-26.05";
     };
     disko = {
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,14 +31,14 @@
     };
     millennium = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:steamclienthomebrew/millennium?dir=packages/nix&rev=e2c66a276e579ee73c5151b01897bf63503aa12c";
+      url = "github:steamclienthomebrew/millennium?ref=next&dir=packages/nix";
     };
     nix-index-database = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nix-index-database";
     };
     nixos-hardware.url = "github:nixos/nixos-hardware";
-    nixpkgs.url = "https://channels.nixos.org/nixos-25.11/nixexprs.tar.xz";
+    nixpkgs.url = "https://channels.nixos.org/nixos-26.05/nixexprs.tar.xz";
     prince = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:forkprince/nur-packages";

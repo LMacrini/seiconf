@@ -1,10 +1,10 @@
 {
   flake.file.inputs = {
-    nixpkgs.url = "https://channels.nixos.org/nixos-25.11/nixexprs.tar.xz";
+    nixpkgs.url = "https://channels.nixos.org/nixos-26.05/nixexprs.tar.xz";
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
     catppuccin = {
-      url = "github:catppuccin/nix/release-25.11";
+      url = "github:catppuccin/nix?ref=release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

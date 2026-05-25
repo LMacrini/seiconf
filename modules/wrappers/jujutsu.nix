@@ -11,7 +11,7 @@
       settings = {
         revsets = {
           # TODO: 26.05 use jj b a in my workflow
-          bookmark-advance-to = "heads(::to & ~description(exact:'') & (~empty() | merges()))";
+          bookmark-advance-to = "heads(::@ & ~description(exact:'') & (~empty() | merges()))";
         };
 
         user = {

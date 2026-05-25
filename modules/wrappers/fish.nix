@@ -15,13 +15,14 @@
     }:
     let
       match =
-        builtins.readFile "${inputs'.catppuccin.packages.fish}/Catppuccin Macchiato.theme"
-        |> builtins.split "(fish_color_.*?)$";
+        builtins.readFile "${inputs'.catppuccin.packages.fish}/static/catppuccin-macchiato.theme"
+        |> builtins.split "(fish_.*?)$";
 
       theme =
         builtins.elemAt (builtins.elemAt match 1) 0
+        |> lib.trim
         |> lib.splitString "\n"
-        |> builtins.map (s: "set -g ${s}")
+        |> map (s: "set -g ${s}")
         |> builtins.concatStringsSep "\n";
 
       conf = pkgs.writeText "config.fish" ''
