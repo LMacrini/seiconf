@@ -40,6 +40,8 @@
       timers.purge-old-trash = {
         description = "Run daily to clean up old trash";
 
+        wantedBy = [ "timers.target" ];
+
         timerConfig = {
           OnCalendar = "daily";
           Persistent = true;
