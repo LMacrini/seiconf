@@ -56,7 +56,7 @@
       boot.kernelPackages = pkgs.linuxPackages_zen;
 
       programs = {
-        noisetorch.enable = true;
+        noisetorch.enable = false;
         steam.enable = true;
       };
 
@@ -98,16 +98,18 @@
         SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="df11", MODE:="0666", SYMLINK+="stm32_dfu"
         # Keymapp Flashing rules for the Voyager
         SUBSYSTEMS=="usb", ATTRS{idVendor}=="3297", MODE:="0666", SYMLINK+="ignition_dfu"
-
-        ACTION=="add", SUBSYSTEM=="sound", ENV{ID_VENDOR}=="SteelSeries", ENV{ID_MODEL}=="Arctis_Nova_3", TAG+="systemd", ENV{SYSTEMD_USER_WANTS}+="noisetorch-headset.service"
       '';
+
+      # ''
+      #   ACTION=="add", SUBSYSTEM=="sound", ENV{ID_VENDOR}=="SteelSeries", ENV{ID_MODEL}=="Arctis_Nova_3", TAG+="systemd", ENV{SYSTEMD_USER_WANTS}+="noisetorch-headset.service"
+      # '';
       hjem.users.lioma = {
         systemd.services.noisetorch-headset =
           let
             mic = "alsa_output.usb-SteelSeries_Arctis_Nova_3-00.analog-stereo";
           in
           {
-            enable = true;
+            enable = false;
             description = "Run noisetorch on headset (udev triggered)";
             after = [
               "graphical-session.target"
@@ -139,6 +141,7 @@
       hjem.users.lioma.packages = [
         inputs'.prince.packages.fluxer-bin
         # inputs'.freesm.packages.default
+        pkgs.easyeffects
         pkgs.prismlauncher
         pkgs.gearlever
       ];
