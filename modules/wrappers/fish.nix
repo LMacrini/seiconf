@@ -58,7 +58,7 @@
               sqlite3 -cmd ".parameter init" \
                   -cmd ".parameter set @program \"$program\"" \
                   /etc/programs.sqlite \
-                  "select package from programs where name = @program and system = \"${system}\";" \
+                  "select package from programs where name = @program and system = '${system}';" \
                   2>/dev/null
             )
 
