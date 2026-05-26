@@ -26,7 +26,7 @@
         keys = {
           insert =
             builtins.listToAttrs
-            <| builtins.map (key: {
+            <| map (key: {
               name = key;
               value = "no_op";
             })
