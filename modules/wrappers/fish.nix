@@ -1,50 +1,73 @@
-{
-  self,
-  lib,
-  ...
-}:
+{ self, ... }:
 {
   flake.wrappers.fish =
     {
-      inputs',
-      wlib,
       pkgs,
       system,
-      config,
+      inputs',
+      wlib,
       ...
     }:
     let
-      match =
-        builtins.readFile "${inputs'.catppuccin.packages.fish}/static/catppuccin-macchiato.theme"
-        |> builtins.split "(fish_.*?)$";
+    in
+    {
+      imports = [
+        wlib.wrapperModules.fish
+        self.nixosModules.inputs
+      ];
 
-      theme =
-        builtins.elemAt (builtins.elemAt match 1) 0
-        |> lib.trim
-        |> lib.splitString "\n"
-        |> map (s: "set -g ${s}")
-        |> builtins.concatStringsSep "\n";
+      plugins = [
+        inputs'.catppuccin.packages.fish
+      ];
 
-      conf = pkgs.writeText "config.fish" ''
-        ${theme}
+      runtimePkgs = with pkgs; [
+        lsd
+        nix-your-shell
+        sqlite
+        zoxide
+      ];
 
-        status is-interactive; and begin
+      shellAliases = {
+        cd = "z";
+        ls = "lsd";
+      };
+
+      abbreviations = {
+        ll = "ls -l";
+        la = "ls -A";
+        lt = "ls --tree";
+        lla = "ls -lA";
+        llt = "ls -l --tree";
+        l = "ls -alh";
+
+        tmpdir = {
+          word = "!tmp";
+          expansion = "(mktemp -d)";
+          position = "anywhere";
+        };
+      };
+
+      configFile.content = # fish
+        ''
+          fish_config theme choose catppuccin-macchiato
+
           nix-your-shell fish | source
           zoxide init fish | source
 
-          alias cd z
-          alias ls lsd
-          abbr --add ll ls -l
-          abbr --add la ls -A
-          abbr --add lt ls --tree
-          abbr --add lla ls -lA
-          abbr --add llt ls -l --tree
-          abbr --add l ls -alh
+          if type -q direnv
+            direnv hook fish | source
+          end
 
-          abbr --add !tmp --position anywhere "(mktemp -d)"
+          if type -q jj; and type -q git
+            abbr --add git jj git
+            abbr --add _git git
+          end
 
-          set fish_greeting
-          bind \cz 'fg 2>/dev/null; commandline -f repaint'
+          if set -q KITTY_INSTALLATION_DIR
+            set --global KITTY_SHELL_INTEGRATION "no-rc no-cursor"
+            source "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish"
+            set --prepend fish_complete_path "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_completions.d"
+          end
 
           function fish_command_not_found
             set program $argv[1]
@@ -85,40 +108,6 @@
             end
           end
 
-          if type -q direnv
-            direnv hook fish | source
-          end
-
-          if type -q jj; and type -q git
-            abbr --add git jj git
-            abbr --add _git git
-          end
-
-          if set -q KITTY_INSTALLATION_DIR
-            set --global KITTY_SHELL_INTEGRATION "no-rc no-cursor"
-            source "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_conf.d/kitty-shell-integration.fish"
-            set --prepend fish_complete_path "$KITTY_INSTALLATION_DIR/shell-integration/fish/vendor_completions.d"
-          end
-        end
-      '';
-    in
-    {
-      imports = [
-        wlib.modules.default
-        self.nixosModules.inputs
-      ];
-      package = pkgs.fish;
-      runtimePkgs = with pkgs; [
-        lsd
-        nix-your-shell
-        sqlite
-        zoxide
-      ];
-
-      passthru.shellPath = config.wrapperPaths.relPath;
-
-      flags = {
-        "-C" = "source ${conf}";
-      };
+        '';
     };
 }
