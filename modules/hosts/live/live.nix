@@ -40,8 +40,6 @@
         };
       };
 
-      networking.wireless.enable = false;
-
       environment.systemPackages = [
         self'.packages.installVm
       ];
