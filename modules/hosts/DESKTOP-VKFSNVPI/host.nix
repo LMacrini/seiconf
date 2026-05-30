@@ -138,12 +138,13 @@
           };
       };
 
-      hjem.users.lioma.packages = [
+      hjem.users.lioma.packages = with pkgs; [
         inputs'.prince.packages.fluxer-bin
         # inputs'.freesm.packages.default
-        pkgs.easyeffects
-        pkgs.prismlauncher
-        pkgs.gearlever
+        easyeffects
+        gearlever
+        heroic
+        prismlauncher
       ];
 
       hardware = {
