@@ -62,6 +62,7 @@
 
       services = {
         cloudflare-warp.enable = true;
+        openssh.enable = true;
       };
 
       virtualisation.libvirtd.enable = true;
