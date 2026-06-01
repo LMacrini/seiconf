@@ -42,35 +42,19 @@
         mango
       ];
 
-      xdg.portal = {
+      programs.mangowc = {
         enable = true;
+        package = mango;
+      };
 
-        config = {
-          mango = {
-            default = "gtk";
-
-            "org.freedesktop.impl.portal.Inhibit" = [ ];
-            "org.freedesktop.impl.portal.ScreenCast" = "wlr";
-            "org.freedesktop.impl.portal.ScreenShot" = "wlr";
-            "org.freedesktop.impl.portal.Secret" = "gnome-keyring";
+      xdg.portal.wlr = {
+        enable = true;
+        settings = {
+          screencast = {
+            chooser_cmd = "${lib.getExe self'.packages.rofi} -dmenu -i";
+            chooser_type = "dmenu";
           };
         };
-
-        extraPortals = with pkgs; [
-          xdg-desktop-portal-gtk
-        ];
-
-        wlr = {
-          enable = true;
-          settings = {
-            screencast = {
-              chooser_cmd = "${lib.getExe self'.packages.rofi} -dmenu -i";
-              chooser_type = "dmenu";
-            };
-          };
-        };
-
-        configPackages = [ mango ];
       };
 
       security = {
@@ -80,7 +64,6 @@
       };
 
       services = {
-        displayManager.sessionPackages = [ mango ];
         graphical-desktop.enable = true;
         gnome.gnome-keyring.enable = true;
 
