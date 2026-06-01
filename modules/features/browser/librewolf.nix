@@ -84,6 +84,7 @@
           };
 
           ".librewolf/default/user.js".text = mkUserJs {
+            "browser.tabs.inTitlebar" = 0;
             "extensions.autoDisableScopes" = 0;
             "general.autoScroll" = true;
             "image.jxl.enabled" = true;
