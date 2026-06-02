@@ -53,7 +53,6 @@
           normal = {
             S-tab = "move_parent_node_start";
             tab = "move_parent_node_end";
-            C-z = "no_op";
           };
 
           select = {
