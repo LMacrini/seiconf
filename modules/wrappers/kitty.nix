@@ -26,6 +26,8 @@
           cursor_trail = 1;
           enable_audio_bell = "no";
 
+          auto_reload_config = -1;
+
           map = [
             "kitty_mod+enter launch --cwd=current"
             "kitty_mod+t new_tab"
