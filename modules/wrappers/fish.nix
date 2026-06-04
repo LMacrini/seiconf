@@ -32,20 +32,27 @@
         ls = "lsd";
       };
 
-      abbreviations = {
-        ll = "ls -l";
-        la = "ls -A";
-        lt = "ls --tree";
-        lla = "ls -lA";
-        llt = "ls -l --tree";
-        l = "ls -alh";
+      abbreviations =
+        let
+          basic = str: {
+            expansion = str;
+            position = "command";
+          };
+        in
+        {
+          ll = basic "ls -l";
+          la = basic "ls -A";
+          lt = basic "ls --tree";
+          lla = basic "ls -lA";
+          llt = basic "ls -l --tree";
+          l = basic "ls -alh";
 
-        tmpdir = {
-          word = "!tmp";
-          expansion = "(mktemp -d)";
-          position = "anywhere";
+          tmpdir = {
+            word = "!tmp";
+            expansion = "(mktemp -d)";
+            position = "anywhere";
+          };
         };
-      };
 
       configFile.content = # fish
         ''
