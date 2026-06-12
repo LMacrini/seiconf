@@ -141,7 +141,7 @@
 
       hjem.users.lioma.packages = with pkgs; [
         inputs'.prince.packages.fluxer-bin
-        # inputs'.freesm.packages.default
+        inputs'.freesm.packages.default
         easyeffects
         gearlever
         heroic

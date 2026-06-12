@@ -25,10 +25,10 @@
   };
   "bitwarden-password-manager" = buildMozillaXpiAddon {
     pname = "bitwarden-password-manager";
-    version = "2026.5.0";
+    version = "2026.5.1";
     addonId = "{446900e4-71c2-419f-a6a7-df9c091e268b}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4827854/bitwarden_password_manager-2026.5.0.xpi";
-    sha256 = "8ebb475518a330b88b4e2cba0864c5ca11bed390739cb84fbf256e938c91b6d9";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4842111/bitwarden_password_manager-2026.5.1.xpi";
+    sha256 = "d32f61f4fb95728ab450edabc88fe195400adfafab488ca949b5a355298f27b8";
     meta = with lib; {
       homepage = "https://bitwarden.com";
       description = "At home, at work, or on the go, Bitwarden easily secures all your passwords, passkeys, and sensitive information.";
@@ -124,10 +124,10 @@
   };
   "darkreader" = buildMozillaXpiAddon {
     pname = "darkreader";
-    version = "4.9.126";
+    version = "4.9.127";
     addonId = "addon@darkreader.org";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4834907/darkreader-4.9.126.xpi";
-    sha256 = "b0bd9127a60a5af8db6fa23de81f304a4ec5d7d3cd7e6e301e3eaa42339528a7";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4837294/darkreader-4.9.127.xpi";
+    sha256 = "25f06b10b43270266af63c8d25e01ecf5e497bd2d5411243ee6d19b3869296ad";
     meta = with lib; {
       homepage = "https://darkreader.org/";
       description = "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing.";
@@ -145,10 +145,10 @@
   };
   "dearrow" = buildMozillaXpiAddon {
     pname = "dearrow";
-    version = "2.3.8";
+    version = "2.3.9";
     addonId = "deArrow@ajay.app";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4826435/dearrow-2.3.8.xpi";
-    sha256 = "0f5945b833f0629330357979b8dd004bb099923dc95907bddd727b8b974ad6fa";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4844316/dearrow-2.3.9.xpi";
+    sha256 = "29347fa23449225c707cc33636230a93aa3ea9ac00b76c03617e4217c989739a";
     meta = with lib; {
       homepage = "https://dearrow.ajay.app";
       description = "Crowdsourcing titles and thumbnails to be descriptive and not sensational";
@@ -490,10 +490,10 @@
   };
   "localcdn-fork-of-decentraleyes" = buildMozillaXpiAddon {
     pname = "localcdn-fork-of-decentraleyes";
-    version = "2.6.84";
+    version = "2.6.85";
     addonId = "{b86e4813-687a-43e6-ab65-0bde4ab75758}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4709745/localcdn_fork_of_decentraleyes-2.6.84.xpi";
-    sha256 = "ec52022d8bf0e78e873d2cd554889cdab14fe45d22781a8181e4c461227d6665";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4838011/localcdn_fork_of_decentraleyes-2.6.85.xpi";
+    sha256 = "628fcad19950ca5a3005e3e9b54de73842cf9bf87a5c3b543452b10c1647fa60";
     meta = with lib; {
       homepage = "https://www.localcdn.org";
       description = "Emulates remote frameworks (e.g. jQuery, Bootstrap, AngularJS) and delivers them as local resource. Prevents unnecessary 3rd party requests to Google, StackPath, MaxCDN and more. Prepared rules for uBlock Origin/uMatrix.";
@@ -551,10 +551,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.6.1";
+    version = "26.6.7";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4831946/refined_github-26.6.1.xpi";
-    sha256 = "a15a9ffa2ae9cf62aa3f7237edbc7524a5e43e972e539b15729ad4a01cdc9437";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4840557/refined_github-26.6.7.xpi";
+    sha256 = "7274247b34b4bab57e73c8058ddd1a459e323bea717d9ec16d1ccc8385791bd0";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -849,10 +849,10 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.5.31";
+    version = "2026.6.11";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4829567/youtube_tweaks-2026.5.31.xpi";
-    sha256 = "92f1ea590e173c9828283562f730f05f72d20ee30a71e89c2ffae225a6400c94";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4846104/youtube_tweaks-2026.6.11.xpi";
+    sha256 = "2129fede8559bc7046a122b427db9e2715f45bafb7eec7f3f03f5f90112bd5a6";
     meta = with lib; {
       description = "A collection of tweaks for hiding Shorts, disabling auto-dubbing, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
       license = licenses.mit;
