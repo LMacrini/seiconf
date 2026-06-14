@@ -50,11 +50,16 @@
       };
 
       programs = {
+        appimage = {
+          enable = true;
+          binfmt = true;
+        };
         steam.enable = true;
       };
 
       hjem.users.lioma.packages = [
         pkgs.arduino
+        pkgs.gearlever
         pkgs.libreoffice
         inputs'.prince.packages.fluxer-bin
       ];
