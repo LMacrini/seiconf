@@ -140,6 +140,7 @@
                 serviceConfig = {
                   Type = "simple";
                   Restart = "always";
+                  RestartSec = 10;
                 };
               };
             };
