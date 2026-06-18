@@ -20,7 +20,7 @@
       flags = {
         "--config" = format.generate "kitty.conf" {
           include = "${pkgs.kitty-themes}/share/kitty-themes/themes/Catppuccin-Macchiato.conf";
-          shell_integration = "no-rc no-cursor";
+          shell_integration = "no-cursor";
           allow_remote_control = "yes";
           confirm_os_window_close = 0;
           cursor_trail = 1;
