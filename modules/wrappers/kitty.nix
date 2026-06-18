@@ -26,6 +26,9 @@
           cursor_trail = 1;
           enable_audio_bell = "no";
 
+          tab_bar_style = "powerline";
+          tab_powerline_style = "angled";
+
           auto_reload_config = -1;
 
           map = [
