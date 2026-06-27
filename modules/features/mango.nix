@@ -68,6 +68,11 @@
         gnome.gnome-keyring.enable = true;
 
         logind.settings.Login.HandleLidSwitch = "ignore";
+
+        pipewire = {
+          enable = true;
+          jack.enable = true;
+        };
       };
 
       hjem.users.lioma =
