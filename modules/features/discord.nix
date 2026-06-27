@@ -8,11 +8,12 @@
     {
       pkgs,
       inputs',
+      config,
       ...
     }:
     let
       userplugins = {
-        shyTyping = builtins.fetchGit {
+        shyTyping = fetchGit {
           url = "https://git.serversmp.xyz/Mirrors/shyTyping";
           rev = "a6f6a21cf5a64792cb049067b6e3536636fcfa37";
         };
@@ -39,10 +40,16 @@
       };
     in
     {
-      nixpkgs.config.allowUnfree = true;
+      options = {
+        programs.discord.enable = lib.mkEnableOption "discord" // {
+          default = true;
+        };
+      };
 
-      hjem.users.lioma.packages = [
-        discord
-      ];
+      config = lib.mkIf config.programs.discord.enable {
+        hjem.users.lioma.packages = [
+          discord
+        ];
+      };
     };
 }

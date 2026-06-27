@@ -55,7 +55,10 @@
 
       boot.kernelPackages = pkgs.linuxPackages_zen;
 
+      nixpkgs.config.allowUnfree = true;
+
       programs = {
+        discord.enable = false;
         noisetorch.enable = false;
         steam.enable = true;
       };
