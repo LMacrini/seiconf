@@ -50,6 +50,8 @@
         hjem.users.lioma.packages = [
           discord
         ];
+
+        nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "discord" ];
       };
     };
 }
