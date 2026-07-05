@@ -1,10 +1,8 @@
 {
   flake.wrappers.helix =
-    { pkgs, wlib, ... }:
+    { wlib, ... }:
     {
       imports = [ wlib.wrapperModules.helix ];
-
-      package = pkgs.evil-helix;
 
       settings = {
         theme = "catppuccin_macchiato";
@@ -12,14 +10,12 @@
         editor = {
           auto-pairs = false;
           color-modes = true;
-          evil = false;
           line-number = "relative";
           mouse = false;
           trim-trailing-whitespace = true;
 
           indent-guides = {
             render = true;
-            rainbow-option = "dim";
           };
 
           cursor-shape = {
