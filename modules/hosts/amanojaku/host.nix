@@ -59,11 +59,12 @@
         steam.enable = true;
       };
 
-      hjem.users.lioma.packages = [
-        pkgs.arduino
-        pkgs.gearlever
-        pkgs.libreoffice
+      hjem.users.lioma.packages = with pkgs; [
         inputs'.prince.packages.fluxer-bin
+        arduino
+        emacs-pgtk
+        gearlever
+        libreoffice
       ];
 
       networking.hostName = "amanojaku";
