@@ -236,8 +236,9 @@
               windowrule = appid:re-lunatic-player,isfloating:1,isglobal:1
               windowrule = appid:spacewarp,isfloating:1
 
-              xkb_rules_layout = us
+              xkb_rules_layout = us,gr
               xkb_rules_options = compose:ralt
+              bind = SUPER,space,switch_keyboard_layout
 
               bind = SUPER+SHIFT,S,spawn_shell,pkill slurp || grim -g "$(slurp -dw 0)" - | wl-copy
               bind = SUPER+CTRL,S,spawn_shell,grim -t ppm - | satty -c /dev/null -f - -o - | wl-copy
@@ -249,8 +250,6 @@
               bind = NONE,XF86MonBrightnessUp,spawn,brightnessctl s 10%+
               bind = NONE,XF86MonBrightnessDown,spawn,brightnessctl s 10%-
               bind = NONE,XF86PowerOff,spawn,systemctl suspend
-
-              bind = SUPER,space,spawn,fcitx5-remote -t
 
               bind = SUPER,Q,spawn,kitty
               bind = SUPER,T,spawn_shell,${launcher}
