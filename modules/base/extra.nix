@@ -5,7 +5,18 @@
     {
       boot.tmp.cleanOnBoot = true;
 
-      services.openssh.settings.UseDns = lib.mkDefault true;
+      services = {
+        kmscon = {
+          enable = true;
+          fonts = [
+            {
+              name = "JetBrainsMonoNL NFM";
+              package = pkgs.nerd-fonts.jetbrains-mono;
+            }
+          ];
+        };
+        openssh.settings.UseDns = lib.mkDefault true;
+      };
 
       programs = {
         gdk-pixbuf.modulePackages = [
