@@ -47,6 +47,8 @@
           llt = basic "ls -l --tree";
           l = basic "ls -alh";
 
+          rmt = basic "gio trash";
+
           tmpdir = {
             word = "!tmp";
             expansion = "(mktemp -d)";

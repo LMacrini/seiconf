@@ -30,6 +30,7 @@
         pkgs.p7zip
         pkgs.unzip
         pkgs.ffmpeg
+        pkgs.glib
 
         self'.packages.helix
         self'.packages.jujutsu
@@ -37,6 +38,7 @@
       ];
       env = {
         EDITOR = lib.getExe self'.packages.helix;
+        NH_SHOW_ACTIVATION_LOGS = "1";
         ZIG_BUILD_ERROR_STYLE = "minimal_clear";
       };
     };
