@@ -60,6 +60,13 @@
       programs = {
         discord.enable = false;
         noisetorch.enable = false;
+        obs-studio = {
+          enable = true;
+          enableVirtualCamera = true;
+          plugins = with pkgs.obs-studio-plugins; [
+            wlrobs
+          ];
+        };
         steam.enable = true;
       };
 
@@ -146,9 +153,12 @@
         inputs'.prince.packages.fluxer-bin
         inputs'.freesm.packages.default
         easyeffects
+        emacs-pgtk
         gearlever
         heroic
         prismlauncher
+        protonplus
+        qpwgraph
       ];
 
       hardware = {
