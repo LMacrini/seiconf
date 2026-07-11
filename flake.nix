@@ -46,6 +46,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:forkprince/nur-packages";
     };
+    waybar = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:alexays/waybar";
+    };
     wrappers = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:birdeehub/nix-wrapper-modules";

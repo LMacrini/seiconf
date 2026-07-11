@@ -551,10 +551,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.7";
+    version = "26.7.11";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4876625/refined_github-26.7.xpi";
-    sha256 = "e3eeffcef15770b97042e2b6caf69b67984d2398b124b75778f176f3b9eff373";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4894260/refined_github-26.7.11.xpi";
+    sha256 = "6c745c814911cadf2f14208c39ea843f24468fc99d8e6ee4ca82435e4d955688";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -849,10 +849,10 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.7.1";
+    version = "2026.7.8";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4877282/youtube_tweaks-2026.7.1.xpi";
-    sha256 = "f48f282d7362d93d78f5563d1ace4dd4f666e493989e9f24bb7918a84d8e0172";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4888648/youtube_tweaks-2026.7.8.xpi";
+    sha256 = "9d9127c27153fb54b9c58d207733330fe9567c2ad0fdb0f331d80950f242ae6f";
     meta = with lib; {
       description = "A collection of tweaks for hiding Shorts, disabling auto-dubbing, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
       license = licenses.mit;

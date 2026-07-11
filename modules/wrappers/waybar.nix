@@ -4,6 +4,11 @@
   ...
 }:
 {
+  flake.file.inputs.waybar = {
+    url = "github:alexays/waybar";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
+
   flake.aspects.waybar.deps = [ "hjem" ];
   flake.aspects.waybar.module = {
     hjem.extraModules = [

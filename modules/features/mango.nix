@@ -102,17 +102,19 @@
         {
           wrappers.waybar = {
             enable = true;
+            package = inputs'.waybar.packages.waybar;
             settings = {
               modules-left = [
-                "ext/workspaces"
-                "dwl/window"
+                "mango/workspaces"
+                "mango/window"
               ];
 
-              "ext/workspaces" = {
+              "mango/workspaces" = {
                 on-click = "activate";
+                hide-empty = true;
               };
 
-              "dwl/window" = {
+              "mango/window" = {
                 format = "  {title}";
                 rewrite = {
                   " (.*) - YouTube — LibreWolf" = "   $1";
