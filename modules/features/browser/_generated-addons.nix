@@ -55,10 +55,10 @@
   };
   "bonjourr-startpage" = buildMozillaXpiAddon {
     pname = "bonjourr-startpage";
-    version = "22.0.0";
+    version = "22.3.0";
     addonId = "{4f391a9e-8717-4ba6-a5b1-488a34931fcb}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4649474/bonjourr_startpage-22.0.0.xpi";
-    sha256 = "59d41cf35dce5f873b6682c5a73117a7b4c73395d764f8ab0243d9136f58e999";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4893547/bonjourr_startpage-22.3.0.xpi";
+    sha256 = "240dc1385a1110b288720160cef9cdee7165614d08583323fe0961dda18f74d5";
     meta = with lib; {
       homepage = "https://bonjourr.fr";
       description = "A beautiful and customizable new tab page inspired by iOS, designed for a calm and focused browsing experience.";
@@ -124,10 +124,10 @@
   };
   "darkreader" = buildMozillaXpiAddon {
     pname = "darkreader";
-    version = "4.9.128";
+    version = "4.9.129";
     addonId = "addon@darkreader.org";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4859299/darkreader-4.9.128.xpi";
-    sha256 = "31be69e5e783e30dc255ee357f2a7233486f801cba061560f1a44deb9603296f";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4899461/darkreader-4.9.129.xpi";
+    sha256 = "f4f047fe08e420b6d29617738ea00a7b784892b2262b7e6f38dd09b8ee958a44";
     meta = with lib; {
       homepage = "https://darkreader.org/";
       description = "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing.";
@@ -551,10 +551,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.7.11";
+    version = "26.7.12";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4894260/refined_github-26.7.11.xpi";
-    sha256 = "6c745c814911cadf2f14208c39ea843f24468fc99d8e6ee4ca82435e4d955688";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4895101/refined_github-26.7.12.xpi";
+    sha256 = "d7601af3c1a6146fe18d0f5f71def6fd4aac4c4ff4d462500540a882855d6d78";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -620,10 +620,10 @@
   };
   "sponsorblock" = buildMozillaXpiAddon {
     pname = "sponsorblock";
-    version = "6.1.6";
+    version = "6.1.7";
     addonId = "sponsorBlocker@ajay.app";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4870235/sponsorblock-6.1.6.xpi";
-    sha256 = "ab8e4cc26e68070c3c6f379b253330b95677e2d25b52149580daa879cf9ba954";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4897574/sponsorblock-6.1.7.xpi";
+    sha256 = "0d50e1632c6f15ee15a543e670e1c572974605a5c02622916e08e026803df83f";
     meta = with lib; {
       homepage = "https://sponsor.ajay.app";
       description = "Easily skip YouTube video sponsors. When you visit a YouTube video, the extension will check the database for reported sponsors and automatically skip known sponsors. You can also report sponsors in videos. Other browsers: https://sponsor.ajay.app";
@@ -655,10 +655,10 @@
   };
   "styl-us" = buildMozillaXpiAddon {
     pname = "styl-us";
-    version = "2.4.5";
+    version = "2.4.6";
     addonId = "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4887700/styl_us-2.4.5.xpi";
-    sha256 = "509557b542d9dcd496a316b108dadbcbd5cfa9ec46a44c1f37c463d45f32270a";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4899605/styl_us-2.4.6.xpi";
+    sha256 = "6954080952bf11dae66d9d46cf739ba98966c62d52ab8ae5d8884d1e620c7428";
     meta = with lib; {
       homepage = "https://add0n.com/stylus.html";
       description = "Redesign your favorite websites with Stylus, an actively developed and community driven userstyles manager. Easily install custom themes from popular online repositories, or create, edit, and manage your own personalized CSS stylesheets.";
@@ -849,10 +849,10 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.7.8";
+    version = "2026.7.12";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4888648/youtube_tweaks-2026.7.8.xpi";
-    sha256 = "9d9127c27153fb54b9c58d207733330fe9567c2ad0fdb0f331d80950f242ae6f";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4895337/youtube_tweaks-2026.7.12.xpi";
+    sha256 = "c4f8f7d74e9a9e849e1f1532506db9549cd05fcaf2cac2c23a3053d72726a28f";
     meta = with lib; {
       description = "A collection of tweaks for hiding Shorts, disabling auto-dubbing, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
       license = licenses.mit;
