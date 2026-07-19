@@ -11,7 +11,7 @@
       ...
     }:
     {
-      imports = [ self.wrapperModules.fish ];
+      imports = [ self.wrapperModules.nushell ];
 
       runtimePkgs = [
         pkgs.nix

@@ -8,8 +8,6 @@
       wlib,
       ...
     }:
-    let
-    in
     {
       imports = [
         wlib.wrapperModules.fish
@@ -110,7 +108,6 @@
               echo "  $package" >&2
             end
           end
-
         '';
     };
 }
