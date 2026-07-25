@@ -56,6 +56,10 @@
           # }
           # figure out conditional jj git abbrs
 
+          use std/dirs
+          alias enter = dirs add
+          alias dexit = dirs drop
+
           source ${inputs'.catppuccin.packages.nushell + /catppuccin_macchiato.nu}
           ${source "nix-your-shell.nu" "${lib.getExe pkgs.nix-your-shell} nushell"}
           ${source "zoxide-nushell-config.nu" "${lib.getExe pkgs.zoxide} init nushell"}
