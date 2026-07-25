@@ -64,6 +64,8 @@
           ${source "nix-your-shell.nu" "${lib.getExe pkgs.nix-your-shell} nushell"}
           ${source "zoxide-nushell-config.nu" "${lib.getExe pkgs.zoxide} init nushell"}
 
+          alias cd = z
+
           def prompt_pwd [
             --dir-length (-d): int = 1 # Length of shortened directories
             --full-dir-length (-D): int = 1 # Number of directories kept at full length
