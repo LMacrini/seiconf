@@ -34,7 +34,7 @@
             $"($user)(ansi white)@($hostname)(ansi reset) (ansi yellow)(prompt_pwd)(ansi reset)"
           }
 
-          $env.config.hooks.env_change.PWD = [{||
+          $env.config.hooks.env_change.PWD = [{
             if (which direnv | is-empty) {
               return
             }
