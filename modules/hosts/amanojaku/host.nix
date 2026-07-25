@@ -60,7 +60,7 @@
       };
 
       hjem.users.lioma.packages = with pkgs; [
-        inputs'.prince.packages.fluxer-bin
+        inputs'.prince.packages.fluxer-stable-bin
         arduino
         emacs-pgtk
         gearlever

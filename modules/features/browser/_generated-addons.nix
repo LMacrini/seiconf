@@ -25,10 +25,10 @@
   };
   "bitwarden-password-manager" = buildMozillaXpiAddon {
     pname = "bitwarden-password-manager";
-    version = "2026.6.1";
+    version = "2026.7.0";
     addonId = "{446900e4-71c2-419f-a6a7-df9c091e268b}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4875950/bitwarden_password_manager-2026.6.1.xpi";
-    sha256 = "7ba16c3d422ab287db17b014a4683bace36341e471e4d4fd58ac2b616c6ac17d";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4915668/bitwarden_password_manager-2026.7.0.xpi";
+    sha256 = "11836eb9d2abc9914bb337b57e20c5a09cf44f24fa572f7e886384fd350a5112";
     meta = with lib; {
       homepage = "https://bitwarden.com";
       description = "At home, at work, or on the go, Bitwarden easily secures all your passwords, passkeys, and sensitive information.";
@@ -145,10 +145,10 @@
   };
   "dearrow" = buildMozillaXpiAddon {
     pname = "dearrow";
-    version = "2.3.9";
+    version = "2.3.10";
     addonId = "deArrow@ajay.app";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4844316/dearrow-2.3.9.xpi";
-    sha256 = "29347fa23449225c707cc33636230a93aa3ea9ac00b76c03617e4217c989739a";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4897568/dearrow-2.3.10.xpi";
+    sha256 = "3151a51db8093746be646c041af3ead553e5de95fa4ebd5fae033e039e1056d1";
     meta = with lib; {
       homepage = "https://dearrow.ajay.app";
       description = "Crowdsourcing titles and thumbnails to be descriptive and not sensational";
@@ -469,10 +469,10 @@
   };
   "libredirect" = buildMozillaXpiAddon {
     pname = "libredirect";
-    version = "3.3.0";
+    version = "3.4.0";
     addonId = "7esoorv3@alefvanoon.anonaddy.me";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4734268/libredirect-3.3.0.xpi";
-    sha256 = "1c91739ae52c6eb8522f0efb38397c3d5e85d961b3999f3c5d60f89db447877d";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4916828/libredirect-3.4.0.xpi";
+    sha256 = "c0fa9a5c2302eb734b1b614284371061330cf2e7b3519ee96c53e8be58ae298f";
     meta = with lib; {
       homepage = "https://libredirect.manerakai.com/";
       description = "Redirects YouTube, Twitter, TikTok... requests to alternative privacy friendly frontends.";
@@ -655,10 +655,10 @@
   };
   "styl-us" = buildMozillaXpiAddon {
     pname = "styl-us";
-    version = "2.4.6";
+    version = "2.4.8";
     addonId = "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4899605/styl_us-2.4.6.xpi";
-    sha256 = "6954080952bf11dae66d9d46cf739ba98966c62d52ab8ae5d8884d1e620c7428";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4907275/styl_us-2.4.8.xpi";
+    sha256 = "455426890a38bd3ee511000112ece51675f8bbc21e988be2170c3ae6900cbedf";
     meta = with lib; {
       homepage = "https://add0n.com/stylus.html";
       description = "Redesign your favorite websites with Stylus, an actively developed and community driven userstyles manager. Easily install custom themes from popular online repositories, or create, edit, and manage your own personalized CSS stylesheets.";
@@ -849,11 +849,12 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.7.12";
+    version = "2026.7.15";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4895337/youtube_tweaks-2026.7.12.xpi";
-    sha256 = "c4f8f7d74e9a9e849e1f1532506db9549cd05fcaf2cac2c23a3053d72726a28f";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4901289/youtube_tweaks-2026.7.15.xpi";
+    sha256 = "c400abc7aa90ea43722aa242060eb3ab8f9f93ae3ba99ef8a5706e4b3bd291cd";
     meta = with lib; {
+      homepage = "https://github.com/pedrosouu/yt-tweaks";
       description = "A collection of tweaks for hiding Shorts, disabling auto-dubbing, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
       license = licenses.mit;
       mozPermissions = [

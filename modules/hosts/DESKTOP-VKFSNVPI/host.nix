@@ -150,7 +150,7 @@
       };
 
       hjem.users.lioma.packages = with pkgs; [
-        inputs'.prince.packages.fluxer-bin
+        inputs'.prince.packages.fluxer-stable-bin
         inputs'.freesm.packages.default
         easyeffects
         emacs-pgtk
