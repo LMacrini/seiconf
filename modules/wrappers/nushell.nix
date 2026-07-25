@@ -44,21 +44,16 @@
             $env.PATH = do (env-conversions).path.from_string $env.PATH
           }]
 
-          # TODO: 26.11
-          # $env.config.abbreviations = {
-          #   ll: ls -l
-          #   la: ls -A
-          #   lt: ls --tree
-          #   lla: ls -lA
-          #   llt: ls -l --tree
-          #   l: ls -alh
-          #   rmt: gio trash
-          # }
-          # figure out conditional jj git abbrs
-
           use std/dirs
           alias enter = dirs add
           alias dexit = dirs drop
+
+          # git can still be accessed via ^git
+          alias git = jj git
+          alias rmt = gio trash
+
+          # NOTE: there is no (nice) way to set aliases conditionally currently
+          # if there is in the future the git and rmt aliases should be updated
 
           source ${inputs'.catppuccin.packages.nushell + /catppuccin_macchiato.nu}
           ${source "nix-your-shell.nu" "${lib.getExe pkgs.nix-your-shell} nushell"}
