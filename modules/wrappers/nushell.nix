@@ -34,7 +34,7 @@
             $"($user)(ansi white)@($hostname)(ansi reset) (ansi yellow)(prompt_pwd)(ansi reset)"
           }
 
-          def "direnv reload" []: nothing -> nothing {
+          $env.config.hooks.env_change.PWD = [{||
             if (which direnv | is-empty) {
               return
             }
@@ -42,10 +42,6 @@
             use std/config env-conversions
             direnv export json | from json | default {} | load-env
             $env.PATH = do (env-conversions).path.from_string $env.PATH
-          }
-
-          $env.config.hooks.env_change.PWD = [{||
-            direnv reload
           }]
 
           # TODO: 26.11
