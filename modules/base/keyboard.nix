@@ -67,7 +67,7 @@
               (deflayer cmkdh
                    1    2                                            -    =
                     q    w    f    p    b    j    l    u    y    ;    [    ]
-                bspc a    r    s    t    g    m    n    e    i    o    '
+                menu a    r    s    t    g    m    n    e    i    o    '
                 lsft  x    c    d    v    z    k    h    ,    .    /    rsft
                 lctl lmet lalt                           ralt @nav
               )

@@ -16,6 +16,7 @@
     {
       pkgs,
       inputs',
+      self',
       ...
     }:
     {
@@ -61,8 +62,9 @@
 
       hjem.users.lioma.packages = with pkgs; [
         inputs'.prince.packages.fluxer-stable-bin
+        self'.packages.emacs
+        git
         arduino
-        emacs-pgtk
         gearlever
         libreoffice
       ];

@@ -244,7 +244,7 @@
               windowrule = appid:spacewarp,isfloating:1
 
               xkb_rules_layout = us,gr
-              xkb_rules_options = compose:ralt
+              xkb_rules_options = compose:menu
               bind = SUPER,space,switch_keyboard_layout
 
               bind = SUPER+SHIFT,S,spawn_shell,pkill slurp || grim -g "$(slurp -dw 0)" - | wl-copy
