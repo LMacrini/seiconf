@@ -159,6 +159,7 @@
         prismlauncher
         protonplus
         qpwgraph
+        signal-desktop
       ];
 
       hardware = {
