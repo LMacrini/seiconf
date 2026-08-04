@@ -551,10 +551,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.7.12";
+    version = "26.7.26";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4895101/refined_github-26.7.12.xpi";
-    sha256 = "d7601af3c1a6146fe18d0f5f71def6fd4aac4c4ff4d462500540a882855d6d78";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4920035/refined_github-26.7.26.xpi";
+    sha256 = "b9f0dda8163cff7fc31d8a289080adc24ac4ed255c8b90cf9c3651fd18a88adf";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -655,10 +655,10 @@
   };
   "styl-us" = buildMozillaXpiAddon {
     pname = "styl-us";
-    version = "2.4.8";
+    version = "2.4.9";
     addonId = "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4907275/styl_us-2.4.8.xpi";
-    sha256 = "455426890a38bd3ee511000112ece51675f8bbc21e988be2170c3ae6900cbedf";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4934380/styl_us-2.4.9.xpi";
+    sha256 = "7108b8d5b600d9d35caee46c50416b296721683d3497c572e029e84f7e42afb7";
     meta = with lib; {
       homepage = "https://add0n.com/stylus.html";
       description = "Redesign your favorite websites with Stylus, an actively developed and community driven userstyles manager. Easily install custom themes from popular online repositories, or create, edit, and manage your own personalized CSS stylesheets.";
@@ -738,10 +738,10 @@
   };
   "ultimadark" = buildMozillaXpiAddon {
     pname = "ultimadark";
-    version = "1.6.66";
+    version = "1.6.73";
     addonId = "{7c7f6dea-3957-4bb9-9eec-2ef2b9e5bcec}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4735965/ultimadark-1.6.66.xpi";
-    sha256 = "ff69639f43eed5f60c29441d34d51b26801b66b827b4bb4068eaf7380794df61";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4934073/ultimadark-1.6.73.xpi";
+    sha256 = "bd96020450777064464cde118fe7cf49795f0eac05186eb576849dd9b9be0b44";
     meta = with lib; {
       homepage = "https://github.com/ThomazPom/Moz-Ext-UltimaDark";
       description = "UltimaDark uses agressive and smart techniques to turn even the sunniest websites into realms of darkness.\nAlthough it works well, this is so experimental, it makes lab rats look like seasoned professionals. \nGo ahead, embrace the shadows! 🦇";
@@ -790,10 +790,10 @@
   };
   "violentmonkey" = buildMozillaXpiAddon {
     pname = "violentmonkey";
-    version = "2.41.0";
+    version = "2.46.0";
     addonId = "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4830363/violentmonkey-2.41.0.xpi";
-    sha256 = "42d184788bd2f6a291956dd31cd45daa7b4a5d1b19bf1c74fb0ae76e456fa36b";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4926076/violentmonkey-2.46.0.xpi";
+    sha256 = "c6952513d77911ac9f717cfb32fe63628e4bed31ef96b12ffa92e09e333e31ff";
     meta = with lib; {
       homepage = "https://violentmonkey.github.io/";
       description = "Userscript support for browsers, open source.";
@@ -849,10 +849,10 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.7.15";
+    version = "2026.7.31";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4901289/youtube_tweaks-2026.7.15.xpi";
-    sha256 = "c400abc7aa90ea43722aa242060eb3ab8f9f93ae3ba99ef8a5706e4b3bd291cd";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4931319/youtube_tweaks-2026.7.31.xpi";
+    sha256 = "14b92fa95fc906c82d278362c1113f3bd1906859ed8f9fe5e9d58c37c0a94a0e";
     meta = with lib; {
       homepage = "https://github.com/pedrosouu/yt-tweaks";
       description = "A collection of tweaks for hiding Shorts, disabling auto-dubbing, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
