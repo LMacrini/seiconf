@@ -21,7 +21,7 @@
         pkgs.nh
         self'.formatter
 
-        pkgs.git
+        pkgs.gitFull
         pkgs.bat
         pkgs.just
         pkgs.ripgrep
