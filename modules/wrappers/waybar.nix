@@ -5,7 +5,7 @@
 }:
 {
   flake.file.inputs.waybar = {
-    url = "github:alexays/waybar?rev=98b2a563f398f63f99ec8a6f7fb2b19a172abd5d";
+    url = "github:alexays/waybar?rev=084d87401d0a91182c16aa7e5f674a7dde767185";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
