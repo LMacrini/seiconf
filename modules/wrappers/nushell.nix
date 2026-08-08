@@ -23,6 +23,15 @@
       "config.nu".content =
         # nu
         ''
+          try {
+            open $"($env.HOME)/.profile"
+              | lines
+              | parse "export {n}=\"{v}\""
+              | transpose --header-row
+              | into record
+              | load-env
+          }
+
           $env.config.show_banner = false
 
           $env.PROMPT_COMMAND_RIGHT = ""
