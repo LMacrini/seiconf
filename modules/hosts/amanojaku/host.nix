@@ -64,8 +64,6 @@
             enable = true;
             user = "lioma";
           };
-
-          defaultSession = "mango"; # maybe move this to be set by mango?
         };
       };
 

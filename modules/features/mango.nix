@@ -64,6 +64,7 @@
       };
 
       services = {
+        displayManager.defaultSession = "mango";
         graphical-desktop.enable = true;
         gnome.gnome-keyring.enable = true;
 
