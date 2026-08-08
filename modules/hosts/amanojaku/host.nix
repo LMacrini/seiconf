@@ -79,7 +79,6 @@
 
       hjem.users.lioma.packages = with pkgs; [
         inputs'.prince.packages.fluxer-stable-bin
-        arduino
         emacs-pgtk
         gearlever
         libreoffice
