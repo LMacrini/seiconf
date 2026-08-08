@@ -22,6 +22,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:feel-co/hjem";
     };
+    impermanence = {
+      inputs = {
+        home-manager.follows = "";
+        nixpkgs.follows = "";
+      };
+      url = "github:nix-community/impermanence";
+    };
     mango = {
       inputs = {
         flake-parts.follows = "flake-parts";
