@@ -44,6 +44,10 @@
           }
 
           $env.config.hooks.env_change.PWD = [{
+            direnv reload
+          }]
+
+          def --env "direnv reload" []: nothing -> nothing {
             if (which direnv | is-empty) {
               return
             }
@@ -51,7 +55,7 @@
             use std/config env-conversions
             direnv export json | from json | default {} | load-env
             $env.PATH = do (env-conversions).path.from_string $env.PATH
-          }]
+          }
 
           use std/dirs
           alias enter = dirs add
