@@ -65,6 +65,7 @@
         emacs-pgtk
         gearlever
         libreoffice
+        signal-desktop
       ];
 
       networking.hostName = "amanojaku";
