@@ -233,6 +233,7 @@
               click_method = 2
 
               env = ELECTRON_OZONE_PLATFORM_HINT,wayland
+              env = PROTON_ENABLE_WAYLAND,1
 
               focuscolor = 0xff6ed4ff
 
