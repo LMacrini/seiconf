@@ -91,6 +91,7 @@
           "/etc/NetworkManager"
           "/var/db/sudo"
           "/var/lib/nixos"
+          "/var/lib/fprint"
         ];
 
         files = [
