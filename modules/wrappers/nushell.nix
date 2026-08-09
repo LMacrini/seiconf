@@ -25,7 +25,7 @@
         # nu
         ''
           try {
-            open $"($env.HOME)/.profile"
+            open ~/.profile
               | lines
               | parse "export {n}=\"{v}\""
               | transpose --header-row
