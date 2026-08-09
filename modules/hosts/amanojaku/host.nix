@@ -36,7 +36,6 @@
       programs.virt-manager.enable = true;
 
       users.users.lioma.extraGroups = [
-        "dialout"
         "libvirtd"
       ];
 
