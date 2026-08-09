@@ -92,6 +92,7 @@
           "/var/db/sudo"
           "/var/lib/nixos"
           "/var/lib/fprint"
+          "/var/lib/systemd/backlight"
         ];
 
         files = [
