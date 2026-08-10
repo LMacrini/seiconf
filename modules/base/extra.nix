@@ -3,7 +3,7 @@
   flake.nixosModules.base =
     { pkgs, ... }:
     {
-      boot.tmp.cleanOnBoot = true;
+      boot.tmp.cleanOnBoot = lib.mkDefault true;
 
       services = {
         kmscon = {
