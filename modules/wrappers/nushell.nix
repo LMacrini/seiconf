@@ -71,6 +71,18 @@
                 }'
               }
             }
+            {
+              name: cancel_clear
+              modifier: control
+              keycode: char_c
+              mode: [emacs]
+              event: {
+                until: [
+                  { edit: Clear }
+                  { send: CtrlC }
+                ]
+              }
+            }
           ]
 
           def --env "direnv reload" []: nothing -> nothing {
