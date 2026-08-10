@@ -57,7 +57,7 @@
               event: {
                 send: ExecuteHostCommand
                 cmd: 'if (commandline | is-empty) {
-                  commandline edit $"sudo (history | last | get command)"
+                  commandline edit $"sudo (history | last | get command?)"
                 } else if (commandline | str starts-with sudo) {
                   let command = commandline | str substring 5..
                   let pos = commandline get-cursor
