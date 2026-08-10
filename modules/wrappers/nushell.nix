@@ -48,6 +48,31 @@
             direnv reload
           }]
 
+          $env.config.keybindings = [
+            {
+              name: sudo_last
+              modifier: alt
+              keycode: char_s
+              mode: [emacs, vi_insert]
+              event: {
+                send: ExecuteHostCommand
+                cmd: 'if (commandline | is-empty) {
+                  commandline edit $"sudo (history | last | get command)"
+                } else if (commandline | str starts-with sudo) {
+                  let command = commandline | str substring 5..
+                  let pos = commandline get-cursor
+                  commandline edit $command
+                  commandline set-cursor ($pos - 5)
+                } else {
+                  let pos = commandline get-cursor
+                  commandline set-cursor 0
+                  commandline edit --insert "sudo "
+                  commandline set-cursor ($pos + 5)
+                }'
+              }
+            }
+          ]
+
           def --env "direnv reload" []: nothing -> nothing {
             if (which direnv | is-empty) {
               return
