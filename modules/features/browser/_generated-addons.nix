@@ -170,10 +170,10 @@
   };
   "decentraleyes" = buildMozillaXpiAddon {
     pname = "decentraleyes";
-    version = "3.0.1";
+    version = "3.0.2";
     addonId = "jid1-BoFifL9Vbdl2zQ@jetpack";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4785399/decentraleyes-3.0.1.xpi";
-    sha256 = "a0b6701636c7e1a44dc756b0e71d03f94d40e5f16787cf2c2306688bd0e249b9";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4943310/decentraleyes-3.0.2.xpi";
+    sha256 = "e749d0d1985b579332b36aa00d43bd11c9e820b1375701657cf9aceedbb47581";
     meta = with lib; {
       homepage = "https://decentraleyes.org";
       description = "Protects you against tracking through \"free\", centralized, content delivery. It prevents a lot of requests from reaching networks like Google Hosted Libraries, and serves local files to keep sites from breaking. Complements regular content blockers.";
@@ -551,10 +551,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.7.26";
+    version = "26.8.8";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4920035/refined_github-26.7.26.xpi";
-    sha256 = "b9f0dda8163cff7fc31d8a289080adc24ac4ed255c8b90cf9c3651fd18a88adf";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4945591/refined_github-26.8.8.xpi";
+    sha256 = "cfa6508a75193560a2623220a4e59c6bad7099fed16d65e04c28f0372775e4c6";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -655,10 +655,10 @@
   };
   "styl-us" = buildMozillaXpiAddon {
     pname = "styl-us";
-    version = "2.4.9";
+    version = "2.4.10";
     addonId = "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4934380/styl_us-2.4.9.xpi";
-    sha256 = "7108b8d5b600d9d35caee46c50416b296721683d3497c572e029e84f7e42afb7";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4947910/styl_us-2.4.10.xpi";
+    sha256 = "907c1ebcfeaaa78890ef82ebb1a004f8e607fe482095165cd1b8309373112129";
     meta = with lib; {
       homepage = "https://add0n.com/stylus.html";
       description = "Redesign your favorite websites with Stylus, an actively developed and community driven userstyles manager. Easily install custom themes from popular online repositories, or create, edit, and manage your own personalized CSS stylesheets.";
@@ -700,10 +700,10 @@
   };
   "ublock-origin" = buildMozillaXpiAddon {
     pname = "ublock-origin";
-    version = "1.72.2";
+    version = "1.73.0";
     addonId = "uBlock0@raymondhill.net";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4888680/ublock_origin-1.72.2.xpi";
-    sha256 = "40c315b0da7871868155ecfae7a50a58dfa0920aebd865e008214986f1b7c578";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4940584/ublock_origin-1.73.0.xpi";
+    sha256 = "bccc51a773150af4af6e1fd62c7bfdeb7238b79ff2381b998fa9f2e38f64786a";
     meta = with lib; {
       homepage = "https://github.com/gorhill/uBlock#ublock-origin";
       description = "Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory.";
@@ -790,10 +790,10 @@
   };
   "violentmonkey" = buildMozillaXpiAddon {
     pname = "violentmonkey";
-    version = "2.46.0";
+    version = "2.47.0";
     addonId = "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4926076/violentmonkey-2.46.0.xpi";
-    sha256 = "c6952513d77911ac9f717cfb32fe63628e4bed31ef96b12ffa92e09e333e31ff";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4941753/violentmonkey-2.47.0.xpi";
+    sha256 = "cce81b8ae7064e7d70a805f61e73190fbd546bdd3c78483d3b702be003b1316f";
     meta = with lib; {
       homepage = "https://violentmonkey.github.io/";
       description = "Userscript support for browsers, open source.";
