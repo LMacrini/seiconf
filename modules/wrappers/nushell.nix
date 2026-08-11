@@ -56,7 +56,7 @@
               mode: [emacs, vi_insert]
               event: {
                 send: ExecuteHostCommand
-                cmd: 'if (commandline | is-empty) {
+                cmd: 'if (commandline | str trim | is-empty) {
                   commandline edit $"sudo (history | last | get command?)"
                 } else if (commandline | str starts-with sudo) {
                   let command = commandline | str substring 5..
