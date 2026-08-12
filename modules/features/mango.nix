@@ -33,9 +33,7 @@
       # might be a good idea to use unstable nixpkgs,
       # or maybe just keep using the flake until
       # updates slow down, unsure
-      mango = inputs'.mango.packages.mango.override {
-        enableXWayland = false;
-      };
+      mango = inputs'.mango.packages.mango;
     in
     {
       environment.systemPackages = [
@@ -147,7 +145,6 @@
             slurp
             wireplumber
             wl-clipboard
-            xwayland-satellite
             zenity
 
             self'.packages.kitty
@@ -223,9 +220,6 @@
 
               exec-once = ${lib.getExe pkgs.networkmanagerapplet}
               exec-once = ${lib.getExe' pkgs.blueman "blueman-applet"}
-
-              env = DISPLAY,:3
-              exec = xwayland-satellite :3
 
               exec-once = ${lib.getExe autostart}
 
