@@ -14,7 +14,7 @@
     let
       merger = pkgs.writers.writeNuBin "merge" ''
         def parse-file [file] {
-          open $file | lines | parse --regex '(?<name>.*)(?:=(?<value>.*))?' | transpose --header-row | into record
+          open $file | lines | parse --regex '(?<name>.*)(?:=(?<value>.*))?' | transpose --header-row --as-record
         }
 
         def main [first second output] {

@@ -28,8 +28,7 @@
             open ~/.profile
               | lines
               | parse "export {n}=\"{v}\""
-              | transpose --header-row
-              | into record
+              | transpose --header-row --as-record
               | load-env
           }
 
