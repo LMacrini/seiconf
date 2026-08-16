@@ -100,7 +100,6 @@
 
           # git can still be accessed via ^git
           alias git = jj git
-          alias rmt = gio trash
 
           # NOTE: there is no (nice) way to set aliases conditionally currently
           # if there is in the future the git and rmt aliases should be updated

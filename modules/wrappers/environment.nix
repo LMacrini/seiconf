@@ -30,7 +30,6 @@
         pkgs.p7zip
         pkgs.unzip
         pkgs.ffmpeg
-        pkgs.glib
 
         self'.packages.helix
         self'.packages.jujutsu
