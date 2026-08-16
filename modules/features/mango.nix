@@ -143,6 +143,7 @@
             nautilus
             satty
             slurp
+            wayfreeze
             wireplumber
             wl-clipboard
             zenity
@@ -243,8 +244,26 @@
               xkb_rules_options = compose:ralt
               bind = SUPER,space,switch_keyboard_layout
 
-              bind = SUPER+SHIFT,S,spawn_shell,pkill slurp || grim -g "$(slurp -dw 0)" - | wl-copy
               bind = SUPER+CTRL,S,spawn_shell,grim -t ppm - | satty -c /dev/null -f - -o - | wl-copy
+              bind = SUPER+SHIFT,S,spawn,${
+                pkgs.writers.writeNuBin "screenshot"
+                  # nu
+                  ''
+                    let pipe = $"(mktemp --dry).fifo"
+                    mkfifo $pipe
+                    let wayfreeze_job = job spawn {
+                      wayfreeze --after-freeze-timeout 100 --after-freeze-cmd $"echo > ($pipe)"
+                    }
+                    open --raw $pipe
+                    try {
+                      let selection = slurp -dw 0 e> /dev/null
+                      grim -g $selection - | wl-copy
+                    }
+                    job kill $wayfreeze_job
+                    rm --force $pipe
+                  ''
+                |> lib.getExe
+              }
 
               bind = NONE,XF86AudioRaiseVolume,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
               bind = NONE,XF86AudioLowerVolume,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
