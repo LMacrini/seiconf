@@ -680,10 +680,10 @@
   };
   "traduzir-paginas-web" = buildMozillaXpiAddon {
     pname = "traduzir-paginas-web";
-    version = "10.1.1.1";
+    version = "10.2.1.0";
     addonId = "{036a55b4-5e72-4d05-a06c-cba2dfcc134a}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4455681/traduzir_paginas_web-10.1.1.1.xpi";
-    sha256 = "dc94a7efac63468f7d34a74bedf5c8b360a67c99d213bb5b1a1d55d911797782";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4962745/traduzir_paginas_web-10.2.1.0.xpi";
+    sha256 = "67f4b90279426590ccf88f85aef14509948b4e661682d938a93c0bcce94c523b";
     meta = with lib; {
       description = "Translate your page in real time using Google, Bing or Yandex.\nIt is not necessary to open new tabs.";
       license = licenses.mpl20;
@@ -693,7 +693,6 @@
         "activeTab"
         "contextMenus"
         "webRequest"
-        "https://www.deepl.com/*/translator*"
       ];
       platforms = platforms.all;
     };

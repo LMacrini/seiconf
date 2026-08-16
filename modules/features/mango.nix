@@ -224,7 +224,7 @@
               exec-once = ${lib.getExe autostart}
 
               trackpad_natural_scrolling = 1
-              click_method = 2
+              trackpad_click_method = 2
 
               env = ELECTRON_OZONE_PLATFORM_HINT,wayland
               env = PROTON_ENABLE_WAYLAND,1
