@@ -8,8 +8,8 @@ inputs.flake-parts.lib.mkFlake { inherit inputs; } {
     |> builtins.filter (
       file:
       let
-        f = toString file;
+        f = baseNameOf file;
       in
-      !lib.hasPrefix "_" (builtins.baseNameOf f) && lib.hasSuffix ".nix" f
+      !lib.hasPrefix "_" f && lib.hasSuffix ".nix" f
     );
 }
