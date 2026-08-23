@@ -33,6 +33,7 @@
           }
 
           $env.config.show_banner = false
+          $env.config.filesize.unit = "binary"
 
           $env.PROMPT_COMMAND_RIGHT = ""
 
@@ -47,12 +48,18 @@
             direnv reload
           }]
 
+          if "KITTY_INSTALLATION_DIR" in $env {
+            $env.config.use_kitty_protocol = true
+          }
+
+          # TODO: 26.11 use helix mode, make sure to update keybinding modes
+
           $env.config.keybindings = [
             {
               name: sudo_last
               modifier: alt
               keycode: char_s
-              mode: [emacs, vi_insert]
+              mode: [emacs vi_insert]
               event: {
                 send: ExecuteHostCommand
                 cmd: 'if (commandline | str trim | is-empty) {
@@ -74,7 +81,7 @@
               name: cancel_clear
               modifier: control
               keycode: char_c
-              mode: [emacs]
+              mode: [emacs vi_normal vi_insert]
               event: {
                 until: [
                   { edit: Clear }
