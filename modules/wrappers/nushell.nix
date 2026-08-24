@@ -102,7 +102,14 @@
           }
 
           use std/dirs
-          alias enter = dirs add
+          def --env --wrapped enter [...rest]: nothing -> nothing {
+            let dir = if ($rest | length) == 1 and ($rest.0 | path exists) {
+              $rest.0
+            } else {
+              zoxide query ...$rest
+            }
+            dirs add $dir
+          }
           alias dexit = dirs drop
 
           # git can still be accessed via ^git
