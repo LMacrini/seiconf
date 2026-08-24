@@ -114,7 +114,7 @@
           source ${inputs'.catppuccin.packages.nushell + /catppuccin_macchiato.nu}
           ${source "nix-your-shell.nu" "${lib.getExe pkgs.nix-your-shell} nushell"}
           ${source "zoxide-nushell-config.nu" "${lib.getExe pkgs.zoxide} init nushell"}
-          ${source "carapacu.nu" "${lib.getExe pkgs.carapace} _carapace nushell"}
+          ${source "carapace.nu" "${lib.getExe pkgs.carapace} _carapace nushell"}
 
           alias cd = z
 
