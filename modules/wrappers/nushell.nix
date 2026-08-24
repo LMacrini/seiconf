@@ -116,7 +116,7 @@
           alias git = jj git
 
           # NOTE: there is no (nice) way to set aliases conditionally currently
-          # if there is in the future the git and rmt aliases should be updated
+          # if there is in the future the git alias should be updated
 
           source ${inputs'.catppuccin.packages.nushell + /catppuccin_macchiato.nu}
           ${source "nix-your-shell.nu" "${lib.getExe pkgs.nix-your-shell} nushell"}
