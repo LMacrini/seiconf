@@ -11,7 +11,10 @@
         getAll = aspects: aspects ++ map (aspect: self.aspects.${aspect}.deps |> getAll) aspects;
       in
       aspects:
-      getAll aspects |> lib.flatten |> lib.uniqueStrings |> map (aspect: self.aspects.${aspect}.module);
+      getAll aspects
+      |> lib.flatten
+      |> lib.uniqueStrings
+      |> map (aspect: self.aspects.${aspect}.module);
 
     makePrime =
       a: system:
