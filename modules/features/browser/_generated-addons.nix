@@ -124,10 +124,10 @@
   };
   "darkreader" = buildMozillaXpiAddon {
     pname = "darkreader";
-    version = "4.9.129";
+    version = "4.9.130";
     addonId = "addon@darkreader.org";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4899461/darkreader-4.9.129.xpi";
-    sha256 = "f4f047fe08e420b6d29617738ea00a7b784892b2262b7e6f38dd09b8ee958a44";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4998573/darkreader-4.9.130.xpi";
+    sha256 = "075d5457316af21d62a39a290b31fbf71f514dfc8c3f6a87376fd50f54ef4c9c";
     meta = with lib; {
       homepage = "https://darkreader.org/";
       description = "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing.";
@@ -257,10 +257,10 @@
   };
   "localcdn-fork-of-decentraleyes" = buildMozillaXpiAddon {
     pname = "localcdn-fork-of-decentraleyes";
-    version = "2.6.85";
+    version = "2.6.86";
     addonId = "{b86e4813-687a-43e6-ab65-0bde4ab75758}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4838011/localcdn_fork_of_decentraleyes-2.6.85.xpi";
-    sha256 = "628fcad19950ca5a3005e3e9b54de73842cf9bf87a5c3b543452b10c1647fa60";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5010046/localcdn_fork_of_decentraleyes-2.6.86.xpi";
+    sha256 = "2fcca5f9fd9d0de3b2b4e3b0260d1ca3645f46d6467b09a6d0c039262f425674";
     meta = with lib; {
       homepage = "https://www.localcdn.org";
       description = "Emulates remote frameworks (e.g. jQuery, Bootstrap, AngularJS) and delivers them as local resource. Prevents unnecessary 3rd party requests to Google, StackPath, MaxCDN and more. Prepared rules for uBlock Origin/uMatrix.";
@@ -318,10 +318,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.8.8";
+    version = "26.9";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4945591/refined_github-26.8.8.xpi";
-    sha256 = "cfa6508a75193560a2623220a4e59c6bad7099fed16d65e04c28f0372775e4c6";
+    url = "https://addons.mozilla.org/firefox/downloads/file/4998329/refined_github-26.9.xpi";
+    sha256 = "b4f20254ad5dce01d28d84bab77804272bd4e4c27028a4734cf9fd23214aba41";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -340,10 +340,10 @@
   };
   "return-youtube-dislikes" = buildMozillaXpiAddon {
     pname = "return-youtube-dislikes";
-    version = "3.0.0.18";
+    version = "4.0.6";
     addonId = "{762f9885-5a13-4abd-9c77-433dcd38b8fd}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4371820/return_youtube_dislikes-3.0.0.18.xpi";
-    sha256 = "2d33977ce93276537543161f8e05c3612f71556840ae1eb98239284b8f8ba19e";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5012638/return_youtube_dislikes-4.0.6.xpi";
+    sha256 = "59719749f6df38c1601ca5f39c02158d5f005c43e9eeea1f19527f468c941217";
     meta = with lib; {
       description = "Returns ability to see dislike statistics on youtube";
       license = licenses.gpl3;
@@ -352,6 +352,7 @@
         "*://*.youtube.com/*"
         "storage"
         "*://returnyoutubedislikeapi.com/*"
+        "identity"
       ];
       platforms = platforms.all;
     };
@@ -556,10 +557,10 @@
   };
   "violentmonkey" = buildMozillaXpiAddon {
     pname = "violentmonkey";
-    version = "2.48.0";
+    version = "2.49.0";
     addonId = "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4963965/violentmonkey-2.48.0.xpi";
-    sha256 = "e73e3103697cbeee3335020c31c7e3c587946929740cd78f9bff1b50bf62be34";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5009389/violentmonkey-2.49.0.xpi";
+    sha256 = "761ea6a32cee78c3263d19bbd821eafd4ea0722f10ff358ecba2739c5bff76fb";
     meta = with lib; {
       homepage = "https://violentmonkey.github.io/";
       description = "Userscript support for browsers, open source.";
@@ -615,10 +616,10 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.8.13";
+    version = "2026.9.8";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4955980/youtube_tweaks-2026.8.13.xpi";
-    sha256 = "4b90d8b25a3bc6e2e2d09511280805decc40a0677d24a309ae09f1e7c0f2aaae";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5014100/youtube_tweaks-2026.9.8.xpi";
+    sha256 = "c8cd232d7750f567f503e605063df01ccbb770b025829a461cc4961578a99a44";
     meta = with lib; {
       homepage = "https://github.com/pedrosouu/yt-tweaks";
       description = "A collection of tweaks for hiding Shorts, disabling auto-dubbing, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
