@@ -77,6 +77,21 @@
             ];
           }
           {
+            name = "java";
+            auto-format = true;
+            formatter = {
+              command = "google-java-format";
+              args = [
+                "--aosp"
+                "-"
+              ];
+            };
+            indent = {
+              tab-width = 4;
+              unit = "    ";
+            };
+          }
+          {
             name = "uiua";
             scope = "source.uiua";
             injection-regex = "uiua";
