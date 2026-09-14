@@ -84,7 +84,22 @@
             <Multi_key> <asciitilde> <l> : "ɫ" U026B # LATIN SMALL LETTER L WITH MIDDLE TILDE
 
             <Multi_key> <f> <n>			: "λ"	U03BB # GREEK SMALL LETTER LAMDA
+            <Multi_key> <i> <f> <f> : "↔" U2194 # LEFT RIGHT ARROW
+            <Multi_key> <n> <o> <t> : "¬" U00AC # NOT SIGN
+            <Multi_key> <a> <n> <d> : "∧" U2227 # LOGICAL AND
+            <Multi_key> <o> <r>     : "∨" U2228 # LOGICAL OR
 
+            <Multi_key> <l> <a> <n> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
+            <Multi_key> <r> <a> <n> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET
+
+            <Multi_key> <A> <l>     : "Α" U03B1 # GREEK CAPITAL LETTER ALPHA
+            <Multi_key> <a> <l>     : "α" U03B1 # GREEK SMALL LETTER ALPHA
+            <Multi_key> <B> <t>     : "Β" U03B2 # GREEK CAPITAL LETTER BETA
+            <Multi_key> <b> <t>     : "β" U03B2 # GREEK SMALL LETTER BETA
+            <Multi_key> <G> <a>     : "Γ" U03B3 # GREEK CAPITAL LETTER GAMMA
+            <Multi_key> <g> <a>     : "γ" U03B3 # GREEK SMALL LETTER GAMMA
+            <Multi_key> <D> <e>     : "Δ" U03B4 # GREEK CAPITAL LETTER DELTA
+            <Multi_key> <d> <e>     : "δ" U03B4 # GREEK SMALL LETTER DELTA
             <Multi_key> <M> <u>			: "Μ"	U039C # GREEK CAPITAL LETTER MU
             <Multi_key> <m> <u>			: "μ"	U03BC # GREEK SMALL LETTER MU
             <Multi_key> <N> <u>			: "Ν"	U039D # GREEK CAPITAL LETTER NU
@@ -93,6 +108,16 @@
             <Multi_key> <p> <i>			: "π"	U03C0 # GREEK SMALL LETTER PI
             <Multi_key> <X> <i>			: "Ξ"	U039E # GREEK CAPITAL LETTER XI
             <Multi_key> <x> <i>			: "ξ"	U03BE # GREEK SMALL LETTER XI
+
+            <Multi_key> <u> <n> <i> <t> : "⊤" U22A4 # DOWN TACK
+            <Multi_key> <f> <o> <r> <a> <l> <l> : "∀" U2200 # FOR ALL
+            <Multi_key> <e> <q> <u> <i> <v> : "≡" U2261 # IDENTICAL TO
+
+            <Multi_key> <n> <a> <t> : "ℕ" U2115 # DOUBLE-STRUCK CAPITAL N
+            <Multi_key> <i> <n> <t> : "ℤ" U2124 # DOUBLE-STRUCK CAPITAL Z
+            <Multi_key> <r> <a> <t> : "ℚ" U211A # DOUBLE-STRUCK CAPITAL Q
+            <Multi_key> <r> <e> <a> : "ℝ" U211D # DOUBLE-STRUCK CAPITAL R
+            <Multi_key> <c> <o> <m> : "ℂ" U2102 # DOUBLE-STRUCK CAPITAL C
           '';
 
           systemd =
