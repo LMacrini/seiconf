@@ -278,10 +278,10 @@
   };
   "nekocap" = buildMozillaXpiAddon {
     pname = "nekocap";
-    version = "1.23.2";
+    version = "1.24.0";
     addonId = "nekocaption@gmail.com";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4809223/nekocap-1.23.2.xpi";
-    sha256 = "2e5e5c2ef0837d0a5278e4d67270fecf0813d32dae81df8653f6b38fcccdfd40";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5025837/nekocap-1.24.0.xpi";
+    sha256 = "4dde7d98a7db7532f47143fcef585d07733c77aeb62985eb34af1ae03781fcaa";
     meta = with lib; {
       homepage = "https://nekocap.com";
       description = "Create and upload community captions for YouTube videos (and more) with this easy to use extension that supports SSA/ASS rendering.";
@@ -318,10 +318,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.9";
+    version = "26.9.12";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4998329/refined_github-26.9.xpi";
-    sha256 = "b4f20254ad5dce01d28d84bab77804272bd4e4c27028a4734cf9fd23214aba41";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5024350/refined_github-26.9.12.xpi";
+    sha256 = "eff601153ab28f19ac3bcda4b5d8f3f8c8f4eb47ac45dddaa3a49a67b734138d";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -423,10 +423,10 @@
   };
   "styl-us" = buildMozillaXpiAddon {
     pname = "styl-us";
-    version = "2.4.11";
+    version = "2.4.13";
     addonId = "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4970801/styl_us-2.4.11.xpi";
-    sha256 = "a1fb8025132ad77f3f81dcdf6ac6a31798048a95ea65b975d12b335116df0224";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5028285/styl_us-2.4.13.xpi";
+    sha256 = "2d969b7514acbfa7b77b4e4c6341b9e1e8bcd4c3b9bc63d8b06e5d853dd1cbdd";
     meta = with lib; {
       homepage = "https://add0n.com/stylus.html";
       description = "Redesign your favorite websites with Stylus, an actively developed and community driven userstyles manager. Easily install custom themes from popular online repositories, or create, edit, and manage your own personalized CSS stylesheets.";
@@ -622,7 +622,7 @@
     sha256 = "c8cd232d7750f567f503e605063df01ccbb770b025829a461cc4961578a99a44";
     meta = with lib; {
       homepage = "https://github.com/pedrosouu/yt-tweaks";
-      description = "A collection of tweaks for hiding Shorts, disabling auto-dubbing, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
+      description = "A collection of tweaks for hiding Shorts, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
       license = licenses.mit;
       mozPermissions = [
         "storage"
