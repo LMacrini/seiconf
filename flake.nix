@@ -48,7 +48,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nixos/nixos-hardware";
     };
-    nixpkgs.url = "https://channels.nixos.org/nixos-26.05/nixexprs.tar.xz";
+    nixpkgs.url = "https://channels.nixos.org/nixos-26.05/nixexprs.tar.zst";
     prince = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:forkprince/nur-packages";
