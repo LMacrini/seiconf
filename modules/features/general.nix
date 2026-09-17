@@ -92,14 +92,22 @@
             <Multi_key> <l> <a> <n> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
             <Multi_key> <r> <a> <n> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET
 
-            <Multi_key> <A> <l>     : "Α" U03B1 # GREEK CAPITAL LETTER ALPHA
+            <Multi_key> <A> <l>     : "Α" U0391 # GREEK CAPITAL LETTER ALPHA
             <Multi_key> <a> <l>     : "α" U03B1 # GREEK SMALL LETTER ALPHA
-            <Multi_key> <B> <t>     : "Β" U03B2 # GREEK CAPITAL LETTER BETA
+            <Multi_key> <B> <t>     : "Β" U0392 # GREEK CAPITAL LETTER BETA
             <Multi_key> <b> <t>     : "β" U03B2 # GREEK SMALL LETTER BETA
-            <Multi_key> <G> <a>     : "Γ" U03B3 # GREEK CAPITAL LETTER GAMMA
+            <Multi_key> <G> <a>     : "Γ" U0393 # GREEK CAPITAL LETTER GAMMA
             <Multi_key> <g> <a>     : "γ" U03B3 # GREEK SMALL LETTER GAMMA
-            <Multi_key> <D> <e>     : "Δ" U03B4 # GREEK CAPITAL LETTER DELTA
+            <Multi_key> <D> <e>     : "Δ" U0394 # GREEK CAPITAL LETTER DELTA
             <Multi_key> <d> <e>     : "δ" U03B4 # GREEK SMALL LETTER DELTA
+            <Multi_key> <E> <p>     : "Ε" U0395 # GREEK CAPITAL LETTER EPSILON
+            <Multi_key> <e> <p>     : "ε" U03B5 # GREEK SMALL LETTER EPSILON
+            <Multi_key> <Z> <e>     : "Ζ" U0396 # GREEK CAPITAL LETTER ZETA
+            <Multi_key> <z> <e>     : "ζ" U03B6 # GREEK SMALL LETTER ZETA
+            <Multi_key> <E> <t>     : "Η" U0397 # GREEK CAPITAL LETTER ETA
+            <Multi_key> <e> <t>     : "η" U03B7 # GREEK SMALL LETTER ETA
+            <Multi_key> <T> <t>     : "Θ" U0398 # GREEK CAPITAL LETTER THETA
+            <Multi_key> <t> <t>     : "θ" U03B8 # GREEK SMALL LETTER THETA
             <Multi_key> <M> <u>			: "Μ"	U039C # GREEK CAPITAL LETTER MU
             <Multi_key> <m> <u>			: "μ"	U03BC # GREEK SMALL LETTER MU
             <Multi_key> <N> <u>			: "Ν"	U039D # GREEK CAPITAL LETTER NU
