@@ -117,7 +117,8 @@
             <Multi_key> <X> <i>			: "Ξ"	U039E # GREEK CAPITAL LETTER XI
             <Multi_key> <x> <i>			: "ξ"	U03BE # GREEK SMALL LETTER XI
 
-            <Multi_key> <u> <n> <i> <t> : "⊤" U22A4 # DOWN TACK
+            <Multi_key> <t> <o> <p> : "⊤" U22A4 # DOWN TACK
+            <Multi_key> <p> <e> <r> <p> : "⊥" U22A5 # UP TACK
             <Multi_key> <f> <o> <r> <a> <l> <l> : "∀" U2200 # FOR ALL
             <Multi_key> <e> <x> <i> : "∃" U2203 # THERE EXISTS
             <Multi_key> <e> <q> <u> <i> <v> : "≡" U2261 # IDENTICAL TO
