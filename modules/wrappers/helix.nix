@@ -25,6 +25,18 @@
           };
 
           soft-wrap.enable = true;
+
+          statusline = {
+            right = [
+              "diagnostics"
+              "selections"
+              "register"
+              "position-percentage"
+              "position"
+              "version-control"
+              "file-encoding"
+            ];
+          };
         };
 
         keys = {
