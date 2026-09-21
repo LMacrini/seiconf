@@ -88,6 +88,8 @@
             <Multi_key> <n> <o> <t> : "¬" U00AC # NOT SIGN
             <Multi_key> <a> <n> <d> : "∧" U2227 # LOGICAL AND
             <Multi_key> <o> <r>     : "∨" U2228 # LOGICAL OR
+            <Multi_key> <o> <plus>  : "⊕" U2295 # CIRCLED PLUS
+            <Multi_key> <o> <p> <l> <u> <s> : "⊕" U2295 # CIRCLED PLUS
 
             <Multi_key> <l> <a> <n> : "⟨" U27E8 # MATHEMATICAL LEFT ANGLE BRACKET
             <Multi_key> <r> <a> <n> : "⟩" U27E9 # MATHEMATICAL RIGHT ANGLE BRACKET
