@@ -93,6 +93,7 @@
           "/var/lib/nixos"
           "/var/lib/fprint"
           "/var/lib/systemd/backlight"
+          "/var/lib/cloudflare-warp"
         ];
 
         files = [
