@@ -21,9 +21,8 @@
         "--config" = format.generate "kitty.conf" {
           include = "${pkgs.kitty-themes}/share/kitty-themes/themes/Catppuccin-Macchiato.conf";
           shell_integration = "no-cursor";
-          allow_remote_control = "yes";
+          allow_remote_control = "no";
           confirm_os_window_close = 0;
-          cursor_trail = 1;
           enable_audio_bell = "no";
 
           tab_bar_style = "powerline";
