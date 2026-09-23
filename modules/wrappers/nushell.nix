@@ -33,6 +33,7 @@
           }
 
           $env.config.show_banner = false
+          $env.config.rm.always_trash = true
           $env.config.filesize.unit = "binary"
 
           $env.PROMPT_COMMAND_RIGHT = ""
@@ -41,7 +42,10 @@
           $env.PROMPT_COMMAND = {
             let user = (ansi cyan)(whoami)
             let hostname = (ansi blue)(sys host | get hostname)
-            $"($user)(ansi white)@($hostname)(ansi reset) (ansi yellow)(prompt_pwd)(ansi reset)"
+            let exit_code = if ($env.LAST_EXIT_CODE != 0) {
+              $" (ansi red_bold)[($env.LAST_EXIT_CODE)]"
+            } else {""}
+            $"($user)(ansi white)@($hostname)(ansi reset) (ansi yellow)(prompt_pwd)($exit_code)(ansi reset)"
           }
 
           $env.config.hooks.env_change.PWD = [{
