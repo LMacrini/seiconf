@@ -252,7 +252,7 @@
                     let pipe = $"(mktemp --dry).fifo"
                     mkfifo $pipe
                     let wayfreeze_job = job spawn {
-                      wayfreeze --after-freeze-timeout 100 --after-freeze-cmd $"echo > ($pipe)"
+                      wayfreeze --hide-cursor --after-freeze-timeout 100 --after-freeze-cmd $"echo > ($pipe)"
                     }
                     open --raw $pipe
                     try {
