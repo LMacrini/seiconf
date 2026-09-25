@@ -19,12 +19,12 @@
               let pipe = $"(mktemp --dry).fifo"
               mkfifo $pipe
               let wayfreeze_job = job spawn {
-                wayfreeze --hide-cursor --after-freeze-timeout 100 --after-freeze-cmd $"echo > ($pipe)"
+                ${lib.getExe pkgs.wayfreeze} --hide-cursor --after-freeze-timeout 100 --after-freeze-cmd $"echo > ($pipe)"
               }
               open --raw $pipe
               try {
-                let selection = slurp -dw 0 e> /dev/null
-                grim -g $selection - | wl-copy
+                let selection = ${lib.getExe pkgs.slurp} -dw 0 e> /dev/null
+                ${lib.getExe pkgs.grim} -g $selection - | ${lib.getExe' pkgs.wl-clipboard "wl-copy"}
               }
               job kill $wayfreeze_job
               rm --force $pipe
