@@ -24,6 +24,7 @@
         pkgs.gitFull
         pkgs.bat
         pkgs.just
+        pkgs.just-lsp
         pkgs.ripgrep
         pkgs.tlrc
         pkgs.rip2
