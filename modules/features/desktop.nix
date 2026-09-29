@@ -1,5 +1,46 @@
 { lib, ... }:
 {
+  perSystem = { pkgs, ... }: {
+    packages.ioseika = pkgs.iosevka.override {
+      privateBuildPlan = {
+        family = "Ioseika";
+        spacing = "term";
+        serifs = "sans";
+        noCvSs = true;
+        exportGlyphNames = true;
+        noLigation = true;
+
+        weights = {
+          Regular = {
+            shape = 400;
+            menu = 400;
+            css = 400;
+          };
+          Bold = {
+            shape = 700;
+            menu = 700;
+            css = 700;
+          };
+        };
+
+        slopes = {
+          Upright = {
+            angle = 0;
+            shape = "upright";
+            menu = "upright";
+            css = "normal";
+          };
+          Italic = {
+            angle = 9.4;
+            shape = "italic";
+            menu = "italic";
+            css = "italic";
+          };
+        };
+      };
+    };
+  };
+
   flake.aspects.desktop.deps = [
     "hjem"
   ];
@@ -8,6 +49,7 @@
     {
       config,
       pkgs,
+      self',
       ...
     }:
     {
@@ -49,6 +91,7 @@
             nasin-nanpa-helvetica
             noto-fonts
             noto-fonts-cjk-sans
+            self'.packages.ioseika
           ];
 
           fontconfig.defaultFonts = {
