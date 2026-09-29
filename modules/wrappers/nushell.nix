@@ -43,7 +43,7 @@
             let user = (ansi cyan)(whoami)
             let hostname = (ansi blue)(sys host | get hostname)
             let exit_code = if ($env.LAST_EXIT_CODE != 0) {
-              $" (ansi red_bold)[($env.LAST_EXIT_CODE)]"
+              $" (ansi red)[(ansi attr_bold)($env.LAST_EXIT_CODE)(ansi reset_bold)]"
             } else {""}
             $"($user)(ansi white)@($hostname)(ansi reset) (ansi yellow)(prompt_pwd)($exit_code)(ansi reset)"
           }
