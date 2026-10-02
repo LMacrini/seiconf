@@ -14,7 +14,7 @@
         };
 
         user = {
-          email = "seijamail@duck.com";
+          email = "seija@amanojaku.my.id";
           name = "Seija";
         };
 
