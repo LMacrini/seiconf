@@ -1,9 +1,10 @@
-{ lib, ... }:
+{ lib, self, ... }:
 {
   flake.wrappers.kitty =
     {
       wlib,
       pkgs,
+      self',
       ...
     }:
     let
@@ -13,9 +14,15 @@
       };
     in
     {
-      imports = [ wlib.modules.default ];
+      imports = [
+        wlib.modules.default
+        self.nixosModules.inputs
+      ];
 
       package = pkgs.kitty;
+      runtimePkgs = [
+        self'.packages.ioseika
+      ];
 
       flags = {
         "--config" = format.generate "kitty.conf" {
@@ -24,6 +31,9 @@
           allow_remote_control = "no";
           confirm_os_window_close = 0;
           enable_audio_bell = "no";
+
+          font_family = "family=Ioseika";
+          font_size = 12.0;
 
           tab_bar_style = "powerline";
           tab_powerline_style = "angled";
