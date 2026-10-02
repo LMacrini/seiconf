@@ -40,6 +40,10 @@
 
           auto_reload_config = -1;
 
+          notify_on_cmd_finish = "unfocused 15.0 notify";
+
+          shell = lib.getExe self'.packages.environment;
+
           map = [
             "kitty_mod+enter launch --cwd=current"
             "kitty_mod+t new_tab"
