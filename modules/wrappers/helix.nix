@@ -131,13 +131,24 @@
               "\"" = "\"";
             };
           }
+          {
+            name = "zig";
+            language-servers = [
+              "zigscient"
+              "zls"
+            ];
+          }
         ];
 
         language-server = {
-          zls.config.enable_snippets = false;
           uiua-lsp = {
             command = "uiua";
             args = [ "lsp" ];
+          };
+          zls.config.enable_snippets = false;
+          zigscient = {
+            command = "zigscient";
+            config.enable_snippets = false;
           };
         };
       };
