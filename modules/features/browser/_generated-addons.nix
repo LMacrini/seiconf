@@ -25,10 +25,10 @@
   };
   "bitwarden-password-manager" = buildMozillaXpiAddon {
     pname = "bitwarden-password-manager";
-    version = "2026.9.0";
+    version = "2026.9.3";
     addonId = "{446900e4-71c2-419f-a6a7-df9c091e268b}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5037282/bitwarden_password_manager-2026.9.0.xpi";
-    sha256 = "324a2d97e365092fe9db0f0069e4c748c935858523868361a3277c1bbf339a17";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5076543/bitwarden_password_manager-2026.9.3.xpi";
+    sha256 = "5dd6efa5d228dbeac7a0c6a883f951787dc66e57985322ce549210b0df8d054c";
     meta = with lib; {
       homepage = "https://bitwarden.com";
       description = "At home, at work, or on the go, Bitwarden easily secures all your passwords, passkeys, and sensitive information.";
@@ -211,10 +211,10 @@
   };
   "indie-wiki-buddy" = buildMozillaXpiAddon {
     pname = "indie-wiki-buddy";
-    version = "4.0.0";
+    version = "4.0.1";
     addonId = "{cb31ec5d-c49a-4e5a-b240-16c767444f62}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4982796/indie_wiki_buddy-4.0.0.xpi";
-    sha256 = "2769ffe55ff3462eef9029f00d90bb2df7d3f2fa6521b90de47aa81152e25df8";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5057371/indie_wiki_buddy-4.0.1.xpi";
+    sha256 = "3b4b804391e9c9ffc62da11299720f887c829220d05393c67392ef6c81407c42";
     meta = with lib; {
       homepage = "https://getindie.wiki/";
       description = "Helping you discover quality, independent wikis!\n\nWhen visiting a Fandom wiki, Indie Wiki Buddy redirects or alerts you of independent alternatives. It also filters search engine results. BreezeWiki is also supported, to reduce clutter on Fandom.";
@@ -318,10 +318,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.9.12";
+    version = "26.10";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5024350/refined_github-26.9.12.xpi";
-    sha256 = "eff601153ab28f19ac3bcda4b5d8f3f8c8f4eb47ac45dddaa3a49a67b734138d";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5075070/refined_github-26.10.xpi";
+    sha256 = "ee4784797ac6af961e8bdea62767357a753dbfefbad51a25a04746d6156ea192";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";

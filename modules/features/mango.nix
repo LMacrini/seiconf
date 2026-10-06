@@ -91,7 +91,7 @@
             |> lib.mapAttrsToList (
               n: v:
               with v;
-              "monitorrule=name:${n},width:${width},height:${height},refresh:${refreshRate},x:${x},y:${y},scale:${scale}"
+              "monitor_rule=name:${n},width:${width},height:${height},refresh:${refreshRate},x:${x},y:${y},scale:${scale}"
             )
             |> builtins.concatStringsSep "\n";
 
@@ -213,13 +213,13 @@
                 ''
             )
             <| pkgs.writeText "mango.conf" ''
-              exec-once = kitty
-              exec-once = waybar
+              exec_once = kitty
+              exec_once = waybar
 
-              exec-once = ${lib.getExe pkgs.networkmanagerapplet}
-              exec-once = ${lib.getExe' pkgs.blueman "blueman-applet"}
+              exec_once = ${lib.getExe pkgs.networkmanagerapplet}
+              exec_once = ${lib.getExe' pkgs.blueman "blueman-applet"}
 
-              exec-once = ${lib.getExe autostart}
+              exec_once = ${lib.getExe autostart}
 
               trackpad_natural_scrolling = 1
               trackpad_click_method = 2
@@ -227,15 +227,15 @@
               env = ELECTRON_OZONE_PLATFORM_HINT,wayland
               env = PROTON_ENABLE_WAYLAND,1
 
-              focuscolor = 0xff6ed4ff
+              focus_color = 0xff6ed4ff
 
               gesturebind = NONE,left,3,viewtoright_have_client
               gesturebind = NONE,right,3,viewtoleft_have_client
               switchbind = fold,spawn,systemctl suspend
 
-              windowrule = isopensilent:1,isglobal:1,offsetx:100,offsety:100,appid:steam,title:^notificationtoasts_\d+_desktop$
-              windowrule = appid:re-lunatic-player,isfloating:1,isglobal:1
-              windowrule = appid:spacewarp,isfloating:1
+              window_rule = is_open_silent:1,is_global:1,offset_x:100,offset_y:100,app_id:steam,title:^notificationtoasts_\d+_desktop$
+              window_rule = app_id:re-lunatic-player,is_floating:1,is_global:1
+              window_rule = app_id:spacewarp,is_floating:1
 
               xkb_rules_layout = us,gr
               xkb_rules_options = compose:ralt
@@ -268,7 +268,7 @@
               bind = SUPER+SHIFT,O,restore_minimized
               bind = SUPER,H,toggle_scratchpad
               bind = SUPER,K,toggle_named_scratchpad,kitty-scratch,none,kitty --app-id kitty-scratch
-              windowrule = isnamedscratchpad:1,appid:kitty-scratch
+              window_rule = is_named_scratchpad:1,app_id:kitty-scratch
 
               bind = SUPER,U,incnmaster,+1
               bind = SUPER,D,incnmaster,-1
@@ -308,7 +308,7 @@
 
               cursor_hide_timeout = 5
               new_is_master = 0
-              smartgaps = 1
+              smart_gaps = 1
               drag_tile_to_tile = 1
 
               ${monitors}
@@ -324,7 +324,7 @@
                     bind=SUPER+SHIFT,${tag},tag,${tag}
                     bind=SUPER+CTRL,${tag},toggleview,${tag}
                     bind=SUPER+CTRL+SHIFT,${tag},toggletag,${tag}
-                    tagrule=id:${tag},layout_name:fair
+                    tag_rule=id:${tag},layout_name:fair
                   ''
                 ) 9
               }
