@@ -49,7 +49,7 @@
           }
 
           $env.config.hooks.env_change.PWD = [{
-            direnv reload
+            direnv load
           }]
 
           if "KITTY_INSTALLATION_DIR" in $env {
@@ -95,7 +95,7 @@
             }
           ]
 
-          def --env "direnv reload" []: nothing -> nothing {
+          def --env "direnv load" []: nothing -> nothing {
             if (which direnv | is-empty) {
               return
             }
@@ -103,6 +103,11 @@
             use std/config env-conversions
             direnv export json | from json | default {} | load-env
             $env.PATH = do (env-conversions).path.from_string $env.PATH
+          }
+
+          def --env "direnv reload" []: nothing -> nothing {
+            ^direnv reload
+            direnv load
           }
 
           use std/dirs
