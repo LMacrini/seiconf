@@ -177,7 +177,7 @@
                   insert_final_newline = true
                   charset = utf-8
 
-                  [*.{nix,hs}]
+                  [*.{nix,hs,typ}]
                   indent_size = 2
                 '';
 
