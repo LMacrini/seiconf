@@ -179,6 +179,37 @@
             print --stderr $"The command '($command)' was found in the following packages from nixpkgs:"
             $packages
           }
+
+          def psub [
+            task: closure
+            --timeout (-t): duration
+          ]: any -> path {
+            let pipe = $"(mktemp --dry).fifo"
+            mkfifo $pipe
+
+            let cleanup = job spawn --description "psub cleanup" {
+              let $id: int = job recv --tag 1
+              try {
+                if ($timeout != null) {
+                  job recv --timeout $timeout --tag 2
+                } else {
+                  job recv --tag 2
+                }
+              } catch {
+                job kill $id
+                print --stderr $"psub task with id ($id) timed out"
+              }
+              rm --permanent --force $pipe
+            }
+
+            let job: int = job spawn --description "psub job" {
+              $in | do $task | save --force $pipe
+              job send $cleanup --tag 2
+            }
+
+            $job | job send $cleanup --tag 1
+            $pipe
+          }
         '';
     };
 }
