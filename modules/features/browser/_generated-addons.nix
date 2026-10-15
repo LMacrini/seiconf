@@ -616,10 +616,10 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.9.8";
+    version = "2026.10.15";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5014100/youtube_tweaks-2026.9.8.xpi";
-    sha256 = "c8cd232d7750f567f503e605063df01ccbb770b025829a461cc4961578a99a44";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5123845/youtube_tweaks-2026.10.15.xpi";
+    sha256 = "247177df3a31af28a91b7cf2a1a3832bbfd28a2f4b0a69ab4b3641853add58ba";
     meta = with lib; {
       homepage = "https://github.com/pedrosouu/yt-tweaks";
       description = "A collection of tweaks for hiding Shorts, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";

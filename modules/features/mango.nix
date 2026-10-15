@@ -255,7 +255,7 @@
               bind = SUPER,Q,spawn,kitty
               bind = SUPER,T,spawn_shell,${launcher}
               bind = ALT,space,spawn_shell,${launcher}
-              bind = SUPER,C,killclient
+              bind = SUPER,C,smartkillclient
               bind = SUPER,Return,zoom
               bind = SUPER,L,spawn,${sessionMenu}
 
