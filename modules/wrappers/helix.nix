@@ -73,6 +73,20 @@
       languages = {
         language = [
           {
+            name = "c";
+            indent = {
+              tab-width = 4;
+              unit = "    ";
+            };
+          }
+          {
+            name = "cpp";
+            indent = {
+              tab-width = 4;
+              unit = "    ";
+            };
+          }
+          {
             name = "nix";
             auto-format = true;
             formatter = {
