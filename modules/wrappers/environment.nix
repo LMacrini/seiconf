@@ -31,7 +31,7 @@
         pkgs.p7zip
         pkgs.unzip
         pkgs.ffmpeg
-        pkgs.man-pages
+        pkgs.man-pages.man
 
         self'.packages.helix
         self'.packages.jujutsu
