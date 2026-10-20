@@ -25,14 +25,13 @@
   };
   "bitwarden-password-manager" = buildMozillaXpiAddon {
     pname = "bitwarden-password-manager";
-    version = "2026.9.3";
+    version = "2026.10.0";
     addonId = "{446900e4-71c2-419f-a6a7-df9c091e268b}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5076543/bitwarden_password_manager-2026.9.3.xpi";
-    sha256 = "5dd6efa5d228dbeac7a0c6a883f951787dc66e57985322ce549210b0df8d054c";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5125667/bitwarden_password_manager-2026.10.0.xpi";
+    sha256 = "a25e02e961f4ffcecda12584f32f1993102ad7509e9ca84582e5287109f5bd20";
     meta = with lib; {
       homepage = "https://bitwarden.com";
       description = "At home, at work, or on the go, Bitwarden easily secures all your passwords, passkeys, and sensitive information.";
-      license = licenses.gpl3;
       mozPermissions = [
         "<all_urls>"
         "*://*/*"
@@ -318,10 +317,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.10";
+    version = "26.10.20";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5075070/refined_github-26.10.xpi";
-    sha256 = "ee4784797ac6af961e8bdea62767357a753dbfefbad51a25a04746d6156ea192";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5140575/refined_github-26.10.20.xpi";
+    sha256 = "d32ee946ef773e893a48c532ad4ea7154bc5c9f69919899d6f76effa6c58cf15";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -423,10 +422,10 @@
   };
   "styl-us" = buildMozillaXpiAddon {
     pname = "styl-us";
-    version = "2.4.14";
+    version = "2.4.17";
     addonId = "{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5044316/styl_us-2.4.14.xpi";
-    sha256 = "51d4efd6aa6484a749b97e36222f7bbe2ff699ed16b9a13adf40ecb6a0597081";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5142667/styl_us-2.4.17.xpi";
+    sha256 = "6ea20f86a2015e3e7a639e2dbb13bc0d63461fdfdb80d7138c3f8e8924e4fb1c";
     meta = with lib; {
       homepage = "https://add0n.com/stylus.html";
       description = "Redesign your favorite websites with Stylus, an actively developed and community driven userstyles manager. Easily install custom themes from popular online repositories, or create, edit, and manage your own personalized CSS stylesheets.";
@@ -582,16 +581,17 @@
   };
   "youtube-anti-translate" = buildMozillaXpiAddon {
     pname = "youtube-anti-translate";
-    version = "1.19.12";
+    version = "1.20.5";
     addonId = "{458160b9-32eb-4f4c-87d1-89ad3bdeb9dc}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4572770/youtube_anti_translate-1.19.12.xpi";
-    sha256 = "640195b5f8b26697491b2704d30c125446309a0ef8c0c1198d9c6b3a370a260f";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5067251/youtube_anti_translate-1.20.5.xpi";
+    sha256 = "ab7d21be6befce78ae79422fcef14ed2428a088aabd79b44283ca48c88b4085f";
     meta = with lib; {
       description = "A small extension to disable YT video titles autotranslation.";
       license = licenses.mpl20;
       mozPermissions = [
         "storage"
         "*://*.youtube.com/*"
+        "*://*.youtube-nocookie.com/*"
         "*://m.youtube.com/*"
       ];
       platforms = platforms.all;
@@ -616,10 +616,10 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.10.15";
+    version = "2026.10.20";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5123845/youtube_tweaks-2026.10.15.xpi";
-    sha256 = "247177df3a31af28a91b7cf2a1a3832bbfd28a2f4b0a69ab4b3641853add58ba";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5143860/youtube_tweaks-2026.10.20.xpi";
+    sha256 = "af20ecce20b80abb71b31a8fe88145c29e5a37b579768a0b9b5f17d8946c4a05";
     meta = with lib; {
       homepage = "https://github.com/pedrosouu/yt-tweaks";
       description = "A collection of tweaks for hiding Shorts, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
