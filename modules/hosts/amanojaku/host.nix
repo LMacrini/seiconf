@@ -76,10 +76,10 @@
 
       hjem.users.lioma.packages = with pkgs; [
         inputs'.prince.packages.fluxer-stable-bin
-        emacs-pgtk
         gearlever
         libreoffice
         signal-desktop
+        sioyek
       ];
 
       networking.hostName = "amanojaku";
