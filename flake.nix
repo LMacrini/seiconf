@@ -2,6 +2,10 @@
 # DO NOT MODIFY
 {
   inputs = {
+    anime-games = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:an-anime-team/anime-games-launcher";
+    };
     catppuccin = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:catppuccin/nix?ref=release-26.05";

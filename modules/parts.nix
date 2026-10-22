@@ -48,9 +48,7 @@
       {
         config._module.args = rec {
           system = pkgs.stdenvNoCC.hostPlatform.system;
-
           inputs' = builtins.mapAttrs (_: flake: self.lib.makePrime flake system) inputs;
-
           self' = self.lib.makePrime self system;
         };
       };

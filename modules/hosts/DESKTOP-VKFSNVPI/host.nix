@@ -1,12 +1,20 @@
 {
   self,
+  inputs,
   lib,
   ...
 }:
 {
-  flake.file.inputs.freesm = {
-    url = "github:freesmteam/freesmlauncher";
-    inputs.nixpkgs.follows = "nixpkgs";
+  flake.file.inputs = {
+    anime-games = {
+      url = "github:an-anime-team/anime-games-launcher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    freesm = {
+      url = "github:freesmteam/freesmlauncher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   flake.nixosConfigurations.DESKTOP-VKFSNVPI = self.lib.nixosSystem {
@@ -25,6 +33,10 @@
       ...
     }:
     {
+      imports = [
+        inputs.anime-games.nixosModules.anime-games-launcher
+      ];
+
       preferences = {
         monitors = {
           DP-1 = {
@@ -48,16 +60,17 @@
       };
 
       services.flatpak.enable = true;
-      programs.appimage = {
-        enable = true;
-        binfmt = true;
-      };
 
       boot.kernelPackages = pkgs.linuxPackages_zen;
 
       nixpkgs.config.allowUnfree = true;
 
       programs = {
+        anime-games-launcher.enable = true;
+        appimage = {
+          enable = true;
+          binfmt = true;
+        };
         discord.enable = false;
         noisetorch.enable = false;
         obs-studio = {
