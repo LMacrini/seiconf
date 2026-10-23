@@ -48,10 +48,6 @@
       };
       url = "github:mangowm/mango";
     };
-    millennium = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:steamclienthomebrew/millennium?ref=next&dir=packages/nix";
-    };
     nix-index-database = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nix-index-database";

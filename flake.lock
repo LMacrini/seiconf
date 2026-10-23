@@ -220,48 +220,6 @@
         "type": "github"
       }
     },
-    "millennium": {
-      "inputs": {
-        "millennium-src": "millennium-src",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "nixpkgs-bun": "nixpkgs-bun"
-      },
-      "locked": {
-        "dir": "packages/nix",
-        "lastModified": 1792356694,
-        "narHash": "sha256-ggl3E00MPfvBtCPG25tbNT8t4En0e1wnyFAlSavrVJE=",
-        "owner": "steamclienthomebrew",
-        "repo": "millennium",
-        "rev": "2c15d5ba8b5e0fb41da7f8a1d9db74a910d6ea1b",
-        "type": "github"
-      },
-      "original": {
-        "dir": "packages/nix",
-        "owner": "steamclienthomebrew",
-        "ref": "next",
-        "repo": "millennium",
-        "type": "github"
-      }
-    },
-    "millennium-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1792355243,
-        "narHash": "sha256-8jdezZ7+8+53m40wJddnCOTFfQlCX0sQdDOtn18BJJM=",
-        "owner": "SteamClientHomebrew",
-        "repo": "Millennium",
-        "rev": "426c05a0f0a14fee19c7cc04f5c2fc5cc000e51e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "SteamClientHomebrew",
-        "repo": "Millennium",
-        "rev": "426c05a0f0a14fee19c7cc04f5c2fc5cc000e51e",
-        "type": "github"
-      }
-    },
     "nix-filter": {
       "locked": {
         "lastModified": 1757882181,
@@ -330,22 +288,6 @@
         "url": "https://channels.nixos.org/nixos-26.05/nixexprs.tar.zst"
       }
     },
-    "nixpkgs-bun": {
-      "locked": {
-        "lastModified": 1790822859,
-        "narHash": "sha256-69xHQhAeMAD2wDXO7T2pcOZIF9Sga2W+JkmY2a11Ops=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "c59305bab2065cfecc4944690d9eedbb56f3a9fa",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "c59305bab2065cfecc4944690d9eedbb56f3a9fa",
-        "type": "github"
-      }
-    },
     "prince": {
       "inputs": {
         "nixpkgs": [
@@ -377,7 +319,6 @@
         "hjem": "hjem",
         "impermanence": "impermanence",
         "mango": "mango",
-        "millennium": "millennium",
         "nix-index-database": "nix-index-database",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs",

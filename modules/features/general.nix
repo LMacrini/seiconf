@@ -9,11 +9,6 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    millennium = {
-      url = "github:steamclienthomebrew/millennium?ref=next&dir=packages/nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   flake.aspects.general = {
@@ -47,7 +42,6 @@
         programs = {
           command-not-found.enable = lib.mkForce false;
           nix-index-database.comma.enable = true;
-          # steam.package = lib.mkDefault inputs'.millennium.packages.millennium-steam;
         };
 
         hjem.users.lioma = {
