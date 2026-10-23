@@ -8,7 +8,10 @@
   flake.file.inputs = {
     anime-games = {
       url = "github:an-anime-team/anime-games-launcher";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        flake-utils.follows = "flake-utils";
+      };
     };
 
     freesm = {
@@ -32,11 +35,19 @@
       config,
       ...
     }:
+    let
+      anime-games-launcher = inputs.wrappers.lib.evalPackage (
+        { wlib, ... }: {
+          imports = [ wlib.modules.default ];
+          inherit pkgs;
+          package = inputs'.anime-games.packages.default;
+          runtimePkgs = [
+            pkgs.python3
+          ];
+        }
+      );
+    in
     {
-      imports = [
-        inputs.anime-games.nixosModules.anime-games-launcher
-      ];
-
       preferences = {
         monitors = {
           DP-1 = {
@@ -66,7 +77,6 @@
       nixpkgs.config.allowUnfree = true;
 
       programs = {
-        anime-games-launcher.enable = true;
         appimage = {
           enable = true;
           binfmt = true;
@@ -165,6 +175,7 @@
       hjem.users.lioma.packages = with pkgs; [
         inputs'.prince.packages.fluxer-stable-bin
         inputs'.freesm.packages.default
+        anime-games-launcher
         easyeffects
         emacs-pgtk
         gearlever

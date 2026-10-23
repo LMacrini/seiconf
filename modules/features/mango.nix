@@ -5,6 +5,10 @@
     inputs = {
       nixpkgs.follows = "nixpkgs";
       flake-parts.follows = "flake-parts";
+      scenefx.inputs = {
+        flake-utils.follows = "flake-utils";
+        systems.follows = "flake-utils/systems";
+      };
     };
   };
 

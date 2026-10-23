@@ -16,6 +16,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # only to sync flake-utils for other flakes
+    flake-utils.url = "github:numtide/flake-utils";
+
     prince = {
       url = "github:forkprince/nur-packages";
       inputs.nixpkgs.follows = "nixpkgs";

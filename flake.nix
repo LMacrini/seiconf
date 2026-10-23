@@ -3,7 +3,10 @@
 {
   inputs = {
     anime-games = {
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs = {
+        flake-utils.follows = "flake-utils";
+        nixpkgs.follows = "nixpkgs";
+      };
       url = "github:an-anime-team/anime-games-launcher";
     };
     catppuccin = {
@@ -18,6 +21,7 @@
       inputs.nixpkgs-lib.follows = "nixpkgs";
       url = "github:hercules-ci/flake-parts";
     };
+    flake-utils.url = "github:numtide/flake-utils";
     freesm = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:freesmteam/freesmlauncher";
@@ -37,6 +41,10 @@
       inputs = {
         flake-parts.follows = "flake-parts";
         nixpkgs.follows = "nixpkgs";
+        scenefx.inputs = {
+          flake-utils.follows = "flake-utils";
+          systems.follows = "flake-utils/systems";
+        };
       };
       url = "github:mangowm/mango";
     };
