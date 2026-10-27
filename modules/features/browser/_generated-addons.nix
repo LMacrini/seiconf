@@ -277,10 +277,10 @@
   };
   "nekocap" = buildMozillaXpiAddon {
     pname = "nekocap";
-    version = "1.24.0";
+    version = "1.25.0";
     addonId = "nekocaption@gmail.com";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5025837/nekocap-1.24.0.xpi";
-    sha256 = "4dde7d98a7db7532f47143fcef585d07733c77aeb62985eb34af1ae03781fcaa";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5159569/nekocap-1.25.0.xpi";
+    sha256 = "46fa390bd5d77648d2176b50002c5c09ec0c018c07fc720e5ce89d97031b0202";
     meta = with lib; {
       homepage = "https://nekocap.com";
       description = "Create and upload community captions for YouTube videos (and more) with this easy to use extension that supports SSA/ASS rendering.";
@@ -317,10 +317,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.10.20";
+    version = "26.10.26";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5140575/refined_github-26.10.20.xpi";
-    sha256 = "d32ee946ef773e893a48c532ad4ea7154bc5c9f69919899d6f76effa6c58cf15";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5167698/refined_github-26.10.26.xpi";
+    sha256 = "12c2828bc4c31718f9a2595a007fa7b0300970b5b0d2eadd0aaf3754dbf7f1ff";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -556,10 +556,10 @@
   };
   "violentmonkey" = buildMozillaXpiAddon {
     pname = "violentmonkey";
-    version = "2.49.0";
+    version = "2.50.0";
     addonId = "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5009389/violentmonkey-2.49.0.xpi";
-    sha256 = "761ea6a32cee78c3263d19bbd821eafd4ea0722f10ff358ecba2739c5bff76fb";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5170937/violentmonkey-2.50.0.xpi";
+    sha256 = "5e074465c7fdd31934e5b4664e3d2eac54269df575a0c0db52c843fe9afd81df";
     meta = with lib; {
       homepage = "https://violentmonkey.github.io/";
       description = "Userscript support for browsers, open source.";
@@ -616,10 +616,10 @@
   };
   "youtube-tweaks" = buildMozillaXpiAddon {
     pname = "youtube-tweaks";
-    version = "2026.10.20";
+    version = "2026.10.26";
     addonId = "{d867162c-4c38-4c5f-aca4-db6a6592d7da}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5143860/youtube_tweaks-2026.10.20.xpi";
-    sha256 = "af20ecce20b80abb71b31a8fe88145c29e5a37b579768a0b9b5f17d8946c4a05";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5170763/youtube_tweaks-2026.10.26.xpi";
+    sha256 = "b34b217d1448bb125a0c021fd7a5dd62743bbd598c1ba909d6e861dc374c7296";
     meta = with lib; {
       homepage = "https://github.com/pedrosouu/yt-tweaks";
       description = "A collection of tweaks for hiding Shorts, disabling 'Video paused. Continue watching?', changing the number of videos per row and more!";
