@@ -40,7 +40,7 @@
 
           auto_reload_config = -1;
 
-          notify_on_cmd_finish = "unfocused 15.0 notify";
+          notify_on_cmd_finish = "unfocused 30.0 notify";
 
           shell = lib.getExe self'.packages.environment;
 
