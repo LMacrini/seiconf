@@ -63,7 +63,7 @@
     };
     waybar = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:alexays/waybar?rev=084d87401d0a91182c16aa7e5f674a7dde767185";
+      url = "github:alexays/waybar?rev=8733df8913b90551340fbea9d18f3d06a11e42ea";
     };
     wrappers = {
       inputs.nixpkgs.follows = "nixpkgs";

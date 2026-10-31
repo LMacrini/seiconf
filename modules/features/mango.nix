@@ -105,7 +105,14 @@
         {
           wrappers.waybar = {
             enable = true;
-            package = inputs'.waybar.packages.waybar;
+            package = inputs'.waybar.packages.waybar.override {
+              waybar = pkgs.waybar.override {
+                cavaSupport = false;
+                runTests = false;
+                niriSupport = false;
+              };
+            };
+
             settings = {
               modules-left = [
                 "mango/workspaces"
