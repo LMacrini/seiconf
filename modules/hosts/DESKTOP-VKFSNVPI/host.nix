@@ -81,8 +81,12 @@
           enable = true;
           binfmt = true;
         };
-        discord.enable = false;
-        noisetorch.enable = false;
+
+        noisetorch = {
+          enable = true;
+          package = inputs'.prince.packages.noisetorch;
+        };
+
         obs-studio = {
           enable = true;
           enableVirtualCamera = true;
