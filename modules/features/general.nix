@@ -118,6 +118,7 @@
             <Multi_key> <f> <o> <r> <a> <l> <l> : "∀" U2200 # FOR ALL
             <Multi_key> <e> <x> <i> : "∃" U2203 # THERE EXISTS
             <Multi_key> <e> <q> <u> <i> <v> : "≡" U2261 # IDENTICAL TO
+            <Multi_key> <equal> <equal> : "≡" U2261 # IDENTICAL TO
 
             <Multi_key> <n> <a> <t> : "ℕ" U2115 # DOUBLE-STRUCK CAPITAL N
             <Multi_key> <i> <n> <t> : "ℤ" U2124 # DOUBLE-STRUCK CAPITAL Z
