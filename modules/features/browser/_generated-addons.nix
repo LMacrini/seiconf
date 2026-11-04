@@ -25,10 +25,10 @@
   };
   "bitwarden-password-manager" = buildMozillaXpiAddon {
     pname = "bitwarden-password-manager";
-    version = "2026.10.1";
+    version = "2026.10.2";
     addonId = "{446900e4-71c2-419f-a6a7-df9c091e268b}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5182191/bitwarden_password_manager-2026.10.1.xpi";
-    sha256 = "25cd5e074628058474ca7578269c75e3e136569e6a821a0da07d56ed761e11fa";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5198653/bitwarden_password_manager-2026.10.2.xpi";
+    sha256 = "abf9d7273dd55ac0583ecc6997f7f7ae3d29de11e2ad0a4838b80e2b941daa73";
     meta = with lib; {
       homepage = "https://bitwarden.com";
       description = "At home, at work, or on the go, Bitwarden easily secures all your passwords, passkeys, and sensitive information.";
@@ -235,10 +235,10 @@
   };
   "libredirect" = buildMozillaXpiAddon {
     pname = "libredirect";
-    version = "3.4.0";
+    version = "3.5.1";
     addonId = "7esoorv3@alefvanoon.anonaddy.me";
-    url = "https://addons.mozilla.org/firefox/downloads/file/4916828/libredirect-3.4.0.xpi";
-    sha256 = "c0fa9a5c2302eb734b1b614284371061330cf2e7b3519ee96c53e8be58ae298f";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5207393/libredirect-3.5.1.xpi";
+    sha256 = "cd0796cbcaf9f7eb2643e9b937dc735526605e6eae925eda2a28b2e703bff234";
     meta = with lib; {
       homepage = "https://libredirect.manerakai.com/";
       description = "Redirects YouTube, Twitter, TikTok... requests to alternative privacy friendly frontends.";
@@ -256,10 +256,10 @@
   };
   "localcdn-fork-of-decentraleyes" = buildMozillaXpiAddon {
     pname = "localcdn-fork-of-decentraleyes";
-    version = "2.6.86";
+    version = "2.6.87";
     addonId = "{b86e4813-687a-43e6-ab65-0bde4ab75758}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5010046/localcdn_fork_of_decentraleyes-2.6.86.xpi";
-    sha256 = "2fcca5f9fd9d0de3b2b4e3b0260d1ca3645f46d6467b09a6d0c039262f425674";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5189789/localcdn_fork_of_decentraleyes-2.6.87.xpi";
+    sha256 = "e5a1dd02166c487f0409cd09df8dddb04ab0e4aeb432eeae5330501c615e2dc8";
     meta = with lib; {
       homepage = "https://www.localcdn.org";
       description = "Emulates remote frameworks (e.g. jQuery, Bootstrap, AngularJS) and delivers them as local resource. Prevents unnecessary 3rd party requests to Google, StackPath, MaxCDN and more. Prepared rules for uBlock Origin/uMatrix.";
@@ -339,10 +339,10 @@
   };
   "return-youtube-dislikes" = buildMozillaXpiAddon {
     pname = "return-youtube-dislikes";
-    version = "4.0.6";
+    version = "4.1.5";
     addonId = "{762f9885-5a13-4abd-9c77-433dcd38b8fd}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5012638/return_youtube_dislikes-4.0.6.xpi";
-    sha256 = "59719749f6df38c1601ca5f39c02158d5f005c43e9eeea1f19527f468c941217";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5205580/return_youtube_dislikes-4.1.5.xpi";
+    sha256 = "82b780b5bab6a03aafa07cf89f17c4c49f4d13333867772e3e975c1c6c827a53";
     meta = with lib; {
       description = "Returns ability to see dislike statistics on youtube";
       license = licenses.gpl3;
@@ -466,10 +466,10 @@
   };
   "ublock-origin" = buildMozillaXpiAddon {
     pname = "ublock-origin";
-    version = "1.75.0";
+    version = "1.75.4";
     addonId = "uBlock0@raymondhill.net";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5034826/ublock_origin-1.75.0.xpi";
-    sha256 = "5b74415860456370644bd80f16125e865b0e6c356bb5dfcfb84069967eaa5287";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5203014/ublock_origin-1.75.4.xpi";
+    sha256 = "e2df503cce7cf5069130618c349695f62bdddb9eb8c189156d027269ae4ae267";
     meta = with lib; {
       homepage = "https://github.com/gorhill/uBlock#ublock-origin";
       description = "Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory.";
