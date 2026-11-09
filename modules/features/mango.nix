@@ -156,7 +156,7 @@
             wl-clipboard
             zenity
 
-            self'.packages.kitty
+            self'.packages.kitty-system
             self'.packages.rofi
             self'.packages.wlogout
 

@@ -1,10 +1,16 @@
 { lib, self, ... }:
 {
+  flake.wrappers.kitty-system = {
+    imports = [ self.wrapperModules.kitty ];
+    systemShell = true;
+  };
+
   flake.wrappers.kitty =
     {
       wlib,
       pkgs,
       self',
+      config,
       ...
     }:
     let
@@ -19,38 +25,44 @@
         self.nixosModules.inputs
       ];
 
-      package = pkgs.kitty;
-      runtimePkgs = [
-        self'.packages.ioseika
-      ];
+      options = {
+        systemShell = lib.mkEnableOption "system shell instead of custom shell";
+      };
 
-      flags = {
-        "--config" = format.generate "kitty.conf" {
-          include = "${pkgs.kitty-themes}/share/kitty-themes/themes/Catppuccin-Macchiato.conf";
-          shell_integration = "no-cursor";
-          allow_remote_control = "no";
-          confirm_os_window_close = 0;
-          enable_audio_bell = "no";
+      config = {
+        package = pkgs.kitty;
+        runtimePkgs = [
+          self'.packages.ioseika
+        ];
 
-          font_family = "family=Ioseika";
-          font_size = 12.0;
+        flags = {
+          "--config" = format.generate "kitty.conf" {
+            include = "${pkgs.kitty-themes}/share/kitty-themes/themes/Catppuccin-Macchiato.conf";
+            shell_integration = "no-cursor";
+            allow_remote_control = "no";
+            confirm_os_window_close = 0;
+            enable_audio_bell = "no";
 
-          tab_bar_style = "powerline";
-          tab_powerline_style = "angled";
+            font_family = "family=Ioseika";
+            font_size = 12.0;
 
-          auto_reload_config = -1;
+            tab_bar_style = "powerline";
+            tab_powerline_style = "angled";
 
-          notify_on_cmd_finish = "unfocused 30.0 notify";
+            auto_reload_config = -1;
 
-          shell = lib.getExe self'.packages.environment;
+            notify_on_cmd_finish = "unfocused 30.0 notify";
 
-          map = [
-            "kitty_mod+enter launch --cwd=current"
-            "kitty_mod+t new_tab"
+            shell = if config.systemShell then "." else lib.getExe self'.packages.environment;
 
-            # 26.05
-            # "ctrl+a>a goto_session ~/sesh/"
-          ];
+            map = [
+              "kitty_mod+enter launch --cwd=current"
+              "kitty_mod+t new_tab"
+
+              # 26.05
+              # "ctrl+a>a goto_session ~/sesh/"
+            ];
+          };
         };
       };
     };
