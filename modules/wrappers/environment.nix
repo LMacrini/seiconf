@@ -28,7 +28,7 @@
         pkgs.ripgrep
         pkgs.tlrc
         pkgs.rip2
-        pkgs.p7zip
+        pkgs._7zip-zstd
         pkgs.unzip
         pkgs.ffmpeg
         pkgs.man-pages.man
