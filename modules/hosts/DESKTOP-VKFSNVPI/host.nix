@@ -179,6 +179,7 @@
       hjem.users.lioma.packages = with pkgs; [
         inputs'.prince.packages.fluxer-stable-bin
         inputs'.freesm.packages.default
+        aaaaxy
         anime-games-launcher
         easyeffects
         emacs-pgtk
