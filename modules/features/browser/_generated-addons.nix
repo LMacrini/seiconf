@@ -123,10 +123,10 @@
   };
   "darkreader" = buildMozillaXpiAddon {
     pname = "darkreader";
-    version = "4.9.134";
+    version = "4.9.135";
     addonId = "addon@darkreader.org";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5175215/darkreader-4.9.134.xpi";
-    sha256 = "700633395aa2f639a1bed4253e27309eb676f346d599b0ae2b7a0453232e0aec";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5216111/darkreader-4.9.135.xpi";
+    sha256 = "bfed4591d6cc69857f5ed33a2d3cbfbc5811d5b92c4323d0735d2f1757e2dce4";
     meta = with lib; {
       homepage = "https://darkreader.org/";
       description = "Dark mode for every website. Take care of your eyes, use dark theme for night and daily browsing.";
@@ -317,10 +317,10 @@
   };
   "refined-github-" = buildMozillaXpiAddon {
     pname = "refined-github-";
-    version = "26.10.26";
+    version = "26.11.6";
     addonId = "{a4c4eda4-fb84-4a84-b4a1-f7c1cbf2a1ad}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5167698/refined_github-26.10.26.xpi";
-    sha256 = "12c2828bc4c31718f9a2595a007fa7b0300970b5b0d2eadd0aaf3754dbf7f1ff";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5216077/refined_github-26.11.6.xpi";
+    sha256 = "877286e8034e868ba79b325195dbd7ddea9726dcb326568f1c656d057ae83fff";
     meta = with lib; {
       homepage = "https://github.com/refined-github/refined-github";
       description = "Simplifies the GitHub interface and adds many useful features.";
@@ -339,10 +339,10 @@
   };
   "return-youtube-dislikes" = buildMozillaXpiAddon {
     pname = "return-youtube-dislikes";
-    version = "4.1.5";
+    version = "4.1.7";
     addonId = "{762f9885-5a13-4abd-9c77-433dcd38b8fd}";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5205580/return_youtube_dislikes-4.1.5.xpi";
-    sha256 = "82b780b5bab6a03aafa07cf89f17c4c49f4d13333867772e3e975c1c6c827a53";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5222672/return_youtube_dislikes-4.1.7.xpi";
+    sha256 = "ac52f0786bbf4e4a669009be0e2847c21c642e60cfe358c01a80057c52d507d6";
     meta = with lib; {
       description = "Returns ability to see dislike statistics on youtube";
       license = licenses.gpl3;
@@ -466,10 +466,10 @@
   };
   "ublock-origin" = buildMozillaXpiAddon {
     pname = "ublock-origin";
-    version = "1.75.4";
+    version = "1.76.0";
     addonId = "uBlock0@raymondhill.net";
-    url = "https://addons.mozilla.org/firefox/downloads/file/5203014/ublock_origin-1.75.4.xpi";
-    sha256 = "e2df503cce7cf5069130618c349695f62bdddb9eb8c189156d027269ae4ae267";
+    url = "https://addons.mozilla.org/firefox/downloads/file/5225273/ublock_origin-1.76.0.xpi";
+    sha256 = "6f20ff6749193599548770539103069c20948dfcd3e61c3089a67da7bfc3be39";
     meta = with lib; {
       homepage = "https://github.com/gorhill/uBlock#ublock-origin";
       description = "Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory.";
@@ -479,6 +479,7 @@
         "dns"
         "menus"
         "privacy"
+        "publicSuffix"
         "storage"
         "tabs"
         "unlimitedStorage"

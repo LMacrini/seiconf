@@ -210,10 +210,13 @@
             wantedBy = [ "graphical-session.target" ];
           };
 
-          xdg.config.files."mango/config.conf".source =
+          xdg.config.files."mango/config.toml".source =
+            let
+              toml = pkgs.formats.toml { };
+            in
             (
               f:
-              pkgs.runCommand "mango.conf"
+              pkgs.runCommand "mango.toml"
                 {
                   nativeBuildInputs = [ mango ];
                   conf = f;
@@ -223,123 +226,176 @@
                   cp $conf $out
                 ''
             )
-            <| pkgs.writeText "mango.conf" ''
-              exec_once = kitty
-              exec_once = waybar
+            <| toml.generate "mango.toml" {
+              global = {
+                exec_once = [
+                  "kitty"
+                  "waybar"
+                  (lib.getExe pkgs.networkmanagerapplet)
+                  (lib.getExe' pkgs.blueman "blueman-applet")
+                  (lib.getExe autostart)
+                ];
 
-              exec_once = ${lib.getExe pkgs.networkmanagerapplet}
-              exec_once = ${lib.getExe' pkgs.blueman "blueman-applet"}
+                trackpad_natural_scrolling = 1;
+                trackpad_click_method = 2;
 
-              exec_once = ${lib.getExe autostart}
+                focus_color = "0xff6ed4ff";
 
-              trackpad_natural_scrolling = 1
-              trackpad_click_method = 2
+                xkb_rules_layout = "us,gr";
+                xkb_rules_options = "compose:ralt";
 
-              env = ELECTRON_OZONE_PLATFORM_HINT,wayland
-              env = PROTON_ENABLE_WAYLAND,1
+                scroller_proportion_preset = "1,0.7,0.5,0.3";
 
-              focus_color = 0xff6ed4ff
+                enable_hotarea = 0;
 
-              gesturebind = NONE,left,3,viewtoright_have_client
-              gesturebind = NONE,right,3,viewtoleft_have_client
-              switchbind = fold,spawn,systemctl suspend
+                cursor_hide_timeout = 5;
+                new_is_master = 0;
+                smart_gaps = 1;
+                drag_tile_to_tile = 1;
+              };
 
-              window_rule = is_open_silent:1,is_global:1,offset_x:100,offset_y:100,app_id:steam,title:^notificationtoasts_\d+_desktop$
-              window_rule = app_id:re-lunatic-player,is_floating:1,is_global:1
-              window_rule = app_id:spacewarp,is_floating:1
+              env = {
+                ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+                PROTON_ENABLE_WAYLAND = 1;
+              };
 
-              xkb_rules_layout = us,gr
-              xkb_rules_options = compose:ralt
-              bind = SUPER,space,switch_keyboard_layout
+              bind.default = {
+                "SUPER+CTRL+S" = "spawn_shell,grim -t ppm - | satty -c /dev/null -f - -o - | wl-copy";
+                "SUPER+SHIFT+S" = "spawn,${lib.getExe self'.packages.screenshot}";
 
-              bind = SUPER+CTRL,S,spawn_shell,grim -t ppm - | satty -c /dev/null -f - -o - | wl-copy
-              bind = SUPER+SHIFT,S,spawn,${lib.getExe self'.packages.screenshot}
+                "NONE+XF86AudioRaiseVolume" = "spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
+                "NONE+XF86AudioLowerVolume" = "spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
+                "NONE+XF86AudioMute" = "spawn,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+                "NONE+XF86AudioMicMute" = "spawn,wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+                "NONE+XF86MonBrightnessUp" = "spawn,brightnessctl s 10%+";
+                "NONE+XF86MonBrightnessDown" = "spawn,brightnessctl s 10%-";
+                "NONE+XF86PowerOff" = "spawn,systemctl suspend";
 
-              bind = NONE,XF86AudioRaiseVolume,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
-              bind = NONE,XF86AudioLowerVolume,spawn,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-              bind = NONE,XF86AudioMute,spawn,wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-              bind = NONE,XF86AudioMicMute,spawn,wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
-              bind = NONE,XF86MonBrightnessUp,spawn,brightnessctl s 10%+
-              bind = NONE,XF86MonBrightnessDown,spawn,brightnessctl s 10%-
-              bind = NONE,XF86PowerOff,spawn,systemctl suspend
+                "SUPER+Q" = "spawn,kitty";
+                "SUPER+T" = "spawn_shell,${launcher}";
+                "ALT+space" = "spawn_shell,${launcher}";
+                "SUPER+C" = "smartkillclient";
+                "SUPER+Return" = "zoom";
+                "SUPER+L" = "spawn,${sessionMenu}";
 
-              bind = SUPER,Q,spawn,kitty
-              bind = SUPER,T,spawn_shell,${launcher}
-              bind = ALT,space,spawn_shell,${launcher}
-              bind = SUPER,C,smartkillclient
-              bind = SUPER,Return,zoom
-              bind = SUPER,L,spawn,${sessionMenu}
+                "SUPER+N" = "focusstack,next";
+                "SUPER+E" = "focusstack,prev";
+                "SUPER+M" = "setmfact,-0.05";
+                "SUPER+I" = "setmfact,+0.05";
 
-              bind = SUPER,N,focusstack,next
-              bind = SUPER,E,focusstack,prev
-              bind = SUPER,M,setmfact,-0.05
-              bind = SUPER,I,setmfact,+0.05
+                "SUPER+O" = "minimized";
+                "SUPER+SHIFT+O" = "restore_minimized";
+                "SUPER+H" = "toggle_scratchpad";
+                "SUPER+K" = "toggle_named_scratchpad,kitty-scratch,none,kitty --app-id kitty-scratch";
 
-              bind = SUPER,O,minimized
-              bind = SUPER+SHIFT,O,restore_minimized
-              bind = SUPER,H,toggle_scratchpad
-              bind = SUPER,K,toggle_named_scratchpad,kitty-scratch,none,kitty --app-id kitty-scratch
-              window_rule = is_named_scratchpad:1,app_id:kitty-scratch
+                "SUPER+U" = "incnmaster,+1";
+                "SUPER+D" = "incnmaster,-1";
 
-              bind = SUPER,U,incnmaster,+1
-              bind = SUPER,D,incnmaster,-1
+                "SUPER+code:60" = "focusmon,right";
+                "SUPER+SHIFT+code:60" = "tagmon,right";
+                "SUPER+code:59" = "focusmon,left";
+                "SUPER+SHIFT+code:59" = "tagmon,left";
 
-              bind = SUPER,code:60,focusmon,right
-              bind = SUPER+SHIFT,code:60,tagmon,right
-              bind = SUPER,code:59,focusmon,left
-              bind = SUPER+SHIFT,code:59,tagmon,left
+                "SUPER+Up" = "focusdir,up";
+                "SUPER+Down" = "focusdir,down";
+                "SUPER+Left" = "focusdir,left";
+                "SUPER+Right" = "focusdir,right";
 
-              bind = SUPER,Up,focusdir,up
-              bind = SUPER,Down,focusdir,down
-              bind = SUPER,Left,focusdir,left
-              bind = SUPER,Right,focusdir,right
+                "SUPER+SHIFT+Up" = "exchange_client,up";
+                "SUPER+SHIFT+Down" = "exchange_client,down";
+                "SUPER+SHIFT+Left" = "exchange_client,left";
+                "SUPER+SHIFT+Right" = "exchange_client,right";
 
-              bind = SUPER+SHIFT,Up,exchange_client,up
-              bind = SUPER+SHIFT,Down,exchange_client,down
-              bind = SUPER+SHIFT,Left,exchange_client,left
-              bind = SUPER+SHIFT,Right,exchange_client,right
+                "SUPER+F" = "togglefullscreen";
+                "SUPER+SHIFT+F" = "togglefloating";
+                "SUPER+SHIFT+M" = "togglemaximizescreen";
+                "SUPER+G" = "toggleglobal";
 
-              bind = SUPER,F,togglefullscreen
-              bind = SUPER+SHIFT,F,togglefloating
-              bind = SUPER+SHIFT,M,togglemaximizescreen
-              bind = SUPER,G,toggleglobal
+                "SUPER+W" = "setlayout,fair";
+                "SUPER+SHIFT+T" = "setlayout,tile";
+                "SUPER+S" = "setlayout,scroller";
+                "SUPER+CTRL+M" = "setlayout,monocle";
 
-              bind = SUPER,W,setlayout,fair
-              bind = SUPER+SHIFT,T,setlayout,tile
-              bind = SUPER,S,setlayout,scroller
-              bind = SUPER+CTRL,M,setlayout,monocle
+                "SUPER+R" = "switch_proportion_preset";
 
-              scroller_proportion_preset = 1,0.7,0.5,0.3
-              bind = SUPER,R,switch_proportion_preset
-
-              bind = SUPER,Y,toggleoverview
-              mousebind = SUPER,btn_left,moveresize,curmove
-              mousebind = SUPER,btn_right,moveresize,curresize
-              enable_hotarea = 0
-
-              cursor_hide_timeout = 5
-              new_is_master = 0
-              smart_gaps = 1
-              drag_tile_to_tile = 1
-
-              ${monitors}
-              ${
-                lib.concatStrings
-                <| builtins.genList (
+                "SUPER+Y" = "toggleoverview";
+              }
+              // lib.mergeAttrsList (
+                builtins.genList (
                   i:
                   let
-                    tag = toString <| i + 1;
+                    ws = toString (i + 1);
                   in
-                  ''
-                    bind=SUPER,${tag},view,${tag}
-                    bind=SUPER+SHIFT,${tag},tag,${tag}
-                    bind=SUPER+CTRL,${tag},toggleview,${tag}
-                    bind=SUPER+CTRL+SHIFT,${tag},toggletag,${tag}
-                    tag_rule=id:${tag},layout_name:fair
-                  ''
+                  {
+                    "SUPER+${ws}" = "view,${ws}";
+                    "SUPER+SHIFT+${ws}" = "tag,${ws}";
+                    "SUPER+CTRL+${ws}" = "toggleview,${ws}";
+                    "SUPER+CTRL+SHIFT+${ws}" = "toggletag,${ws}";
+                  }
                 ) 9
-              }
-            '';
+              );
+
+              gesturebind.default = {
+                "NONE+left+3" = "viewtoright_have_client";
+                "NONE+right+3" = "viewtoleft_have_client";
+              };
+
+              switchbind.default = {
+                "lid_off" = "spawn,systemctl suspend";
+              };
+
+              mousebind.default = {
+                "SUPER+btn_left" = "moveresize,curmove";
+                "SUPER+btn_right" = "moveresize,curresize";
+              };
+
+              rule = {
+                tag_rule = builtins.genList (i: {
+                  id = i + 1;
+                  layout_name = "fair";
+                }) 9;
+
+                window_rule = [
+                  {
+                    app_id = "steam";
+                    title = "^notificationtoasts_\\d+_desktop$";
+                    is_open_silent = 1;
+                    is_global = 1;
+                    offset_x = 100;
+                    offset_y = 100;
+                  }
+                  {
+                    app_id = "re-lunatic-player";
+                    is_floating = 1;
+                    is_global = 1;
+                  }
+                  {
+                    app_id = "spacewarp";
+                    is_floating = 1;
+                  }
+                  {
+                    app_id = "kitty-scratch";
+                    is_named_scratchpad = 1;
+                  }
+                ];
+
+                monitor_rule =
+                  config.preferences.monitors
+                  |> lib.mapAttrsToList (
+                    n: v: {
+                      inherit (v)
+                        width
+                        height
+                        x
+                        y
+                        scale
+                        ;
+                      name = n;
+                      refresh = v.refreshRate;
+                    }
+                  );
+              };
+            };
         };
     };
 }
