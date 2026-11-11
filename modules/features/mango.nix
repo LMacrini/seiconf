@@ -90,14 +90,7 @@
                 & echo $! > /tmp/.mangowc-systemd-inhibit
           '';
 
-          monitors =
-            config.preferences.monitors
-            |> lib.mapAttrsToList (
-              n: v:
-              with v;
-              "monitor_rule=name:${n},width:${width},height:${height},refresh:${refreshRate},x:${x},y:${y},scale:${scale}"
-            )
-            |> builtins.concatStringsSep "\n";
+          toml = pkgs.formats.toml { };
 
           launcher = "pkill rofi || rofi -show drun";
           sessionMenu = "wlogout";
@@ -211,9 +204,6 @@
           };
 
           xdg.config.files."mango/config.toml".source =
-            let
-              toml = pkgs.formats.toml { };
-            in
             (
               f:
               pkgs.runCommand "mango.toml"
