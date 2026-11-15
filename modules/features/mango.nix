@@ -331,7 +331,7 @@
               };
 
               switchbind.default = {
-                "lid_off" = "spawn,systemctl suspend";
+                "lid_on" = "spawn,systemctl suspend";
               };
 
               mousebind.default = {
