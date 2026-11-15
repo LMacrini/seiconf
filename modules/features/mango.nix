@@ -71,6 +71,7 @@
         gnome.gnome-keyring.enable = true;
 
         logind.settings.Login.HandleLidSwitch = "ignore";
+        logind.settings.Login.HandlePowerKey = "suspend";
 
         pipewire = {
           enable = true;
@@ -82,12 +83,6 @@
         let
           autostart = pkgs.writeShellScriptBin "autostart.sh" ''
             systemctl --user reset-failed
-            systemd-inhibit --who="mangowc config" \
-                --why="power button keybind" \
-                --what=handle-power-key \
-                --mode=block \
-                sleep infinity \
-                & echo $! > /tmp/.mangowc-systemd-inhibit
           '';
 
           toml = pkgs.formats.toml { };
@@ -259,7 +254,6 @@
                 "NONE+XF86AudioMicMute" = "spawn,wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
                 "NONE+XF86MonBrightnessUp" = "spawn,brightnessctl s 10%+";
                 "NONE+XF86MonBrightnessDown" = "spawn,brightnessctl s 10%-";
-                "NONE+XF86PowerOff" = "spawn,systemctl suspend";
 
                 "SUPER+Q" = "spawn,kitty";
                 "SUPER+T" = "spawn_shell,${launcher}";
