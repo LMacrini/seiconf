@@ -111,7 +111,6 @@
       boot = {
         tmp.cleanOnBoot = false;
         initrd.systemd = {
-          enable = true;
           services.rollback = {
             description = "Rollback BTRFS root subvolume to a clean state";
             wantedBy = [ "initrd.target" ];

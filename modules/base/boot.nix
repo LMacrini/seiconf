@@ -16,7 +16,6 @@
     {
       boot = {
         consoleLogLevel = ifPlymouth 3;
-        initrd.verbose = ifPlymouth false;
         kernelParams = ifPlymouth [
           "quiet"
           "splash"

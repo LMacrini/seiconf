@@ -8,12 +8,7 @@
       services = {
         kmscon = {
           enable = true;
-          fonts = [
-            {
-              name = "JetBrainsMonoNL NFM";
-              package = pkgs.nerd-fonts.jetbrains-mono;
-            }
-          ];
+          config.font-name = "Ioseika";
         };
         openssh.settings.UseDns = lib.mkDefault true;
       };

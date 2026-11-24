@@ -26,7 +26,11 @@
       };
 
       settings = {
-        experimental-features = "nix-command flakes pipe-operators";
+        experimental-features = [
+          "nix-command"
+          "flakes"
+          "pipe-operators"
+        ];
         trusted-users = [
           "root"
           "lioma"

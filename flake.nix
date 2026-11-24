@@ -11,7 +11,7 @@
     };
     catppuccin = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:catppuccin/nix?ref=release-26.05";
+      url = "github:catppuccin/nix";
     };
     disko = {
       inputs.nixpkgs.follows = "nixpkgs";
@@ -56,14 +56,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nixos/nixos-hardware";
     };
-    nixpkgs.url = "https://channels.nixos.org/nixos-26.05/nixexprs.tar.zst";
+    nixpkgs.url = "https://channels.nixos.org/nixos-26.11-small/nixexprs.tar.zst";
     prince = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:forkprince/nur-packages";
-    };
-    waybar = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:alexays/waybar?rev=8733df8913b90551340fbea9d18f3d06a11e42ea";
     };
     wrappers = {
       inputs.nixpkgs.follows = "nixpkgs";

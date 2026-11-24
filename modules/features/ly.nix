@@ -5,7 +5,7 @@
       settings = {
         animation = "gameoflife";
         bigclock = "en";
-        ly_log = null;
+        ly_log = "/var/log/ly.log";
       };
     };
   };

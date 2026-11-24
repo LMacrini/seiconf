@@ -4,11 +4,6 @@
   ...
 }:
 {
-  flake.file.inputs.waybar = {
-    url = "github:alexays/waybar?rev=8733df8913b90551340fbea9d18f3d06a11e42ea";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
-
   flake.aspects.waybar.deps = [ "hjem" ];
   flake.aspects.waybar.module = {
     hjem.extraModules = [
