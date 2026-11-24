@@ -20,7 +20,7 @@ flake:
     nix fmt ./flake.nix
 
 iso:
-    nom build .#iso
+    rom build .#iso
 
 update *FLAKES: && addons
     nix flake update {{ FLAKES }}

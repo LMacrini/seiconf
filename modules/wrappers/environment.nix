@@ -16,7 +16,7 @@
       runtimePkgs = [
         pkgs.nix
         pkgs.nix-inspect
-        pkgs.nix-output-monitor
+        pkgs.rom
         pkgs.nixd
         pkgs.nh
         self'.formatter
